@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    padding: 1rem 0.75rem;
+}
+
+#logoIcon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 2.5rem;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#navIcons {
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+}
+
+.icons {
+    list-style: none;
+}
+
+.iconTag {
+    font-size: 1.75rem;
+}
