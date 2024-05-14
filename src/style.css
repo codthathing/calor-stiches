@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
+#frontPage {
+    height: 100vh;
+    border: 1px solid red;
+}
+
 #header {
-    padding: 1rem 0.75rem;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid black;
 }
 
 #logoIcon {
