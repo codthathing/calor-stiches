@@ -1,6 +1,10 @@
 import React from "react";
+import FrontText from "./frontText";
+import ProductTemplate from "./productTemplate";
+import { productDetails } from "./products";
 
 const Home = () => {
+
   return (
     <main>
       <section id="frontPage">
@@ -17,15 +21,19 @@ const Home = () => {
           </nav>
         </header>
 
-        <div id="displayText">
-          <p id="disParagraph">YOU CAN HAVE ANYTHING YOU WANT IF YOU DRESS FOR IT</p>
-          <h1 id="disHead">Inspired By Nature & Crafted With Love</h1>
-          <button id="shopBtn">SHOP NOW</button>
-          <div id="disDiv">
-            <span className="disShowing" id="disOne">1</span>
-            <span className="disShowing" id="disTwo">2</span>
-          </div>
+        <FrontText></FrontText>
+      </section>
+
+      <section id="productSection">
+        <div id="productTopicDiv">
+          <p id="productParagraph" className="paragraphStyles">NEW AND EXTRAORDINARY</p>
+          <h1 id="productHead" className="headStyles">Featured Products</h1>
         </div>
+        <main id="mainProduct">
+          {productDetails.map((details) => {
+            return <ProductTemplate key={details.id} {...details}></ProductTemplate>
+          })}
+        </main>
       </section>
     </main>
   );
