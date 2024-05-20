@@ -7,17 +7,17 @@ const FrontText = () => {
     disOnePad: "0.75rem",
     disTwoPad: "0"
   });
-  // if (currentDisplay == "ONE") {
-  //   setTimeout(() => {
-  //     setCurrentDisplay("TWO");
-  //     setInitialDetails({...initialDetails, head: "Outrageous Fashion Always For You", disOnePad: "0", disTwoPad: "0.75rem"});
-  //   }, 2500)
-  // } else if (currentDisplay == "TWO") {
-  //   setTimeout(() => {
-  //     setCurrentDisplay("ONE");
-  //     setInitialDetails({...initialDetails, head: "Inspired By Nature & Crafted With Love", disOnePad: "0.75rem", disTwoPad: "0"});
-  //   }, 2500)
-  // };
+  if (currentDisplay == "ONE") {
+    setTimeout(() => {
+      setCurrentDisplay("TWO");
+      setInitialDetails({...initialDetails, head: "Outrageous Fashion Always For You", disOnePad: "0", disTwoPad: "0.75rem"});
+    }, 2500)
+  } else if (currentDisplay == "TWO") {
+    setTimeout(() => {
+      setCurrentDisplay("ONE");
+      setInitialDetails({...initialDetails, head: "Inspired By Nature & Crafted With Love", disOnePad: "0.75rem", disTwoPad: "0"});
+    }, 2500)
+  };
 
 
 
