@@ -13,6 +13,7 @@ export const productDetails = [
     productName: "dust lightweight jacket",
     productPrice: 85.00,
     productAvailable: "50% OFF",
+    productAvailableColor: "red",
     cutOff: true,
     percentOff: 50,
     originalPrice: 170
@@ -22,13 +23,15 @@ export const productDetails = [
     productImage: productOne,
     productName: "karatima outwear",
     productPrice: 85.00,
-    productAvailable: "SOLD OUT"
+    productAvailable: "SOLD OUT",
+    productAvailableColor: "#a80000" 
   },
   {
     id: 3,
     productImage: productOne,
     productName: "white dressed pants",
     productPrice: 85.00,
-    productAvailable: "NEW IN"
+    productAvailable: "NEW IN",
+    productAvailableColor: "green"
   },
 ] 
