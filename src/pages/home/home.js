@@ -2,6 +2,8 @@ import React from "react";
 import FrontText from "./frontText";
 import ProductTemplate from "./productTemplate";
 import { productDetails } from "./products";
+import CollectionTemplate from "./collectionTemplate";
+import { collections } from "./collections";
 
 const Home = () => {
 
@@ -34,6 +36,31 @@ const Home = () => {
             return <ProductTemplate key={details.id} {...details}></ProductTemplate>
           })}
         </main>
+        <button id="productButton" className="viewButton">
+          <p id="productButtonText" className="paragraphStyles">VIEW ALL</p>
+        </button>
+      </section>
+
+      <section id="collectionSection">
+        {collections.map((details) => {
+          return <CollectionTemplate key={details.id} {...details}></CollectionTemplate>
+        })}
+      </section>
+
+      <section id="latestSection">
+        <ul id="navLatest">
+          <li className="latestItem">HOT ITEMS</li>
+          <li className="latestItem">NEW ARRIVALS</li>
+          <li className="latestItem">ON SALE</li>
+        </ul>
+        <section id="latestSections">
+          {productDetails.map((details) => {
+            return <ProductTemplate key={details.id} {...details}></ProductTemplate>
+          })}
+        </section>
+        <button id="latestButton" className="viewButton">
+          <p id="latestButtonText" className="paragraphStyles">VIEW ALL</p>
+        </button>
       </section>
     </main>
   );

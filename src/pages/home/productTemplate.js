@@ -1,13 +1,14 @@
 import React from "react";
 
-const ProductTemplate = ({ productAvailable, productAvailableColor, productImage, productName, cutOff, originalPrice, productPrice }) => {
+const ProductTemplate = ({ productAvailable, productAvailableColor, doubleProductAvail, doubleAvailColor, productImage, productName, cutOff, originalPrice, productPrice }) => {
 
   return (
     <div className="productDiv">
       <section className="orderOptions" style={{ backgroundImage: `url(${productImage})` }}>
-        {productAvailable &&
-          <span className="productAvail paragraphStyles" style={{ backgroundColor: productAvailableColor }}>{productAvailable}</span>
-        }
+        <div className="availDiv">
+          {doubleProductAvail && <span className="productAvail paragraphStyles" style={{ backgroundColor: doubleAvailColor }}>{doubleProductAvail}</span>}
+          {productAvailable && <span className="productAvail paragraphStyles" style={{ backgroundColor: productAvailableColor }}>{productAvailable}</span>}
+        </div>
         <div className="optionBtnsDiv">
           <i className="fa-regular fa-heart optionIcon"></i>
           <p className="paragraphStyles">SELECT OPTIONS</p>

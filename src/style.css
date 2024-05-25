@@ -91,18 +91,18 @@
     font-size: 1.25rem;
 }
 
-#productTopicDiv {
-    padding: 2rem 0;
+#productSection {
     text-align: center;
+    padding: 2rem 0.5rem 4rem 0.5rem;
+}
+
+#productTopicDiv {
+    margin-bottom: 2rem;
 }
 
 #productHead {
     margin-top: 1rem;
     font-size: 3rem;
-}
-
-#mainProduct {
-    padding: 0 0.5rem;
 }
 
 .orderOptions {
@@ -113,12 +113,18 @@
     display: flex;
 }
 
-.productAvail {
+.availDiv {
+    width: fit-content;
     position: absolute;
+    margin: 0.75rem 0 0 0.75rem;
+    display: flex;
+    gap: 0 0.75rem;
+}
+
+.productAvail {
     color: white;
     font-size: 1rem;
     padding: 0.25rem;
-    margin: 0.75rem 0 0 0.75rem;
 }
 
 .optionBtnsDiv {
@@ -126,9 +132,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 0;
     align-self: flex-end;
     width: 100%;
+    padding: 1.5rem 0;
 }
 
 .optionIcon {
@@ -146,7 +152,6 @@
 }
 
 .productNamePrice {
-    text-align: center;
     padding: 2rem 0;
 }
 
@@ -171,5 +176,73 @@
 
 .productPrice {
     font-size: 1.25rem;
+    white-space: pre;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.viewButton {
+    background: transparent;
+    border: 1px solid black;
+    padding: 1.5rem;
+    width: fit-content;
+    margin-top: 1.5rem;
+}
+
+#collectionSection {
+    padding: 0 0.5rem 3rem 0.5rem;
+    border-bottom: 1px solid black;
+}
+
+.mainCollection {
+    border: 1px solid black;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding-bottom: 3.5rem;
+}
+
+.collectionMain {
+    height: 50%;
+    width: fit-content;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collectionTopic {
+    font-size: 3rem;
+    font-family: serif;
+    text-transform: capitalize;
+}
+
+.collectionLink {
+    color: black;
+    text-decoration: none;
+}
+
+#latestSection {
+    padding: 0 0.5rem 5rem 0.5rem;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+#navLatest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    border-bottom: 1px solid gray;
+    margin-bottom: 3rem;
+}
+
+.latestItem {
+    list-style: none;
+    padding-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid black;
+    color: black;
 }
