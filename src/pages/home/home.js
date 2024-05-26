@@ -3,7 +3,10 @@ import FrontText from "./frontText";
 import ProductTemplate from "./productTemplate";
 import { productDetails } from "./products";
 import CollectionTemplate from "./collectionTemplate";
-import { collections } from "./collections";
+import PageArticle from "./article";
+import DisplayPage from "./display";
+import videoPoster from "./productImages/style.jpg";
+import ServiceTemplate from "./service";
 
 const Home = () => {
 
@@ -42,9 +45,7 @@ const Home = () => {
       </section>
 
       <section id="collectionSection">
-        {collections.map((details) => {
-          return <CollectionTemplate key={details.id} {...details}></CollectionTemplate>
-        })}
+        <CollectionTemplate></CollectionTemplate>
       </section>
 
       <section id="latestSection">
@@ -61,6 +62,23 @@ const Home = () => {
         <button id="latestButton" className="viewButton">
           <p id="latestButtonText" className="paragraphStyles">VIEW ALL</p>
         </button>
+      </section>
+
+      <PageArticle></PageArticle>
+
+      <section id="displaySection">
+        <DisplayPage></DisplayPage>
+      </section>
+
+      <div id="videoDiv">
+        <video id="videoMain" poster={videoPoster}></video>
+        <aside id="videoAside">
+          {true ? <i className="fa-solid fa-chevron-right" id="videoPlayer"></i> : <p id="videoPlay" className="paragraphStyles">PLAY VIDEO</p>}
+        </aside>
+      </div>
+
+      <section id="serviceSection">
+        <ServiceTemplate></ServiceTemplate>
       </section>
     </main>
   );
