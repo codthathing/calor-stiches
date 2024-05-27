@@ -7,6 +7,7 @@ import PageArticle from "./article";
 import DisplayPage from "./display";
 import videoPoster from "./productImages/style.jpg";
 import ServiceTemplate from "./service";
+import PostTemplate from "./post";
 
 const Home = () => {
 
@@ -71,7 +72,7 @@ const Home = () => {
       </section>
 
       <div id="videoDiv">
-        <video id="videoMain" poster={videoPoster}></video>
+        <video id="videoMain" poster={videoPoster} alt="products_adverts"></video>
         <aside id="videoAside">
           {true ? <i className="fa-solid fa-chevron-right" id="videoPlayer"></i> : <p id="videoPlay" className="paragraphStyles">PLAY VIDEO</p>}
         </aside>
@@ -79,6 +80,16 @@ const Home = () => {
 
       <section id="serviceSection">
         <ServiceTemplate></ServiceTemplate>
+      </section>
+
+      <section id="postSection">
+        <div id="postHeadDiv">
+          <p id="postParagraph" className="paragraphStyles">FROM THE BLOGS</p>
+          <p id="postHead">Check Out Our Latest Posts</p>
+        </div>
+        <main id="mainPost">
+          <PostTemplate></PostTemplate>
+        </main>
       </section>
     </main>
   );

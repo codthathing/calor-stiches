@@ -343,6 +343,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 3.5rem 0;
+    border-bottom: 1px solid black;
 }
 
 .serviceDiv {
@@ -363,4 +364,50 @@
 .serviceParagraph {
     font-size: 1.25rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#postSection {
+    border-bottom: 1px solid black;
+}
+
+#postHeadDiv {
+    text-align: center;
+    padding: 2.5rem 4rem 3.5rem 4rem;
+}
+
+#postHead {
+    font-size: 3rem;
+    margin-top: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mainPostDiv {
+    padding: 0 1rem 3.5rem 1rem;
+}
+
+.postImage {
+    height: 40rem;
+    width: 100%;
+}
+
+.postDate {
+    margin: 1rem 0;
+}
+
+.postHead {
+    font-size: 2.75rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+.postParagraph {
+    margin: 1.25rem 0;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.postRead {
+    display: block;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
