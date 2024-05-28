@@ -8,6 +8,11 @@ import DisplayPage from "./display";
 import videoPoster from "./productImages/style.jpg";
 import ServiceTemplate from "./service";
 import PostTemplate from "./post";
+import facebook from "./handleIcons/facebook_black.png";
+import instagram from "./handleIcons/instagram_white.jpg";
+import tiktok from "./handleIcons/tiktok_black.png";
+import twitter from "./handleIcons/twi_white.png";
+
 
 const Home = () => {
 
@@ -90,6 +95,34 @@ const Home = () => {
         <main id="mainPost">
           <PostTemplate></PostTemplate>
         </main>
+      </section>
+
+      <section id="newsSection">
+        <div id="contactDiv">
+          <main className="contactMain">
+            <h1 className="contactHead">Contact Us</h1>
+            <p className="contactParagraph">Email: akinwumiboluwatife1975@gmail.com</p>
+            <p className="contactParagraph">Phone: 09043445618</p>
+          </main>
+          <main className="contactMain">
+            <h1 className="contactHead">Our store</h1>
+            <p className="contactParagraph">36 Imam Olorunimbe, Lagos State Nigeria</p>
+          </main>
+        </div>
+        <div id="subscribeDiv">
+          <h1 id="subscribeHead">Subscribe To Our Newsletter</h1>
+          <form id="subscribeForm">
+            <input type="text" id="subscribeInput" title="Please fill out this field" placeholder="Your Email Address"/>
+            <button type="submit" id="subscribeButton">SUBSCRIBE</button> 
+          </form>
+          <p id="subscribeParagraph">By subscribing, you accept the Privacy Policy</p>
+          <aside id="newsAside">
+            <img src={facebook} alt="facebook_handle" className="newsHandle"/>
+            <img src={instagram} alt="instagram_handle" className="newsHandle"/>
+            <img src={tiktok} alt="tiktok_handle" className="newsHandle"/>
+            <img src={twitter} alt="twitter_handle" className="newsHandle"/>
+          </aside>
+        </div>
       </section>
     </main>
   );
