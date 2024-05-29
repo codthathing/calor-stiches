@@ -31,7 +31,7 @@ const DisplayPage = () => {
               <img src={displayImage} alt="display_image" className="displayImage" />
             </div>
             <main className="mainDisplay">
-              <p className="paragraphStyles">{displayTopic}</p>
+              <p className="paragraphStyles displayTopic">{displayTopic}</p>
               <h1 className="displayHead">{displayHead}</h1>
               <p className="displayParagraph">{displayParagraph}</p>
               <button className="displayButton">{displayButton}</button>

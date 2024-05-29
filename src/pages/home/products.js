@@ -13,7 +13,7 @@ export const productDetails = [
     productName: "dust lightweight jacket",
     productPrice: "85.00",
     productAvailable: "50% OFF",
-    productAvailableColor: "red",
+    productAvailableColor: "#FF421D",
     cutOff: true,
     originalPrice: "170.00"
   },
@@ -23,7 +23,7 @@ export const productDetails = [
     productName: "karatima outwear",
     productPrice: "85.00",
     productAvailable: "SOLD OUT",
-    productAvailableColor: "#a80000" 
+    productAvailableColor: "#C2272D" 
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ export const productDetails = [
     productName: "white dressed pants",
     productPrice: "85.00",
     productAvailable: "NEW IN",
-    productAvailableColor: "green"
+    productAvailableColor: "#00A849"
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const productDetails = [
     productName: "lime punch outerwear",
     productPrice: "109.00   -   $129.00",
     productAvailable: "BACK IN STORE",
-    productAvailableColor: "brown"
+    productAvailableColor: "#AECA2E"
   },
   {
     id: 5,
@@ -52,5 +52,13 @@ export const productDetails = [
     productAvailableColor: "red",
     cutOff: true,
     originalPrice: "170.00"
+  },
+  {
+    id: 6,
+    productImage: productOne,
+    productName: "cocoon davni dress",
+    productPrice: "85.00",
+    productAvailable: "HOT",
+    productAvailableColor: "#FF421D"
   }
 ] 

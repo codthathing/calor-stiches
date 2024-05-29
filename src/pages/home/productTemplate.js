@@ -11,7 +11,7 @@ const ProductTemplate = ({ productAvailable, productAvailableColor, doubleProduc
         </div>
         <div className="optionBtnsDiv">
           <i className="fa-regular fa-heart optionIcon"></i>
-          <p className="paragraphStyles">SELECT OPTIONS</p>
+          <p className="paragraphStyles selectOption">SELECT OPTIONS</p>
           <i class="fa-regular fa-eye optionIcon"></i>
         </div>
       </section>
@@ -19,7 +19,7 @@ const ProductTemplate = ({ productAvailable, productAvailableColor, doubleProduc
         <p className="productName">{productName}</p>
         <div className="priceDiv">
           {cutOff && <span className="productPrice originalPrice">${originalPrice}</span>}
-          <span className="productPrice" style={{ color: cutOff ? "red" : "black" }}>${productPrice}</span>
+          <span className="productPrice" style={{ color: cutOff ? "#FF0000" : "#222222" }}>${productPrice}</span>
         </div>
       </section>
     </div>
