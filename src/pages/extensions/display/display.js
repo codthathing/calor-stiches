@@ -1,12 +1,13 @@
 import React from "react";
-import imageDisplayed from "./productImages/style.jpg";
+import display_one from "./displayImages/design_twentytwo.jpeg";
+import display_two from "./displayImages/design_twentyfour.jpeg";
 
 const DisplayPage = () => {
 
   const multipleDisplay = [
     {
       id: 0,
-      displayImage: imageDisplayed,
+      displayImage: display_one,
       displayTopic: "DEFINING NEW FASHION",
       displayHead: "Fashionable, True Elegant& Looks So Good!",
       displayParagraph: "Our products use finest materials and stunning design to create something special. Transformative colours, bold textiles and unique prints, natural fibres with high our quality craftsmanship design remains at forefront. We believe in creating unique products, so we use finest materials and stunning design to create special items.",
@@ -14,7 +15,7 @@ const DisplayPage = () => {
     },
     {
       id: 1,
-      displayImage: imageDisplayed,
+      displayImage: display_two,
       displayTopic: "EXPLORE OUR COLLECTIONS",
       displayHead: "Innovative, An Unobtrusive & Honest Beauty!",
       displayParagraph: "Our values are upheld within high quality tailoring, fabric insight and innovative design alongside the desire for innovative and the natural beauty with versatility and top of mind allowing the investment pieces. Our production lines are intentionally small with a focus on natural fabrications and unique seasonless design.",

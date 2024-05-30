@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "../src/style.css";
-import Main from "./pages/main/pages";
+import Home from "./pages/home";
 
 
 const Default = () => {
 
   return (
     <>
-      <Main></Main>
+      <Home></Home>
     </>
   );
 }

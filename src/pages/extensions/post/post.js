@@ -1,26 +1,28 @@
 import React from "react";
-import imagePost from "./productImages/style.jpg"
+import post_one from "./postImages/design_twentyone.jpeg";
+import post_two from "./postImages/design_twentythree.jpeg";
+import post_three from "./postImages/design_twentyfive.jpeg";
 
 const PostTemplate = () => {
 
   const posts = [
     {
       id: 0,
-      postImage: imagePost,
+      postImage: post_one,
       postDate: "OCTOBER 24, 2023 | FASHION, LIFESTYLE",
       postHead: "The Perfect Guide To Pick Your Perfect Duffle 2024!",
       postParagraph: "Summer is here, the season of road trips, redeyes, and getaways is upon us. Add in regularly like your Tuesday cycling class and a duffle..."
     },
     {
       id: 2,
-      postImage: imagePost,
+      postImage: post_two,
       postDate: "OCTOBER 24, 2023 | DENIUM, INDUSTRY",
       postHead: "Products With Purpose: What is clean denim...",
       postParagraph: "We’ve come up with a few tips, in the form of a practical care guide, to increase your products’ lifespan while keeping things like energy..."
     },
     {
       id: 3,
-      postImage: imagePost,
+      postImage: post_three,
       postDate: "OCTOBER 24, 2023 | GOLD, STYLE",
       postHead: "Gold Seal of Sustainability: GOTS, Finally Explained!",
       postParagraph: "One of the reasons why sustainable brands tend to have higher prices than what’s considered the average it’s because the product’s price reflects its..."

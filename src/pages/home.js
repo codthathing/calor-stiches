@@ -1,27 +1,28 @@
-import React from "react";
-import FrontText from "./frontText";
-import ProductTemplate from "./productTemplate";
-import { productDetails } from "./products";
-import CollectionTemplate from "./collectionTemplate";
-import PageArticle from "./article";
-import DisplayPage from "./display";
-import videoPoster from "./productImages/style.jpg";
-import ServiceTemplate from "./service";
-import PostTemplate from "./post";
-import facebook from "./handleIcons/iconmonstr-facebook-4-240.png";
-import instagram from "./handleIcons/iconmonstr-instagram-11-240.png";
-import tiktok from "./handleIcons/tiktok_black.png";
-import twitter from "./handleIcons/iconmonstr-twitter-4-240.png";
-import ContactTemplate from "./contact";
-import visa from "./paymentIcons/Visa-Card.webp";
-import master_card from "./paymentIcons/Master-Card.webp";
-import american_express from "./paymentIcons/American-Express.webp";
-import dinner_club from "./paymentIcons/Dinner-Club.webp";
-import discover from "./paymentIcons/Discover.webp";
-import LinkMainTemplate from "./linktest";
+import React, { useState } from "react";
+import FrontText from "./extensions/frontText";
+import ProductTemplate from "./extensions/productTemplate";
+import { productDetails } from "./extensions/products/products";
+import CollectionTemplate from "./extensions/collection/collectionTemplate";
+import PageArticle from "./extensions/article";
+import DisplayPage from "./extensions/display/display";
+import videoPoster from "./youtube_poster/video_poster.jpeg";
+import ServiceTemplate from "./extensions/service";
+import PostTemplate from "./extensions/post/post";
+import { hotitems } from "./extensions/hotItems/hotitems";
+import { newarrivals } from "./extensions/newArrivals/newarrivals";
+import { onsales } from "./extensions/onSale/onsale";
+import Handle from "./extensions/handleIcons/handle";
+import ContactTemplate from "./extensions/contact";
+import Payment from "./extensions/paymentIcons/payment";
+import LinkMainTemplate from "./extensions/linktest";
 
 
 const Home = () => {
+
+  const [latestItems, setLatestItems] = useState(hotitems)
+  const changeLatestItem = (newitem) => {
+    setLatestItems(newitem)
+  }
 
   return (
     <main>
@@ -73,12 +74,12 @@ const Home = () => {
 
       <section id="latestSection">
         <ul id="navLatest">
-          <li className="latestItem">HOT ITEMS</li>
-          <li className="latestItem">NEW ARRIVALS</li>
-          <li className="latestItem">ON SALE</li>
+          <li className="latestItem" onMouseOver={() => changeLatestItem(hotitems)}>HOT ITEMS</li>
+          <li className="latestItem" onMouseOver={() => changeLatestItem(newarrivals)}>NEW ARRIVALS</li>
+          <li className="latestItem" onMouseOver={() => changeLatestItem(onsales)} style={{ color: '#FF421D', borderBottomColor: '#FF421D' }}>ON SALE</li>
         </ul>
         <section id="latestSections">
-          {productDetails.map((details) => {
+          {latestItems.map((details) => {
             return <ProductTemplate key={details.id} {...details}></ProductTemplate>
           })}
         </section>
@@ -96,7 +97,7 @@ const Home = () => {
       <div id="videoDiv">
         <video id="videoMain" poster={videoPoster} alt="products_adverts"></video>
         <aside id="videoAside">
-          {true ? <i className="fa-solid fa-chevron-right" id="videoPlayer"></i> : <p id="videoPlay" className="paragraphStyles">PLAY VIDEO</p>}
+          {false ? <i className="fa-solid fa-chevron-right" id="videoPlayer"></i> : <p id="videoPlay" className="paragraphStyles">PLAY VIDEO</p>}
         </aside>
       </div>
 
@@ -126,10 +127,7 @@ const Home = () => {
           </form>
           <p id="subscribeParagraph">By subscribing, you accept the Privacy Policy</p>
           <aside id="newsAside">
-            <img src={facebook} alt="facebook_handle" className="newsHandle" />
-            <img src={instagram} alt="instagram_handle" className="newsHandle" />
-            <img src={tiktok} alt="tiktok_handle" className="newsHandle" />
-            <img src={twitter} alt="twitter_handle" className="newsHandle" />
+            <Handle></Handle>
           </aside>
         </div>
       </section>
@@ -141,11 +139,7 @@ const Home = () => {
             <p id="storeParagraph">Our values in Chani are upheld within high quality tailoring, fabric insight and innovative design alongside the desire for innovative and the natural beauty with versatility and top of mind allowing for the investment pieces.</p>
           </article>
           <aside id="payAside">
-            <img src={visa} className="payImage" />
-            <img src={master_card} className="payImage" />
-            <img src={american_express} className="payImage" />
-            <img src={dinner_club} className="payImage" />
-            <img src={discover} className="payImage" />
+            <Payment></Payment>
           </aside>
           <div id="linksDiv">
             <LinkMainTemplate></LinkMainTemplate>
