@@ -29,5 +29,15 @@ export const hotitems = [
     productPrice: "109.00   -   $129.00",
     productAvailable: "BACK IN STORE",
     productAvailableColor: "#AECA2E"
+  },
+  {
+    id: 3,
+    productImage: hotitem_one,
+    productName: "dust lightweight jacket",
+    productPrice: "85.00",
+    productAvailable: "50% OFF",
+    productAvailableColor: "#FF421D",
+    cutOff: true,
+    originalPrice: "170.00"
   }
 ] 

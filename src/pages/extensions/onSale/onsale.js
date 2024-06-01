@@ -30,5 +30,17 @@ export const onsales = [
     productPrice: "85.00",
     productAvailable: "HOT",
     productAvailableColor: "#FF421D"
+  },
+  {
+    id: 3,
+    productImage: onsale_one,
+    productName: "dust lightweight jacket",
+    productPrice: "85.00",
+    doubleProductAvail: "NEW IN",
+    doubleAvailColor: "green",
+    productAvailable: "50% OFF",
+    productAvailableColor: "red",
+    cutOff: true,
+    originalPrice: "170.00"
   }
 ]

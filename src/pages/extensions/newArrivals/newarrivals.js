@@ -26,5 +26,11 @@ export const newarrivals = [
     productPrice: "85.00",
     productAvailable: "SOLD OUT",
     productAvailableColor: "#C2272D" 
+  },
+  {
+    id: 3,
+    productImage: newarrival_one,
+    productName: "sunflower jumpsuit",
+    productPrice: "85.00"
   }
 ]

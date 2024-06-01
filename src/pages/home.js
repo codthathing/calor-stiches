@@ -15,6 +15,7 @@ import Handle from "./extensions/handleIcons/handle";
 import ContactTemplate from "./extensions/contact";
 import Payment from "./extensions/paymentIcons/payment";
 import LinkMainTemplate from "./extensions/linktest";
+import Sidemenu from "./extensions/sidemenu/sidemenu";
 
 
 const Home = () => {
@@ -29,24 +30,33 @@ const Home = () => {
       <section id="frontPage">
         <header id="header">
           <div id="curLangHead">
-            <main className="curLangMain">
-              <p className="curLangText">(USD $)</p>
-              <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>
-            </main>
-            <main className="curLangMain">
-              <p className="curLangText">English</p>
-              <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>
-            </main>
+            <p id="curLangOuterText">Delivery time 2-3 working days</p>
+            <div id="curLangInnerDiv">
+              <p id="curLangInerText"></p>
+              <main className="curLangMain">
+                <p className="curLangText">(USD $)</p>
+                <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>
+              </main>
+              <main className="curLangMain">
+                <p className="curLangText">English</p>
+                <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>
+              </main>
+            </div>
           </div>
-          <nav id="logoIcon">
-            <h1 id="logo">Calor Stiches</h1>
-            <ul id="navIcons">
-              <li className="icons"><i className="fa-regular fa-user iconTag"></i></li>
-              <li className="icons"><i className="fa-solid fa-magnifying-glass iconTag"></i></li>
-              <li className="icons"><i className="fa-regular fa-heart iconTag"></i></li>
-              <li className="icons"><i class="fa-solid fa-bag-shopping iconTag"></i></li>
-              <li className="icons"><i className="fa-solid fa-bars iconTag"></i></li>
-            </ul>
+          <nav id="headerNav">
+            <aside id="sideMenuAside">
+              <Sidemenu></Sidemenu>
+            </aside>
+            <div id="logoIcon">
+              <h1 id="logo">Calor Stiches</h1>
+              <ul id="navIcons">
+                <li className="icons"><i className="fa-regular fa-user iconTag"></i></li>
+                <li className="icons"><i className="fa-solid fa-magnifying-glass iconTag"></i></li>
+                <li className="icons"><i className="fa-regular fa-heart iconTag"></i></li>
+                <li className="icons"><i class="fa-solid fa-bag-shopping iconTag"></i></li>
+                <li className="icons"><i className="fa-solid fa-bars iconTag"></i></li>
+              </ul>
+            </div>
           </nav>
         </header>
 
@@ -159,7 +169,7 @@ const Home = () => {
           <p id="copyText">©2024 Pheezy, All Rights Reserved. With Love by CalorStiches</p>
         </section>
       </footer>
-    </main>
+    </main >
   );
 }
 
