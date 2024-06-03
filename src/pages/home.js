@@ -125,7 +125,7 @@ const Home = () => {
         </main>
       </section>
 
-      <section id="newsSection">
+      <section id="newsSection"> 
         <div id="contactDiv">
           <ContactTemplate></ContactTemplate>
         </div>

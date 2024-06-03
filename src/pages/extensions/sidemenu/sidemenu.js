@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Sidemenu = () => {
 
   const [currentSideMenu, setCurrentSideMenu] = useState([
-    { id: 0, menuText: "home", borderStyle: { borderBottom: "2px solid black" } },
+    { id: 0, menuText: "home", borderStyle: { borderBottom: "3px solid black" } },
     { id: 1, menuText: "shop", borderStyle: { borderBottom: "" } },
     { id: 2, menuText: "products", borderStyle: { borderBottom: "" } },
     { id: 3, menuText: "pages", borderStyle: { borderBottom: "" } },
@@ -13,7 +13,7 @@ const Sidemenu = () => {
 
   const changeBorderStyle = (id) => {
     let presentMenu = currentSideMenu.filter(x => x.id == id)
-    presentMenu.borderStyle = { borderBottom: "2px solid black" }
+    presentMenu.borderStyle = { borderBottom: "3px solid black" }
     setCurrentSideMenu([...currentSideMenu, presentMenu])
     console.log(currentSideMenu)
     // currentSideMenu.filter(x => x.id == id).map(x => {
