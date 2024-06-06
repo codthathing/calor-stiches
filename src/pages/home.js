@@ -32,7 +32,7 @@ const Home = () => {
           <div id="curLangHead">
             <p id="curLangOuterText">Delivery time 2-3 working days</p>
             <div id="curLangInnerDiv">
-              <p id="curLangInerText"></p>
+              <p id="curLangInerText">United States(USD $)</p>
               <main className="curLangMain">
                 <p className="curLangText">(USD $)</p>
                 <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>
