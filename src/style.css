@@ -528,8 +528,7 @@
 
 
 
-
-@media all and (max-width: 1023px) {
+@media all and (min-width: 0px) {
     .curLangMain {
         gap: 0.75rem;
     }
@@ -567,12 +566,19 @@
         font-size: var(--15px);
     }
 
-    #displayText {
-        margin: 13vh auto auto auto;
-    }
-
     #disDiv {
         gap: 0.75rem;
+    }
+}
+
+
+
+
+
+@media all and (max-width: 1023px) {
+
+    #displayText {
+        margin: 13vh auto auto auto;
     }
 
     .availDiv {
@@ -702,7 +708,7 @@
     }
             
     .sideMenuText {
-        font-size: var(--17px);
+        font-size: var(--15px);
     }
     
     .sideMenuIcon {
@@ -719,6 +725,10 @@
 
     #navIcons {
         gap: 0 1rem;
+    }
+
+    #loginText {
+        display: none;
     }
 
     .iconTag {
@@ -874,7 +884,7 @@
 
     .displayButton {
         padding: 1.6rem 1.5rem;
-        font-size: var(--17px);
+        font-size: var(--15px);
     }
 
     #videoDiv {
@@ -1055,9 +1065,11 @@
         --40px: 2.5rem;
         --28px: 1.75rem;
         --13px: 0.8125rem;
+        --12px: 0.75rem;
         --15px: 0.9375rem;
         --44px: 2.75rem;
         --65px: 4.0625rem;
+        --30px: 1.875rem;
         --border_size: 1px;
     }
 
@@ -1069,10 +1081,6 @@
         padding: 1.1rem 1.75rem
     }
 
-    #curLangOuterText {
-        font-size: var(--17px);
-    }
-
     #curLangInnerDiv {
         gap: 0 2.5rem;
     }
@@ -1081,29 +1089,12 @@
         display: none !important;
     }
 
-    .curLangText {
-        font-size: var(--17px);
-    }
-
-    .curLangIcon {
-        font-size: var(--13px);
-    }
-
     #sidemenuList {
-        gap: 0.75rem 0;
         padding: 2.5rem 1.75rem;
     }
     
     .sideMenuItem:hover {
         border-bottom: 3px solid black;
-    }
-    
-    .presentMenu {
-        border-bottom: 3px solid black;
-    }
-            
-    .sideMenuText {
-        font-size: var(--22px);
     }
     
     .sideMenuIcon {
@@ -1114,34 +1105,21 @@
         padding: 2rem 1.75rem;
     }
 
-    #logo {
-        font-size: var(--44px);
-    }
-
     #navIcons {
-        gap: 0 2.5rem;
+        gap: 0 2rem;
     }
 
-    .iconTag {
-        font-size: var(--35px);
-    }
-
-    .paragraphStyles {
-        font-size: var(--17px);
+    #loginText {
+        margin-right: -2.5rem;
     }
 
     #disHead {
-        font-size: var(--60px);
         margin: 1.5rem 0;
     }
 
     #shopBtn {
         padding: 2rem 3.75rem;
         margin-bottom: 4.5rem;
-    }
-
-    .disShowing {
-        font-size: var(--17px);
     }
 
     #productSection {
@@ -1154,7 +1132,6 @@
 
     #productHead {
         margin-top: 1.25rem;
-        font-size: var(--40px);
     }
 
     #mainProduct {
@@ -1172,7 +1149,6 @@
     }
 
     .productAvail {
-        font-size: var(--15px);
         padding: 0.35rem 0.5rem;
     }
 
@@ -1198,15 +1174,10 @@
 
     .productName {
         margin-bottom: 1rem;
-        font-size: var(--28px);
     }
 
     .priceDiv {
         gap: 0 1.5rem;
-    }
-
-    .productPrice {
-        font-size: var(--22px);
     }
 
     .viewButton {
@@ -1243,7 +1214,7 @@
     }
 
     .collectionLink {
-        font-size: var(--17px);
+        font-size: var(--15px);
     }
 
     #latestSection {
@@ -1256,7 +1227,7 @@
 
     .latestItem {
         padding-bottom: 1rem;
-        font-size: var(--22px);
+        font-size: var(--17px);
     }
 
     #latestSections {
@@ -1270,11 +1241,11 @@
     }
 
     #articleText {
-        font-size: var(--44px);
+        font-size: var(--36px);
     }
 
     #articleAuthor {
-        font-size: var(--22px);
+        font-size: var(--15px);
     }
 
     .imageDiv {
@@ -1290,7 +1261,7 @@
     }
 
     .displayTopic {
-        font-size: var(--22px);
+        font-size: var(--15px);
     }
 
     .displayHead {
@@ -1299,13 +1270,13 @@
     }
 
     .displayParagraph {
-        font-size: var(--22px);
+        font-size: var(--17px);
         margin-bottom: 2.5rem;
     }
 
     .displayButton {
         padding: 2rem 3.5rem;
-        font-size: var(--22px);
+        font-size: var(--15px);
     }
 
     #videoDiv {
@@ -1326,7 +1297,7 @@
     }
 
     #videoPlay {
-        font-size: var(--17px);
+        font-size: var(--15px);
     }
 
     #serviceSection {
@@ -1336,11 +1307,11 @@
     }
 
     .serviceHead {
-        font-size: var(--28px);
+        font-size: var(--22px);
     }
 
     .serviceParagraph {
-        font-size: var(--22px);
+        font-size: var(--15px);
     }
 
     #postHeadDiv {
@@ -1377,19 +1348,19 @@
 
     .postDate {
         margin: 1.75rem 0 0.75rem 0;
-        font-size: var(--17px);
+        font-size: var(--15px);
     }
 
     .postHead {
-        font-size: var(--35px);
+        font-size: var(--30px);
     }
 
     .postParagraph {
-        font-size: var(--22px);
+        font-size: var(--17px);
     }
 
     .postRead {
-        font-size: var(--17px);
+        font-size: var(--15px);
     }
 
     #newsSection {
@@ -1403,11 +1374,11 @@
     }
 
     .contactHead {
-        font-size: var(--28px);
+        font-size: var(--22px);
     }
 
     .contactParagraph {
-        font-size: var(--22px);
+        font-size: var(--15px);
     }
 
     #subscribeDiv {
@@ -1425,15 +1396,15 @@
     }
 
     #subscribeInput {
-        font-size: var(--17px);
+        font-size: var(--15px);
     }
 
     #subscribeButton {
-        font-size: var(--17px);
+        font-size: var(--15px);
     }
 
     #subscribeParagraph {
-        font-size: var(--15px);
+        font-size: var(--14px);
     }
 
     .newsHandle {
@@ -1446,12 +1417,12 @@
     }
 
     #storeHead {
-        font-size: var(--28px);
+        font-size: var(--22px);
         margin-bottom: 2rem;
     }
 
     #storeParagraph {
-        font-size: var(--22px);
+        font-size: var(--17px);
     }
 
     #payAside {
@@ -1463,11 +1434,11 @@
     }
 
     .linkHead {
-        font-size: var(--28px);
+        font-size: var(--22px);
     }
 
     .linkText {
-        font-size: var(--17px);
+        font-size: var(--15px);
     }
 
     #lastPage {
@@ -1482,6 +1453,148 @@
     }
 
     #copyText {
+        font-size: var(--15px);
+    }
+}
+
+
+
+
+
+@media all and (min-width: 1024px) {
+
+    .availDiv {
+        margin: 0.75rem 0 0 0.75rem;
+    }
+
+    #navLatest {
+        margin-bottom: 3rem;
+    }
+
+    #pageArticle {
+        padding: 7.5rem 0.75rem;
+    }
+
+    #articleText {
+        margin-bottom: 2rem;
+    }
+
+    .serviceIcon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .serviceHead {
+        margin: 0.75rem 0;
+    }
+
+    .postParagraph {
+        margin: 1.25rem 0;
+    }
+
+    #subscribeInput {
+        padding: 1.5rem;
+    }
+
+    #subscribeButton {
+        padding: 1.5rem 1.25rem;
+    }
+
+    #subscribeParagraph {
+        margin-bottom: 3rem;
+    }
+
+    #newsAside {
+        gap: 0 1.5rem;
+    }
+
+    #payAside {
+        gap: 0 0.5rem;
+    }
+
+    .payImage {
+        width: 3.25rem;
+        height: 2rem;
+    }
+
+    .linkHead {
+        margin-bottom: 2rem;
+    }
+
+    .linkNav {
+        gap: 1.5rem 0;
+    }
+}
+
+
+
+
+
+@media all and (min-width: 768px) {
+
+    .curLangIcon {
+        font-size: var(--13px);
+    }
+
+    #sidemenuList {
+        gap: 0.75rem 0;
+    }
+
+    #curLangOuterText {
+        font-size: var(--13px);
+    }
+
+    .curLangText {
+        font-size: var(--13px);
+    }
+            
+    .sideMenuText {
+        font-size: var(--15px);
+    }
+
+    #logo {
+        font-size: var(--44px);
+    }
+
+    #loginText {
+        font-size: var(--17px);
+        font-weight: var(--500);
+        color: white;
+    }
+
+    #userIcon {
+        display: none;
+    } 
+
+    .iconTag {
+        font-size: var(--30px);
+    }
+
+    .paragraphStyles {
+        font-size: var(--15px);
+    }
+
+    #disHead {
+        font-size: var(--60px);
+    }
+
+    .disShowing {
+        font-size: var(--15px);
+    }
+
+    #productHead {
+        font-size: var(--40px);
+    }
+
+    .productAvail {
+        font-size: var(--12px);
+    }
+
+    .productName {
+        font-size: var(--22px);
+    }
+
+    .productPrice {
         font-size: var(--17px);
     }
 }
@@ -1496,8 +1609,10 @@
         --35px: 2.25rem;
         --22px: 1.375rem;
         --17px: 1.0625rem;
+        --30px: 1.875rem;
         --40px: 2.5rem;
         --28px: 1.75rem;
+        --12px: 0.75rem;
         --13px: 0.8125rem;
         --15px: 0.9375rem;
         --44px: 2.75rem;
@@ -1506,156 +1621,121 @@
     }
 
     #frontPage {
-        padding-bottom: 2.25rem;
+        padding-bottom: 2.75rem;
     }
 
     #curLangHead {
-        padding: 1.1rem 1.75rem
-    }
-
-    #curLangOuterText {
-        font-size: var(--17px);
+        padding: 1rem 3rem
     }
 
     #curLangInnerDiv {
-        gap: 0 2.5rem;
+        gap: 0 1.5rem;
     }
 
     #curLangInerText {
-        display: none;
-    }
-
-    .curLangText {
-        font-size: var(--17px);
-    }
-
-    .curLangIcon {
         font-size: var(--13px);
     }
 
     #sidemenuList {
-        gap: 0.75rem 0;
-        padding: 2.5rem 1.75rem;
+        padding: 2rem 3rem;
     }
     
     .sideMenuItem:hover {
-        border-bottom: 3px solid black;
-    }
-    
-    .presentMenu {
-        border-bottom: 3px solid black;
-    }
-            
-    .sideMenuText {
-        font-size: var(--22px);
+        border-bottom: 1px solid black;
     }
     
     .sideMenuIcon {
-        padding: 0.35rem;
+        padding: 0.25rem;
     }
 
     #logoIcon {
-        padding: 2rem 1.75rem;
-    }
-
-    #logo {
-        font-size: var(--44px);
+        padding: 1.75rem 3rem;
     }
 
     #navIcons {
-        gap: 0 2.5rem;
+        gap: 0 2rem;
     }
 
-    .iconTag {
-        font-size: var(--35px);
+    #loginText {
+        margin-right: -2rem;
     }
 
-    .paragraphStyles {
-        font-size: var(--17px);
+    #displayText {
+        width: 50%;
+        margin: 20vh auto auto auto;
     }
 
     #disHead {
-        font-size: var(--60px);
-        margin: 1.5rem 0;
+        margin: 2rem 0;
     }
 
     #shopBtn {
-        padding: 2rem 3.75rem;
-        margin-bottom: 4.5rem;
-    }
-
-    .disShowing {
-        font-size: var(--17px);
+        padding: 1.75rem 3.75rem;
+        margin-bottom: 7.5rem;
     }
 
     #productSection {
-        padding: 3.5rem 0.75rem 5rem 0.75rem;
+        padding: 9rem 0.75rem 5rem 0.75rem;
     }
 
     #productTopicDiv {
-        margin-bottom: 3rem;
+        margin-bottom: 3.5em;
     }
 
     #productHead {
-        margin-top: 1.25rem;
-        font-size: var(--40px);
+        margin-top: 1.5rem;
     }
 
     #mainProduct {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 0 3.5rem;
     }
 
     .orderOptions {
-        height: 37.5rem;
+        height: 30rem;
     }
 
     .availDiv {
-        gap: 0 0.75rem;
+        gap: 0 0.85rem;
     }
 
     .productAvail {
-        font-size: var(--15px);
-        padding: 0.35rem 0.5rem;
+        padding: 0.25rem 0.5rem;
     }
 
     .optionBtnsDiv {
         padding: 1.25rem 0;
+        display: none;
     }
 
     .optionIcon {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .optionIcon:first-child {
-        padding: 1.25rem 2rem;
+        padding: 0.75rem 1.75rem;
     }
 
     .optionIcon:last-child {
-        padding: 1.25rem 2rem;
+        padding: 0.75rem 1.75rem;
     }
 
     .productNamePrice {
-        padding: 2rem 0 3.5rem 0;
+        padding: 2rem 0 3rem 0;
     }
 
     .productName {
-        margin-bottom: 1rem;
-        font-size: var(--28px);
+        margin-bottom: 0.5rem;
     }
 
     .priceDiv {
         gap: 0 1.5rem;
     }
 
-    .productPrice {
-        font-size: var(--22px);
-    }
-
     .viewButton {
-        padding: 2rem 3.5rem;
-        margin-top: 1.25rem;
+        padding: 1.75rem 3.5rem;
+        margin-top: 1rem;
     }
 
     #collectionSection {

@@ -32,7 +32,7 @@ const Home = () => {
           <div id="curLangHead">
             <p id="curLangOuterText">Delivery time 2-3 working days</p>
             <div id="curLangInnerDiv">
-              <p id="curLangInerText">United States(USD $)</p>
+              <p id="curLangInerText">United States (USD $)</p>
               <main className="curLangMain">
                 <p className="curLangText">(USD $)</p>
                 <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>
@@ -50,7 +50,8 @@ const Home = () => {
             <div id="logoIcon">
               <h1 id="logo">Calor Stiches</h1>
               <ul id="navIcons">
-                <li className="icons"><i className="fa-regular fa-user iconTag"></i></li>
+                <li className="icons"><p id="loginText">LOGIN</p></li>
+                <li className="icons"><i id="userIcon" className="fa-regular fa-user iconTag"></i></li>
                 <li className="icons"><i className="fa-solid fa-magnifying-glass iconTag"></i></li>
                 <li className="icons"><i className="fa-regular fa-heart iconTag"></i></li>
                 <li className="icons"><i class="fa-solid fa-bag-shopping iconTag"></i></li>
