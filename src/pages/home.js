@@ -126,10 +126,8 @@ const Home = () => {
         </main>
       </section>
 
-      <section id="newsSection"> 
-        <div id="contactDiv">
-          <ContactTemplate></ContactTemplate>
-        </div>
+      <section id="newsSection">
+        <ContactTemplate></ContactTemplate>
         <div id="subscribeDiv">
           <h1 id="subscribeHead">Subscribe To Our Newsletter</h1>
           <form id="subscribeForm">
@@ -145,19 +143,22 @@ const Home = () => {
 
       <footer id="footer">
         <section id="storeSection">
-          <article id="storeArticle">
-            <h1 id="storeHead">About Our Store</h1>
-            <p id="storeParagraph">Our values in Chani are upheld within high quality tailoring, fabric insight and innovative design alongside the desire for innovative and the natural beauty with versatility and top of mind allowing for the investment pieces.</p>
-          </article>
-          <aside id="payAside">
-            <Payment></Payment>
-          </aside>
+          <div>
+            <article id="storeArticle">
+              <h1 id="storeHead">About Our Store</h1>
+              <p id="storeParagraph">Our values in Chani are upheld within high quality tailoring, fabric insight and innovative design alongside the desire for innovative and the natural beauty with versatility and top of mind allowing for the investment pieces.</p>
+            </article>
+            <aside id="payAside">
+              <Payment></Payment>
+            </aside>
+          </div>
           <div id="linksDiv">
             <LinkMainTemplate></LinkMainTemplate>
           </div>
         </section>
         <section id="lastPage">
           <div id="curencyLangDiv">
+            <p id="currencyLangInerText">United States (USD $)</p>
             <main className="curLangMain">
               <p className="curLangText">(USD $)</p>
               <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>

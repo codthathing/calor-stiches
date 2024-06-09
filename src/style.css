@@ -41,29 +41,52 @@
 .curLangMain {
     display: flex;
     align-items: center;
+    gap: 0.75rem;
 }
 
 .curLangText {
     font-family: var(--Yantramanav);
+    font-size: var(--13px);
 }
 
 #headerNav {
     position: relative;
 }
 
+#sideMenuAside {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+#sidemenuList {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
 .sideMenuItem {
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    transition: all ease-in-out;
+    padding-bottom: 0.75rem;
 }
 
 .sideMenuText {
     text-transform: uppercase;
     font-family: var(--Yantramanav);
+    font-size: var(--15px);
 }
 
 .sideMenuIcon {
     color: white;
+    background-color: black;
+    border-radius: 0.25rem;
 }
 
 #logoIcon {
@@ -122,21 +145,28 @@
     color: #010101;
     border: none;
     outline: none;
+    font-size: var(--15px);
 }
 
 #disDiv {
     display: flex;
     justify-content: center;
+    gap: 0.75rem;
 }
 
 .disShowing {
     border-bottom: var(--border_size) solid white;
     font-family: var(--Yantramanav);
     color: white;
+    font-size: var(--15px);
 }
 
 #productSection {
     text-align: center;
+}
+
+.paragraphStyles {
+    font-size: var(--15px);
 }
 
 #productParagraph {
@@ -160,10 +190,12 @@
     width: fit-content;
     position: absolute;
     display: flex;
+    margin: 0.75rem 0 0 0.75rem;
 }
 
 .productAvail {
     color: white;
+    font-size: var(--12px);
 }
 
 .optionBtnsDiv {
@@ -191,6 +223,7 @@
     text-transform: capitalize;
     font-family: var(--Yantramanav);
     color: var(--1B1A1A);
+    font-size: var(--22px);
 }
 
 .priceDiv {
@@ -207,6 +240,7 @@
 .productPrice {
     white-space: pre;
     font-family: var(--Yantramanav);
+    font-size: var(--17px);
 }
 
 .viewButton {
@@ -247,6 +281,7 @@
     font-family: var(--Yantramanav);
     color: white;
     text-decoration: none;
+    font-size: var(--15px);
 }
 
 #latestSection {
@@ -259,6 +294,7 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #F3F2ED;
+    margin-bottom: 3rem;
 }
 
 .latestItem {
@@ -266,6 +302,7 @@
     font-family: var(--Yantramanav);
     border-bottom: var(--border_size) solid black;
     color: var(--222222);
+    font-size: var(--17px);
 }
 
 #latestButtonText {
@@ -283,12 +320,15 @@
     font-family: var(--Cormorant);
     color: var(--1B1A1A);
     font-weight: var(--500);
+    margin-bottom: 2rem;
+    font-size: var(--36px);
 }
 
 #articleAuthor {
     color: var(--1B1A1A);
     font-style: normal;
     font-family: var(--Yantramanav);
+    font-size: var(--15px);
 }
 
 .imageDiv {
@@ -312,12 +352,14 @@
 .displayParagraph {
     color: var(--282828);
     font-family: var(--Yantramanav);
+    font-size: var(--17px);
 }
 
 .displayButton {
     border: none;
     background-color: var(--222222);
     font-family: var(--Yantramanav);
+    font-size: var(--15px);
     color: white;
 }
 
@@ -349,6 +391,7 @@
 #videoPlay {
     color: white;
     font-family: var(--Yantramanav);
+    font-size: var(--17px);
 }
 
 #serviceSection {
@@ -364,11 +407,13 @@
     color: var(--1B1A1A);
     font-family: var(--Yantramanav);
     font-weight: var(--500);
+    font-size: var(--22px);
 }
 
 .serviceParagraph {
     color: var(--282828);
     font-family: var(--Yantramanav);
+    font-size: var(--15px);
 }
 
 #postSection {
@@ -395,26 +440,30 @@
 
 .postDate {
     color: var(--222222);
+    font-size: var(--15px);
 }
 
 .postHead {
     font-family: var(--Cormorant);
     color: var(--222222);
     font-weight: var(--500);
+    font-size: var(--30px);
 }
 
 .postParagraph {
     font-family: var(--Yantramanav);
     color: var(--282828);
+    font-size: var(--17px);
 }
 
 .postRead {
     display: block;
     color: var(--222222);
     font-family: var(--Yantramanav);
+    font-size: var(--15px);
 }
 
-#contactDiv {
+#newsSection {
     display: grid;
 }
 
@@ -426,11 +475,19 @@
     font-family: var(--Yantramanav);
     color: var(--1B1A1A);
     font-weight: var(--500);
+    font-size: var(--22px);
+}
+
+.contactHead {
+}
+
+.contactParagraph {
 }
 
 .contactParagraph {
     font-family: var(--Yantramanav);
     color: var(--222222);
+    font-size: var(--15px);
 }
 
 #subscribeDiv {
@@ -452,6 +509,8 @@
     border: none;
     color: var(--222222);
     font-family: var(--Yantramanav);
+    font-size: var(--15px);
+    padding: 1.5rem;
 }
 
 #subscribeButton {
@@ -459,17 +518,22 @@
     border: none;
     background-color: var(--222222);
     color: white;
+    font-size: var(--15px);
+    padding: 1.5rem 1.25rem;
 }
 
 #subscribeParagraph {
     font-family: var(--Yantramanav);
     color: var(--616161);
+    font-size: var(--14px);
+    margin-bottom: 3rem;
 }
 
 #newsAside {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0 1.5rem;
 }
 
 #footer {
@@ -484,10 +548,12 @@
 #storeHead {
     font-family: var(--Cormorant);
     font-weight: var(--500);
+    font-size: var(--22px);
 }
 
 #storeParagraph {
     font-family: var(--Yantramanav);
+    font-size: var(--17px);
 }
 
 #payAside {
@@ -502,6 +568,7 @@
 .linkHead {
     font-family: var(--Cormorant);
     font-weight: var(--500);
+    font-size: var(--22px);
 }
 
 .linkNav {
@@ -514,6 +581,7 @@
     color: white;
     text-decoration: none;
     font-family: var(--Yantramanav);
+    font-size: var(--15px);
 }
 
 #curencyLangDiv {
@@ -521,55 +589,15 @@
     align-items: center;
 }
 
-#copyText {
+#currencyLangInerText {
     font-family: var(--Yantramanav);
 }
 
-
-
-/* Styling for mobile, tab and desktop */
-@media all and (min-width: 0px) {
-    .curLangMain {
-        gap: 0.75rem;
-    }
-
-    #sideMenuAside {
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        z-index: 100;
-        display: none;
-    }    
-
-    #sidemenuList {
-        background-color: white;
-        color: black;
-        display: flex;
-        flex-direction: column;
-    }
-            
-    .sideMenuItem {
-        padding-bottom: 0.75rem;
-    }
-    
-    .sideMenuItem {
-        justify-content: space-between;
-        transition: all ease-in-out;
-    }
-    
-    .sideMenuIcon {
-        background-color: black;
-        border-radius: 0.25rem;
-    }
-
-    #shopBtn {
-        font-size: var(--15px);
-    }
-
-    #disDiv {
-        gap: 0.75rem;
-    }
+#copyText {
+    font-family: var(--Yantramanav);
+    font-size: var(--15px);
 }
+
 
 
 
@@ -579,14 +607,6 @@
 
     #displayText {
         margin: 13vh auto auto auto;
-    }
-
-    .availDiv {
-        margin: 0.75rem 0 0 0.75rem;
-    }
-
-    #navLatest {
-        margin-bottom: 3rem;
     }
 
     #pageArticle {
@@ -608,18 +628,6 @@
 
     .postParagraph {
         margin: 1.25rem 0;
-    }
-
-    #subscribeInput {
-        padding: 1.5rem;
-    }
-
-    #subscribeButton {
-        padding: 1.5rem 1.25rem;
-    }
-
-    #subscribeParagraph {
-        margin-bottom: 3rem;
     }
 
     #newsAside {
@@ -647,6 +655,7 @@
 
 
 
+
 /* Styling for both tab and desktop */
 @media all and (min-width: 768px) {
 
@@ -662,14 +671,6 @@
         font-size: var(--13px);
     }
 
-    .curLangText {
-        font-size: var(--13px);
-    }
-            
-    .sideMenuText {
-        font-size: var(--15px);
-    }
-
     #logo {
         font-size: var(--44px);
     }
@@ -682,22 +683,14 @@
 
     #userIcon {
         display: none;
-    } 
+    }
 
     .iconTag {
         font-size: var(--30px);
     }
 
-    .paragraphStyles {
-        font-size: var(--15px);
-    }
-
     #disHead {
         font-size: var(--60px);
-    }
-
-    .disShowing {
-        font-size: var(--15px);
     }
 
     #productHead {
@@ -708,18 +701,6 @@
         grid-gap: 0 3.5rem;
     }
 
-    .productAvail {
-        font-size: var(--12px);
-    }
-
-    .productName {
-        font-size: var(--22px);
-    }
-
-    .productPrice {
-        font-size: var(--17px);
-    }
-    
     #collectionSection {
         display: grid;
     }
@@ -732,18 +713,61 @@
         font-size: var(--40px);
     }
 
-    .collectionLink {
-        font-size: var(--15px);
-    }
-
     .latestItem {
         padding-bottom: 1rem;
-        font-size: var(--17px);
     }
 
     #latestSections {
         display: grid;
         grid-gap: 0 3.5rem;
+    }
+
+    .displayTopic {
+        font-size: var(--15px);
+    }
+
+    .displayHead {
+        font-size: var(--65px);
+    }
+
+    .displayButton {
+        padding: 2rem 3.5rem;
+    }
+
+    #videoPlayer {
+        font-size: 4rem;
+    }
+
+    #serviceSection {
+        padding: 5rem 1rem;
+    }
+
+    #mainPost {
+        display: grid;
+    }
+
+    .postImage {
+        height: 37.5rem;
+    }
+
+    #subscribeDiv {
+        border-left: 2px solid #F3F2ED;
+        border-right: 2px solid #F3F2ED;
+    }
+
+    #subscribeForm {
+        grid-template-columns: 70% 30%;
+        margin: 2rem 0;
+    }
+
+    #storeHead {
+        margin-bottom: 2rem;
+    }
+
+    #lastPage {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -789,31 +813,23 @@
         display: none !important;
     }
 
-    .curLangText {
-        font-size: var(--13px);
-    }
-
     .curLangIcon {
         font-size: var(--12px);
     }
-        
+
     #sidemenuList {
         gap: 1rem 0;
         padding: 2rem 1.5rem;
     }
-    
+
     .sideMenuItem:hover {
         border-bottom: 2px solid black;
     }
-    
+
     .presentMenu {
         border-bottom: 2px solid black;
     }
-            
-    .sideMenuText {
-        font-size: var(--15px);
-    }
-    
+
     .sideMenuIcon {
         padding: 0.25rem;
     }
@@ -838,10 +854,6 @@
         font-size: var(--28px);
     }
 
-    .paragraphStyles {
-        font-size: var(--15px);
-    }
-
     #disHead {
         font-size: var(--55px);
         margin: 2.5rem 0;
@@ -850,10 +862,6 @@
     #shopBtn {
         padding: 1.6rem 1.5rem;
         margin-bottom: 1.75rem;
-    }
-
-    .disShowing {
-        font-size: var(--15px);
     }
 
     #productSection {
@@ -878,7 +886,6 @@
     }
 
     .productAvail {
-        font-size: var(--12px);
         padding: 0.25rem;
     }
 
@@ -904,15 +911,10 @@
 
     .productName {
         margin-bottom: 1rem;
-        font-size: var(--22px);
     }
 
     .priceDiv {
         gap: 0 1rem;
-    }
-
-    .productPrice {
-        font-size: var(--17px);
     }
 
     .viewButton {
@@ -934,10 +936,6 @@
         font-size: var(--35px);
     }
 
-    .collectionLink {
-        font-size: var(--15px);
-    }
-
     #latestSection {
         padding: 0 0.5rem 5rem 0.5rem;
     }
@@ -948,19 +946,10 @@
 
     .latestItem {
         padding-bottom: 0.75rem;
-        font-size: var(--17px);
     }
 
     #pageArticle {
         height: 55vh;
-    }
-
-    #articleText {
-        font-size: var(--36px);
-    }
-
-    #articleAuthor {
-        font-size: var(--15px);
     }
 
     .imageDiv {
@@ -981,13 +970,11 @@
     }
 
     .displayParagraph {
-        font-size: var(--17px);
         margin-bottom: 2rem;
     }
 
     .displayButton {
         padding: 1.6rem 1.5rem;
-        font-size: var(--15px);
     }
 
     #videoDiv {
@@ -1007,22 +994,10 @@
         font-size: 4rem;
     }
 
-    #videoPlay {
-        font-size: var(--17px);
-    }
-
     #serviceSection {
         grid-gap: 3.5rem 0;
         padding: 3.5rem 1rem;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-    }
-
-    .serviceHead {
-        font-size: var(--22px);
-    }
-
-    .serviceParagraph {
-        font-size: var(--15px);
     }
 
     #postHeadDiv {
@@ -1046,40 +1021,22 @@
         margin: 1rem 0;
     }
 
-    .postHead {
-        font-size: var(--30px);
-    }
-
-    .postParagraph {
-        font-size: var(--17px);
-    }
-
-    .postRead {
-        font-size: var(--15px);
-    }
-
     #newsSection {
         padding: 4rem 0.5rem;
     }
 
-    #contactDiv {
-        padding: 1rem 1.5rem;
-        grid-gap: 3rem 0;
+    .contactMain:nth-child(1) {
+        margin: 1rem 1.5rem 0 1.5rem;
     }
 
-    .contactHead {
-        font-size: var(--22px);
-    }
-
-    .contactParagraph {
-        font-size: var(--15px);
+    .contactMain:nth-child(2) {
+        margin: 3rem 1.5rem 1.5rem 1.5rem;
     }
 
     #subscribeDiv {
         padding: 0 0.5rem;
-        justify-content: center;
-        grid-template-rows: 1fr 1fr;
-        box-shadow: 1px 0 1px #F3F2ED, -1px 0 1px #F3F2ED;
+        border-left: 1px solid #F3F2ED;
+        border-right: 1px solid #F3F2ED;
     }
 
     #subscribeHead {
@@ -1092,18 +1049,6 @@
         margin: 1.5rem 0;
     }
 
-    #subscribeInput {
-        font-size: var(--15px);
-    }
-
-    #subscribeButton {
-        font-size: var(--15px);
-    }
-
-    #subscribeParagraph {
-        font-size: var(--14px);
-    }
-
     .newsHandle {
         height: 1.5rem;
         width: 1.5rem;
@@ -1114,12 +1059,7 @@
     }
 
     #storeHead {
-        font-size: var(--22px);
         margin-bottom: 2.5rem;
-    }
-
-    #storeParagraph {
-        font-size: var(--17px);
     }
 
     #payAside {
@@ -1129,14 +1069,6 @@
     #linksDiv {
         gap: 2rem 0;
         flex-direction: column;
-    }
-
-    .linkHead {
-        font-size: var(--22px);
-    }
-
-    .linkText {
-        font-size: var(--15px);
     }
 
     #lastPage {
@@ -1150,8 +1082,8 @@
         justify-content: space-between;
     }
 
-    #copyText {
-        font-size: var(--15px);
+    #currencyLangInerText {
+        display: none !important;
     }
 }
 
@@ -1163,6 +1095,7 @@
     :root {
         --60px: 3.75rem;
         --35px: 2.25rem;
+        --36px: 2.25rem;
         --22px: 1.375rem;
         --17px: 1.0625rem;
         --40px: 2.5rem;
@@ -1195,11 +1128,11 @@
     #sidemenuList {
         padding: 2.5rem 1.75rem;
     }
-    
+
     .sideMenuItem:hover {
         border-bottom: 3px solid black;
     }
-    
+
     .sideMenuIcon {
         padding: 0.35rem;
     }
@@ -1326,14 +1259,6 @@
         height: 45vh;
     }
 
-    #articleText {
-        font-size: var(--36px);
-    }
-
-    #articleAuthor {
-        font-size: var(--15px);
-    }
-
     .imageDiv {
         padding: 4rem 7.5rem;
     }
@@ -1346,23 +1271,12 @@
         padding: 2rem 2rem 7rem 1.75rem;
     }
 
-    .displayTopic {
-        font-size: var(--15px);
-    }
-
     .displayHead {
         margin: 1rem 0;
-        font-size: var(--65px);
     }
 
     .displayParagraph {
-        font-size: var(--17px);
         margin-bottom: 2.5rem;
-    }
-
-    .displayButton {
-        padding: 2rem 3.5rem;
-        font-size: var(--15px);
     }
 
     #videoDiv {
@@ -1378,26 +1292,9 @@
         width: 19rem;
     }
 
-    #videoPlayer {
-        font-size: 4rem;
-    }
-
-    #videoPlay {
-        font-size: var(--15px);
-    }
-
     #serviceSection {
         grid-gap: 3.5rem;
         grid-template-columns: repeat(2, 1fr);
-        padding: 5rem 1rem;
-    }
-
-    .serviceHead {
-        font-size: var(--22px);
-    }
-
-    .serviceParagraph {
-        font-size: var(--15px);
     }
 
     #postHeadDiv {
@@ -1410,7 +1307,6 @@
     }
 
     #mainPost {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         padding: 0 0.75rem 3rem 0.75rem;
         grid-gap: 3.5rem;
@@ -1428,69 +1324,30 @@
         grid-column: 2/4;
     }
 
-    .postImage {
-        height: 37.5rem;
-    }
-
     .postDate {
         margin: 1.75rem 0 0.75rem 0;
-        font-size: var(--15px);
-    }
-
-    .postHead {
-        font-size: var(--30px);
-    }
-
-    .postParagraph {
-        font-size: var(--17px);
-    }
-
-    .postRead {
-        font-size: var(--15px);
     }
 
     #newsSection {
         padding: 4rem 0.75rem;
+        grid-template-columns: 50% 50%;
     }
 
-    #contactDiv {
-        grid-template-columns: 1fr 1fr;
-        padding: 1rem 2.5rem 1rem 2.5rem;
-        grid-gap: 0 5rem;
+    .contactMain:nth-child(1) {
+        margin: 1rem 0;
     }
 
-    .contactHead {
-        font-size: var(--22px);
-    }
-
-    .contactParagraph {
-        font-size: var(--15px);
+    .contactMain:nth-child(2) {
+        margin: 1rem 0;
     }
 
     #subscribeDiv {
+        grid-column: 1/3;
         padding: 1rem 12.5rem;
-        box-shadow: 2px 0 2px #F3F2ED, -2px 0 2px #F3F2ED;
     }
 
     #subscribeHead {
         font-size: var(--40px);
-    }
-
-    #subscribeForm {
-        grid-template-columns: 70% 30%;
-        margin: 2rem 0;
-    }
-
-    #subscribeInput {
-        font-size: var(--15px);
-    }
-
-    #subscribeButton {
-        font-size: var(--15px);
-    }
-
-    #subscribeParagraph {
-        font-size: var(--14px);
     }
 
     .newsHandle {
@@ -1502,15 +1359,6 @@
         padding: 4.5rem 1.5rem;
     }
 
-    #storeHead {
-        font-size: var(--22px);
-        margin-bottom: 2rem;
-    }
-
-    #storeParagraph {
-        font-size: var(--17px);
-    }
-
     #payAside {
         margin: 2.5rem 0 1.75rem 0;
     }
@@ -1519,96 +1367,16 @@
         gap: 0 11.5rem;
     }
 
-    .linkHead {
-        font-size: var(--22px);
-    }
-
-    .linkText {
-        font-size: var(--15px);
-    }
-
     #lastPage {
         padding: 4rem 1.5rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     #curencyLangDiv {
         gap: 0 2rem;
     }
 
-    #copyText {
-        font-size: var(--15px);
-    }
-}
-
-
-
-
-
-@media all and (min-width: 1024px) {
-
-    .availDiv {
-        margin: 0.75rem 0 0 0.75rem;
-    }
-
-    #navLatest {
-        margin-bottom: 3rem;
-    }
-
-    #pageArticle {
-        padding: 7.5rem 0.75rem;
-    }
-
-    #articleText {
-        margin-bottom: 2rem;
-    }
-
-    .serviceIcon {
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-
-    .serviceHead {
-        margin: 0.75rem 0;
-    }
-
-    .postParagraph {
-        margin: 1.25rem 0;
-    }
-
-    #subscribeInput {
-        padding: 1.5rem;
-    }
-
-    #subscribeButton {
-        padding: 1.5rem 1.25rem;
-    }
-
-    #subscribeParagraph {
-        margin-bottom: 3rem;
-    }
-
-    #newsAside {
-        gap: 0 1.5rem;
-    }
-
-    #payAside {
-        gap: 0 0.5rem;
-    }
-
-    .payImage {
-        width: 3.25rem;
-        height: 2rem;
-    }
-
-    .linkHead {
-        margin-bottom: 2rem;
-    }
-
-    .linkNav {
-        gap: 1.5rem 0;
+    #currencyLangInerText {
+        display: none !important;
     }
 }
 
@@ -1622,8 +1390,12 @@
         --35px: 2.25rem;
         --22px: 1.375rem;
         --17px: 1.0625rem;
+        --36px: 2.25rem;
+        --14px: 0.875rem;
         --30px: 1.875rem;
         --40px: 2.5rem;
+        --55px: 3.4375rem;
+        --45px: 2.8125rem;
         --28px: 1.75rem;
         --12px: 0.75rem;
         --13px: 0.8125rem;
@@ -1652,11 +1424,11 @@
     #sidemenuList {
         padding: 2rem 3rem;
     }
-    
+
     .sideMenuItem:hover {
         border-bottom: 1px solid black;
     }
-    
+
     .sideMenuIcon {
         padding: 0.25rem;
     }
@@ -1782,222 +1554,185 @@
     }
 
     #pageArticle {
-        height: 45vh;
+        height: 40vh;
     }
 
-    #articleText {
-        font-size: var(--44px);
+    #pageArticle {
+        padding: 7.5rem 20rem;
     }
 
-    #articleAuthor {
-        font-size: var(--22px);
-    }
-
-    .imageDiv {
-        padding: 4rem 7.5rem;
-    }
-
-    .displayImage {
-        height: 67.5rem;
-    }
-
-    .mainDisplay {
-        padding: 2rem 2rem 7rem 1.75rem;
-    }
-
-    .displayTopic {
-        font-size: var(--22px);
-    }
-
-    .displayHead {
-        margin: 1rem 0;
-        font-size: var(--65px);
-    }
-
-    .displayParagraph {
-        font-size: var(--22px);
-        margin-bottom: 2.5rem;
-    }
-
-    .displayButton {
-        padding: 2rem 3.5rem;
-        font-size: var(--22px);
-    }
-
-    #videoDiv {
-        padding: 0 0.5rem;
-    }
-
-    #videoMain {
-        height: 35rem;
-    }
-
-    #videoAside {
-        height: 19rem;
-        width: 19rem;
-    }
-
-    #videoPlayer {
-        font-size: 4rem;
-    }
-
-    #videoPlay {
-        font-size: var(--17px);
-    }
-
-    #serviceSection {
-        grid-gap: 3.5rem;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 5rem 1rem;
-    }
-
-    .serviceHead {
-        font-size: var(--28px);
-    }
-
-    .serviceParagraph {
-        font-size: var(--22px);
-    }
-
-    #postHeadDiv {
-        padding: 3rem 4rem 3.5rem 4rem;
-    }
-
-    #postHead {
-        font-size: var(--40px);
-        margin-top: 1rem;
-    }
-
-    #mainPost {
+    #displaySection {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        padding: 0 0.75rem 3rem 0.75rem;
-        grid-gap: 3.5rem;
+        grid-template-columns: 1fr;
+        grid-gap: 10rem 0;
+        margin-bottom: 10rem;
     }
 
-    .mainPostDiv:nth-child(1) {
-        grid-column: 1/3;
-    }
-
-    .mainPostDiv:nth-child(2) {
-        grid-column: 3/5;
-    }
-
-    .mainPostDiv:nth-child(3) {
-        grid-column: 2/4;
-    }
-
-    .postImage {
-        height: 37.5rem;
-    }
-
-    .postDate {
-        margin: 1.75rem 0 0.75rem 0;
-        font-size: var(--17px);
-    }
-
-    .postHead {
-        font-size: var(--35px);
-    }
-
-    .postParagraph {
-        font-size: var(--22px);
-    }
-
-    .postRead {
-        font-size: var(--17px);
-    }
-
-    #newsSection {
-        padding: 4rem 0.75rem;
-    }
-
-    #contactDiv {
+    #displayDiv {
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 1rem 2.5rem 1rem 2.5rem;
-        grid-gap: 0 5rem;
-    }
-
-    .contactHead {
-        font-size: var(--28px);
-    }
-
-    .contactParagraph {
-        font-size: var(--22px);
-    }
-
-    #subscribeDiv {
-        padding: 1rem 12.5rem;
-        box-shadow: 2px 0 2px #F3F2ED, -2px 0 2px #F3F2ED;
-    }
-
-    #subscribeHead {
-        font-size: var(--40px);
-    }
-
-    #subscribeForm {
-        grid-template-columns: 70% 30%;
-        margin: 2rem 0;
-    }
-
-    #subscribeInput {
-        font-size: var(--17px);
-    }
-
-    #subscribeButton {
-        font-size: var(--17px);
-    }
-
-    #subscribeParagraph {
-        font-size: var(--15px);
-    }
-
-    .newsHandle {
-        height: 1.75rem;
-        width: 1.75rem;
-    }
-
-    #storeSection {
-        padding: 4.5rem 1.5rem;
-    }
-
-    #storeHead {
-        font-size: var(--28px);
-        margin-bottom: 2rem;
-    }
-
-    #storeParagraph {
-        font-size: var(--22px);
-    }
-
-    #payAside {
-        margin: 2.5rem 0 1.75rem 0;
-    }
-
-    #linksDiv {
-        gap: 0 11.5rem;
-    }
-
-    .linkHead {
-        font-size: var(--28px);
-    }
-
-    .linkText {
-        font-size: var(--17px);
-    }
-
-    #lastPage {
-        padding: 4rem 1.5rem;
-        display: flex;
-        justify-content: space-between;
         align-items: center;
     }
 
-    #curencyLangDiv {
-        gap: 0 2rem;
+    #displayDiv:nth-child(even) .imageDiv {
+        grid-column: 2/3;
     }
 
-    #copyText {
-        font-size: var(--17px);
+    #displayDiv:nth-child(even) .mainDisplay {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .imageDiv {
+        padding: 4.5rem;
+    }
+
+    .displayImage {
+        height: 55rem;
+    }
+
+    .mainDisplay {
+        padding: 2rem 10rem 7rem 10rem;
+    }
+
+    .displayHead {
+        margin: 2.5rem 0;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+    }
+
+    .displayParagraph {
+        letter-spacing: 1.5px;
+        word-spacing: 2.5px;
+        margin-bottom: 4rem;
+    }
+
+    .displayButton {
+        letter-spacing: 1.5px;
+        word-spacing: 2.5px;
+    }
+
+    #videoDiv {
+        padding: 0 0.75rem;
+    }
+
+    #videoMain {
+        height: 60rem;
+    }
+
+    #videoAside {
+        height: 21rem;
+        width: 21rem;
+    }
+
+    #serviceSection {
+        grid-gap: 0 5rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .serviceHead {
+        margin: 1rem 0;
+    }
+
+    .serviceIcon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    #postHeadDiv {
+        padding: 9rem 0 4rem 0;
+    }
+
+    #postHead {
+        font-size: var(--45px);
+        margin-top: 1.5rem;
+    }
+
+    #mainPost {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 0.75rem 9rem 0.75rem;
+        grid-gap: 0 3.5rem;
+    }
+
+    .postDate {
+        margin: 2rem 0 1rem 0;
+    }
+
+    .postParagraph {
+        margin: 1.5rem 0;
+    }
+
+    #newsSection {
+        padding: 7.5rem 0.75rem;
+        grid-template-columns: 27.5% 45% 27.5%;
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+
+    .contactMain:nth-child(1) {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .contactMain:nth-child(2) {
+        grid-row: 1/2;
+        grid-column: 3/4;
+    }
+
+    #subscribeDiv {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        padding: 1rem 5rem;
+    }
+
+    #subscribeHead {
+        font-size: var(--55px);
+    }
+
+    .newsHandle {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    #storeSection {
+        padding: 7.5rem 1.5rem;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+        grid-gap: 0 15rem;
+    }
+
+    #payAside {
+        margin: 2.5rem 0 0 0;
+        gap: 0 0.45rem;
+    }
+
+    .payImage {
+        width: 3.5rem;
+        height: 2.25rem;
+    }
+
+    #linksDiv {
+        gap: 0 10rem;
+    }
+
+    .linkHead {
+        margin-bottom: 2.5rem;
+    }
+
+    .linkNav {
+        gap: 1.75rem 0;
+    }
+
+    #lastPage {
+        padding: 3.5rem 2rem;
+    }
+
+    #curencyLangDiv {
+        gap: 0 1.5rem;
+    }
+
+    #currencyLangInerText {
+        font-size: var(--13px);
     }
 }
