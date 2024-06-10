@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CurLangTemplate from "./extensions/currencylang";
 import FrontText from "./extensions/frontText";
 import ProductTemplate from "./extensions/productTemplate";
 import { productDetails } from "./extensions/products/products";
@@ -6,7 +7,7 @@ import CollectionTemplate from "./extensions/collection/collectionTemplate";
 import PageArticle from "./extensions/article";
 import DisplayPage from "./extensions/display/display";
 import videoPoster from "./youtube_poster/video_poster.jpeg";
-import ServiceTemplate from "./extensions/service";
+import ServiceTemplate from "./extensions/service/service";
 import PostTemplate from "./extensions/post/post";
 import { hotitems } from "./extensions/hotItems/hotitems";
 import { newarrivals } from "./extensions/newArrivals/newarrivals";
@@ -33,14 +34,7 @@ const Home = () => {
             <p id="curLangOuterText">Delivery time 2-3 working days</p>
             <div id="curLangInnerDiv">
               <p id="curLangInerText">United States (USD $)</p>
-              <main className="curLangMain">
-                <p className="curLangText">(USD $)</p>
-                <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>
-              </main>
-              <main className="curLangMain">
-                <p className="curLangText">English</p>
-                <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>
-              </main>
+              <CurLangTemplate></CurLangTemplate>
             </div>
           </div>
           <nav id="headerNav">
@@ -159,14 +153,7 @@ const Home = () => {
         <section id="lastPage">
           <div id="curencyLangDiv">
             <p id="currencyLangInerText">United States (USD $)</p>
-            <main className="curLangMain">
-              <p className="curLangText">(USD $)</p>
-              <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>
-            </main>
-            <main className="curLangMain">
-              <p className="curLangText">English</p>
-              <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>
-            </main>
+            <CurLangTemplate></CurLangTemplate>
           </div>
           <p id="copyText">©2024 Pheezy, All Rights Reserved. With Love by CalorStiches</p>
         </section>

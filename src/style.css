@@ -7,6 +7,23 @@
 :root {
     --Yantramanav: 'Yantramanav', sans-serif;
     --Cormorant: 'Cormorant Infant', sans-serif;
+    --65px: 4.0625rem;
+    --60px: 3.75rem;
+    --55px: 4.2308rem;
+    --45px: 2.8125rem;
+    --44px: 2.75rem;
+    --40px: 2.5rem;
+    --36px: 2.25rem;
+    --35px: 2.25rem;
+    --30px: 1.875rem;
+    --28px: 1.75rem;
+    --22px: 1.375rem;
+    --17px: 1.0625rem;
+    --15px: 0.9375rem;
+    --14px: 0.875rem;
+    --13px: 0.8125rem;
+    --12px: 0.75rem;
+    --border_size: 1px;
     --616161: #616161;
     --282828: #282828;
     --1B1A1A: #1B1A1A;
@@ -478,12 +495,6 @@
     font-size: var(--22px);
 }
 
-.contactHead {
-}
-
-.contactParagraph {
-}
-
 .contactParagraph {
     font-family: var(--Yantramanav);
     color: var(--222222);
@@ -604,7 +615,6 @@
 
 /* Styling for mobile and tab */
 @media all and (max-width: 1023px) {
-
     #displayText {
         margin: 13vh auto auto auto;
     }
@@ -658,7 +668,6 @@
 
 /* Styling for both tab and desktop */
 @media all and (min-width: 768px) {
-
     .curLangIcon {
         font-size: var(--13px);
     }
@@ -776,22 +785,6 @@
 
 
 @media all and (max-width: 767px) {
-    :root {
-        --55px: 4.2308rem;
-        --35px: 2.25rem;
-        --22px: 1.375rem;
-        --17px: 1.0625rem;
-        --12px: 0.75rem;
-        --36px: 2.25rem;
-        --40px: 2.5rem;
-        --30px: 1.875rem;
-        --14px: 0.875rem;
-        --28px: 1.75rem;
-        --13px: 0.8125rem;
-        --15px: 0.9375rem;
-        --border_size: 1px;
-    }
-
     #frontPage {
         padding-bottom: 3rem;
     }
@@ -1092,23 +1085,6 @@
 
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
-    :root {
-        --60px: 3.75rem;
-        --35px: 2.25rem;
-        --36px: 2.25rem;
-        --22px: 1.375rem;
-        --17px: 1.0625rem;
-        --40px: 2.5rem;
-        --28px: 1.75rem;
-        --13px: 0.8125rem;
-        --12px: 0.75rem;
-        --15px: 0.9375rem;
-        --44px: 2.75rem;
-        --65px: 4.0625rem;
-        --30px: 1.875rem;
-        --border_size: 1px;
-    }
-
     #frontPage {
         padding-bottom: 2.25rem;
     }
@@ -1385,26 +1361,6 @@
 
 
 @media all and (min-width: 1024px) {
-    :root {
-        --60px: 3.75rem;
-        --35px: 2.25rem;
-        --22px: 1.375rem;
-        --17px: 1.0625rem;
-        --36px: 2.25rem;
-        --14px: 0.875rem;
-        --30px: 1.875rem;
-        --40px: 2.5rem;
-        --55px: 3.4375rem;
-        --45px: 2.8125rem;
-        --28px: 1.75rem;
-        --12px: 0.75rem;
-        --13px: 0.8125rem;
-        --15px: 0.9375rem;
-        --44px: 2.75rem;
-        --65px: 4.0625rem;
-        --border_size: 1px;
-    }
-
     #frontPage {
         padding-bottom: 2.75rem;
     }
