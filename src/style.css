@@ -1653,7 +1653,7 @@
     #storeSection {
         padding: 7.5rem 1.5rem;
         display: grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 30% 58.5%;
         align-items: center;
         grid-gap: 0 15rem;
     }
