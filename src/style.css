@@ -23,6 +23,7 @@
     --14px: 0.875rem;
     --13px: 0.8125rem;
     --12px: 0.75rem;
+    --8px: 0.5rem;
     --border_size: 1px;
     --616161: #616161;
     --282828: #282828;
@@ -97,7 +98,7 @@
 .sideMenuText {
     text-transform: uppercase;
     font-family: var(--Yantramanav);
-    font-size: var(--15px);
+    font-size: var(--8px);
 }
 
 .sideMenuIcon {
@@ -162,7 +163,7 @@
     color: #010101;
     border: none;
     outline: none;
-    font-size: var(--15px);
+    font-size: var(--8px);
 }
 
 #disDiv {
@@ -175,7 +176,7 @@
     border-bottom: var(--border_size) solid white;
     font-family: var(--Yantramanav);
     color: white;
-    font-size: var(--15px);
+    font-size: var(--8px);
 }
 
 #productSection {
@@ -183,7 +184,7 @@
 }
 
 .paragraphStyles {
-    font-size: var(--15px);
+    font-size: var(--8px);
 }
 
 #productParagraph {
