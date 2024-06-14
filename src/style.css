@@ -64,7 +64,7 @@
 
 .curLangText {
     font-family: var(--Yantramanav);
-    font-size: var(--13px);
+    font-size: var(--12px);
 }
 
 #headerNav {
@@ -148,6 +148,7 @@
 }
 
 .paragraphStyles {
+    font-size: var(--12px);
     font-family: var(--Yantramanav);
 }
 
@@ -163,7 +164,7 @@
     color: #010101;
     border: none;
     outline: none;
-    font-size: var(--8px);
+    font-size: var(--12px);
 }
 
 #disDiv {
@@ -176,15 +177,11 @@
     border-bottom: var(--border_size) solid white;
     font-family: var(--Yantramanav);
     color: white;
-    font-size: var(--8px);
+    font-size: var(--12px);
 }
 
 #productSection {
     text-align: center;
-}
-
-.paragraphStyles {
-    font-size: var(--8px);
 }
 
 #productParagraph {
@@ -786,6 +783,13 @@
 
 
 @media all and (max-width: 767px) {
+
+    :root {
+        --10px: 0.625rem;
+        --20px: 1.25rem;
+        --48px: 3rem;
+    }
+
     #frontPage {
         padding-bottom: 3rem;
     }
@@ -808,7 +812,7 @@
     }
 
     .curLangIcon {
-        font-size: var(--12px);
+        font-size: var(--10px);
     }
 
     #sidemenuList {
@@ -833,7 +837,7 @@
     }
 
     #logo {
-        font-size: var(--40px);
+        font-size: var(--28px);
     }
 
     #navIcons {
@@ -845,16 +849,16 @@
     }
 
     .iconTag {
-        font-size: var(--28px);
+        font-size: var(--20px);
     }
 
     #disHead {
-        font-size: var(--55px);
+        font-size: var(--48px);
         margin: 2.5rem 0;
     }
 
     #shopBtn {
-        padding: 1.6rem 1.5rem;
+        padding: 1.5rem 1.25rem;
         margin-bottom: 1.75rem;
     }
 
