@@ -42,7 +42,10 @@ const Home = () => {
               <Sidemenu></Sidemenu>
             </aside>
             <div id="logoIcon">
-              <h1 id="logo">CS</h1>
+              <h1 id="logo">
+                <blockquote abbr="Calor Stiches" id="logoMob">CS</blockquote>
+                <span id="logoDesk">Calor Stiches</span>
+              </h1>
               <ul id="navIcons">
                 <li className="icons"><p id="loginText">LOGIN</p></li>
                 <li className="icons"><i id="userIcon" className="fa-regular fa-user iconTag"></i></li>
