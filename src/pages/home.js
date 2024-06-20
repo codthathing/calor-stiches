@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 import CurLangTemplate from "./extensions/currencylang";
 import FrontText from "./extensions/frontText";
 import ProductTemplate from "./extensions/productTemplate";
@@ -17,7 +17,9 @@ import ContactTemplate from "./extensions/contact";
 import Payment from "./extensions/paymentIcons/payment";
 import LinkMainTemplate from "./extensions/linktest";
 import Sidemenu from "./extensions/sidemenu/sidemenu";
+import RegisterPage from "./register_page/register";
 
+export const ToggleRegister = createContext(); 
 
 const Home = () => {
 
@@ -26,8 +28,10 @@ const Home = () => {
     setLatestItems(newitem)
   }
 
+  const [register, setRegister] = useState(false)
+
   return (
-    <main>
+    <ToggleRegister.Provider value={{register, setRegister}}>
       <section id="frontPage">
         <header id="header">
           <div id="curLangHead">
@@ -48,7 +52,10 @@ const Home = () => {
               </h1>
               <ul id="navIcons">
                 <li className="icons"><p id="loginText">LOGIN</p></li>
-                <li className="icons"><i id="userIcon" className="fa-regular fa-user iconTag"></i></li>
+                <li className="icons">
+                  <i id="userIcon" onClick={() => setRegister(true)} className="fa-regular fa-user iconTag"></i>
+                  {register && <RegisterPage></RegisterPage>}
+                </li>
                 <li className="icons"><i className="fa-solid fa-magnifying-glass iconTag"></i></li>
                 <li className="icons"><i className="fa-regular fa-heart iconTag"></i></li>
                 <li className="icons"><i class="fa-solid fa-bag-shopping iconTag"></i></li>
@@ -161,7 +168,7 @@ const Home = () => {
           <p id="copyText">©2024 Pheezy, All Rights Reserved. With Love by CalorStiches</p>
         </section>
       </footer>
-    </main >
+    </ToggleRegister.Provider>
   );
 }
 

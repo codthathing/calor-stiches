@@ -1895,3 +1895,33 @@
         font-size: var(--13px);
     }
 }
+
+
+
+
+
+
+
+
+
+/* Styling for the register page */
+#RegisterSection {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+#mainRegister {
+    background-color: white;
+    color: black;
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 1rem;
+}
