@@ -19,6 +19,9 @@ import LinkMainTemplate from "./extensions/linktest";
 import Sidemenu from "./extensions/sidemenu/sidemenu";
 import RegisterLayout from "./register_page/registerlayout";
 import { ToggleRegister } from "./contextpage";
+import Search from "./search";
+import WishList from "./wishlist_page/wishlist";
+import Cart from "./cart_page/cart";
 
 
 const Home = () => {
@@ -27,7 +30,8 @@ const Home = () => {
   const changeLatestItem = (newitem) => {
     setLatestItems(newitem)
   }
-  const {register, setRegister} = useContext(ToggleRegister);
+  const { register, setRegister, search, setSearch, wishList, setWishList, cart, setCart } = useContext(ToggleRegister);
+  const [toggleSideMenu, setToggleSideMenu] = useState(false)
 
   return (
     <>
@@ -41,9 +45,11 @@ const Home = () => {
             </div>
           </div>
           <nav id="headerNav">
-            <aside id="sideMenuAside">
-              <Sidemenu></Sidemenu>
-            </aside>
+            {toggleSideMenu &&
+              <aside id="sideMenuAside">
+                <Sidemenu></Sidemenu>
+              </aside>
+            }
             <div id="logoIcon">
               <h1 id="logo">
                 <blockquote abbr="Calor Stiches" id="logoMob">CS</blockquote>
@@ -55,10 +61,21 @@ const Home = () => {
                   <i id="userIcon" onClick={() => setRegister(true)} className="fa-regular fa-user iconTag"></i>
                   {register && <RegisterLayout></RegisterLayout>}
                 </li>
-                <li className="icons"><i className="fa-solid fa-magnifying-glass iconTag"></i></li>
-                <li className="icons"><i className="fa-regular fa-heart iconTag"></i></li>
-                <li className="icons"><i class="fa-solid fa-bag-shopping iconTag"></i></li>
-                <li className="icons"><i className="fa-solid fa-bars iconTag"></i></li>
+                <li className="icons">
+                  <i className="fa-solid fa-magnifying-glass iconTag" onClick={() => setSearch(true)}></i>
+                  {search && <Search></Search>}
+                </li>
+                <li className="icons">
+                  <i className="fa-regular fa-heart iconTag" onClick={() => setWishList(true)}></i>
+                  {wishList && <WishList></WishList>}
+                </li>
+                <li className="icons">
+                  <i class="fa-solid fa-bag-shopping iconTag" onClick={() => setCart(true)}></i>
+                  {cart && <Cart></Cart>}
+                </li>
+                <li className="icons">
+                  <i className="fa-solid fa-bars iconTag" onClick={() => setToggleSideMenu(!toggleSideMenu)}></i>
+                </li>
               </ul>
             </div>
           </nav>

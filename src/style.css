@@ -62,7 +62,7 @@
     top: 100%;
     width: 100%;
     z-index: 100;
-    display: none;
+    display: block;
 }
 
 #sidemenuList {
@@ -1905,7 +1905,7 @@
 
 
 /* Styling for the register page */
-.registerSection {
+.navSections {
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -1915,14 +1915,17 @@
     z-index: 100;
 }
 
-.mainRegister {
+.mainNav {
     background-color: white;
     position: absolute;
-    width: 80%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); 
     padding: 1.5rem;
+}
+
+.mainRegister {
+    width: 80%;
 }
 
 .cancelBtn {
@@ -1988,4 +1991,22 @@
     font-family: var(--Yantramanav);
     color: var(--222222);
     font-size: var(--12px);
+}
+
+
+
+
+
+/* Styling for the wishlist page */
+#wishListMain {
+    width: 100%;
+}
+
+
+
+
+
+/* Styling for the cart page */
+.whiteBackSections {
+    background-color: #FFFFFF;
 }

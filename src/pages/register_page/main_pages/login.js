@@ -6,8 +6,8 @@ const LoginPage = () => {
   const { setRegister, setPresentRegister } = useContext(ToggleRegister);
   return (
     <>
-      <section className="registerSection">
-        <main className="mainRegister">
+      <section className="registerSection navSections">
+        <main className="mainRegister mainNav">
           <span className="cancelBtn" onClick={() => setRegister(false)}><i class="fa-solid fa-xmark"></i></span>
           <div className="registerDiv">
             <h1 className="registerHead">Log in</h1>
