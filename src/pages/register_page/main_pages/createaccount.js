@@ -1,12 +1,10 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { ToggleRegister } from "../../contextpage";
+import { useFocus } from "./usefocus";
 
 const CreateAccountPage = () => {
-  const {setRegister, setPresentRegister} = useContext(ToggleRegister)
-  const inputFocus = useRef("")
-  useEffect(()=>{
-    inputFocus.current.focus()
-  },[setPresentRegister])
+  const {setRegister, presentRegister, setPresentRegister} = useContext(ToggleRegister)
+  const {inputFocus} = useFocus(presentRegister)
 
   return (
     <>

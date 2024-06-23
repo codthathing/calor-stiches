@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import { ToggleRegister } from "../contextpage";
 
 const Cart = () => {
-  const {setCart} = useContext(ToggleRegister)
+  const { setCart } = useContext(ToggleRegister)
   return (
     <section id="cartSection" className="navSections whiteBackSections">
-        <span onClick={() => setCart(false)}><i class="fa-solid fa-xmark"></i></span>
+      <div onClick={() => setCart(false)} className="navBack"><i class="fa-solid fa-xmark navBackIcon"></i></div>
+      <footer className="navFooter"></footer>
     </section>
   );
 }

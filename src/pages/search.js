@@ -5,7 +5,8 @@ const Search = () => {
   const {setSearch} = useContext(ToggleRegister)
   return (
     <section id="searchSection" className="navSections whiteBackSections">
-      <span onClick={() => setSearch(false)}><i class="fa-solid fa-xmark"></i></span>
+      <div onClick={() => setSearch(false)} className="navBack"><i class="fa-solid fa-xmark navBackIcon"></i></div>
+      <footer className="navFooter"></footer>
     </section>
   );
 }
