@@ -6,6 +6,18 @@ const Search = () => {
   return (
     <section id="searchSection" className="navSections whiteBackSections">
       <div onClick={() => setSearch(false)} className="navBack"><i class="fa-solid fa-xmark navBackIcon"></i></div>
+      <main id="searchMain">
+        <form id="searchForm">
+          <input type="text" id="searchInput" placeholder="What are you looking for?"/>
+          <i className="fa-solid fa-magnifying-glass" id="searchIcon" type="submit"></i>
+        </form>
+        <div className="navDiv">
+          <h1 className="navHeadText" id="searchHead">Popular Product</h1>
+          <section>
+            
+          </section>
+        </div>
+      </main>
       <footer className="navFooter"></footer>
     </section>
   );

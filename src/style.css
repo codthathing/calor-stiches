@@ -2000,7 +2000,7 @@
 /* Styling for the search page */
 .navBack {
     width: 100%;
-    background-color: red;
+    background-color: white;
     padding: 0.85rem;
     position: fixed;
 }
@@ -2014,12 +2014,54 @@
 .navFooter {
     width: 100%;
     padding: 1.5rem 0;
-    background-color: red;
+    background-color: white;
     position: fixed;
     bottom: 0;
 }
 
+#searchMain {
+    margin-top: 4rem;
+}
 
+#searchForm {
+    display: grid;
+    grid-template-columns: 85% 15%;
+    align-items: center;
+    margin: 0 1.5rem;
+    border: 1px solid black;
+}
+
+#searchInput {
+    padding: 1.5rem;
+    color: var(--222222);
+    font-size: var(--12px);
+    font-family: var(--Yantramanav);
+    border: none;
+}
+
+#searchIcon {
+    padding:1.5rem;
+    color: var(--222222);
+    font-size: var(--12px);
+    background-color: var(--1B1A1A);
+    color: white;
+    border: none;
+}
+
+.navDiv {
+    margin-top: 4rem;
+}
+
+.navHeadText {
+    margin-bottom: 4rem;
+    font-size: var(--24px);
+    font-family: var(--Cormorant);
+    color: var(--1B1A1A);
+}
+
+#searchHead {
+    text-align: center;
+}
 
 
 
@@ -2035,4 +2077,8 @@
 /* Styling for the cart page */
 .whiteBackSections {
     background-color: #FFFFFF;
+}
+
+#cartHead {
+    margin-left: 1.5rem;
 }
