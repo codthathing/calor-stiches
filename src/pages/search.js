@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { ToggleRegister } from "./contextpage";
+import ProductTemplate from "./extensions/productTemplate";
+import { productDetails } from "./extensions/products/products";
 
 const Search = () => {
   const {setSearch} = useContext(ToggleRegister)
@@ -14,7 +16,9 @@ const Search = () => {
         <div className="navDiv">
           <h1 className="navHeadText" id="searchHead">Popular Product</h1>
           <section>
-            
+            {productDetails.map((details) => {
+              return <ProductTemplate key={details.id} {...details}></ProductTemplate>
+            })}
           </section>
         </div>
       </main>
