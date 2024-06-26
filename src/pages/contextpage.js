@@ -4,7 +4,7 @@ export const ToggleRegister = createContext();
 
 export const OptNavProvider = ({children}) => {
   const [register, setRegister] = useState(false)
-  const [search, setSearch] = useState(true)
+  const [search, setSearch] = useState(false)
   const [wishList, setWishList] = useState(false)
   const [cart, setCart] = useState(false)
   const [presentRegister, setPresentRegister] = useState("LOGIN")

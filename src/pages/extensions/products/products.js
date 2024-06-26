@@ -21,8 +21,8 @@ export const productDetails = [
     productPrice: "85.00",
     productAvailable: "50% OFF",
     productAvailableColor: "#FF421D",
-    cutOff: true,
-    originalPrice: "170.00"
+    cutOff: 50,
+    // originalPrice: "170.00"
   },
   {
     id: 2,
@@ -57,8 +57,8 @@ export const productDetails = [
     doubleAvailColor: "green",
     productAvailable: "50% OFF",
     productAvailableColor: "red",
-    cutOff: true,
-    originalPrice: "170.00"
+    cutOff: 50,
+    // originalPrice: "170.00"
   },
   {
     id: 7,
