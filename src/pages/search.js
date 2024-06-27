@@ -2,20 +2,27 @@ import React, { useContext } from "react";
 import { ToggleRegister } from "./contextpage";
 import ProductTemplate from "./extensions/productTemplate";
 import { productDetails } from "./extensions/products/products";
+import { useScroll } from "./usescroll";
+import { useFocus } from "./register_page/main_pages/usefocus";
 
 const Search = () => {
-  const {setSearch} = useContext(ToggleRegister)
+
+  const { setSearch, search } = useContext(ToggleRegister)
+  const { presentScroll: addScroll } = useScroll("auto", "hidden");
+  const { presentScroll: removeScroll } = useScroll("hidden", "auto");
+  const { inputFocus } = useFocus(search);
+
   return (
-    <section id="searchSection" className="navSections whiteBackSections">
-      <div onClick={() => setSearch(false)} className="navBack"><i class="fa-solid fa-xmark navBackIcon"></i></div>
+    <section ref={addScroll} id="searchSection" className="navSections whiteBackSections">
+      <div id="searchHeader" className="navBack"><i ref={removeScroll} onClick={() => setSearch(false)} class="fa-solid fa-xmark navBackIcon"></i></div>
       <main id="searchMain">
         <form id="searchForm">
-          <input type="text" id="searchInput" placeholder="What are you looking for?"/>
+          <input ref={inputFocus} type="text" id="searchInput" placeholder="What are you looking for?" />
           <i className="fa-solid fa-magnifying-glass" id="searchIcon" type="submit"></i>
         </form>
-        <div className="navDiv">
+        <div id="searchProductDiv">
           <h1 className="navHeadText" id="searchHead">Popular Product</h1>
-          <section>
+          <section id="searchProductSection">
             {productDetails.map((details) => {
               return <ProductTemplate key={details.id} {...details}></ProductTemplate>
             })}

@@ -5,9 +5,11 @@ const Cart = () => {
   const { setCart } = useContext(ToggleRegister)
   return (
     <section id="cartSection" className="navSections whiteBackSections">
-      <div onClick={() => setCart(false)} className="navBack"><i class="fa-solid fa-xmark navBackIcon"></i></div>
-      <div className="navDiv">
+      <div className="navBack" id="cartHeader">
+        <i onClick={() => setCart(false)} class="fa-solid fa-xmark navBackIcon"></i>
         <h1 className="navHeadText" id="cartHead">Shopping Cart</h1>
+      </div>
+      <div className="navDiv">
         <section>
 
         </section>

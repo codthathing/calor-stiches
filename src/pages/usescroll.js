@@ -1,12 +1,11 @@
 import { useRef, useEffect } from "react";
 
-export const useScroll = () => {
+export const useScroll = (page, body) => {
   const presentScroll = useRef('');
   useEffect(() => {
-    presentScroll.current.style.overflowY = "auto"
-    document.querySelector("body").style.overflowY = "hidden"
+    presentScroll.current.style.overflowY = page
+    document.querySelector("body").style.overflowY = body
   }, [])
 
   return {presentScroll}
-
 }

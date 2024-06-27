@@ -1921,11 +1921,11 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); 
-    padding: 1.5rem;
 }
 
 .mainRegister {
     width: 80%;
+    padding: 1.5rem;
 }
 
 .cancelBtn {
@@ -2001,8 +2001,11 @@
 .navBack {
     width: 100%;
     background-color: white;
-    padding: 0.85rem;
     position: fixed;
+}
+
+#searchHeader {
+    padding: 0.85rem;
 }
 
 .navBackIcon {
@@ -2048,12 +2051,11 @@
     border: none;
 }
 
-.navDiv {
+#searchProductDiv {
     margin-top: 4rem;
 }
 
 .navHeadText {
-    margin-bottom: 4rem;
     font-size: var(--24px);
     font-family: var(--Cormorant);
     color: var(--1B1A1A);
@@ -2061,6 +2063,12 @@
 
 #searchHead {
     text-align: center;
+    margin-bottom: 4rem;
+}
+
+#searchProductSection {
+    text-align: center;
+    padding: 0 3rem 3rem 3rem;
 }
 
 
@@ -2070,6 +2078,42 @@
     width: 100%;
 }
 
+.wishListContainers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: var(--12px);
+}
+
+#wishListHeader {
+    background-color: #282828;
+}
+
+#wishListText {
+    color: white;
+    font-weight: bold;
+    font-family: var(--Yantramanav);
+}
+
+#wishListCancel {
+    color: var(--9B9B9B);
+}
+
+#wishListItemSection {
+    padding: 1.5rem;
+}
+
+#wishListDefaultText {
+    font-size: var(--12px);
+    font-family: var(--Yantramanav);
+    text-align: center;
+}
+
+.wishListLinks {
+    color: black;
+}
+
 
 
 
@@ -2077,6 +2121,10 @@
 /* Styling for the cart page */
 .whiteBackSections {
     background-color: #FFFFFF;
+}
+
+#cartHeader {
+    padding: 0.85rem 0.85rem 2rem 0.85rem;
 }
 
 #cartHead {
