@@ -2130,3 +2130,42 @@
 #cartHead {
     margin-left: 1.5rem;
 }
+
+#cartProductDiv {
+    margin-top: 6rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem 0;
+}
+
+.cartRemove {
+    position: absolute;
+    font-size: 1rem;
+    right: 0;
+}
+
+.cartProductMain {
+    display: flex;
+    position: relative;
+    gap: 0 1.5rem;
+}
+
+.cartProductImage {
+    height: 5rem;
+}
+
+.cartDetailsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.cartProductName {
+    text-transform: capitalize;
+    font-size: var(--16px);
+}
+
+.cartProductText {
+    font-size: var(--12px);
+}

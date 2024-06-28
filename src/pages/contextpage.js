@@ -6,7 +6,7 @@ export const OptNavProvider = ({children}) => {
   const [register, setRegister] = useState(false)
   const [search, setSearch] = useState(false)
   const [wishList, setWishList] = useState(false)
-  const [cart, setCart] = useState(false)
+  const [cart, setCart] = useState(true)
   const [presentRegister, setPresentRegister] = useState("LOGIN")
 
   return (
