@@ -19,7 +19,7 @@ const ProductTemplate = ({ productAvailable, productAvailableColor, doubleProduc
         <p className="productName">{productName}</p>
         <div className="priceDiv">
           {cutOff && <span className="productPrice originalPrice">${(100 / cutOff) * productPrice}.00</span>}
-          <span className="productPrice" style={{ color: cutOff ? "#FF0000" : "#222222" }}>${productPrice}</span>
+          <span className="productPrice" style={{ color: cutOff ? "#FF0000" : "#222222" }}>${productPrice}.00</span>
         </div>
       </section>
     </div>

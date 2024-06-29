@@ -12,33 +12,48 @@ export const productDetails = [
     id: 0,
     productImage: product_one,
     productName: "sunflower jumpsuit",
-    productPrice: "85.00"
+    productPrice: "85.00",
+    productDetails: {
+      cartSize: ["L"],
+      cartColor: ["Olive green"],
+      cartAmt: 1
+    }
   },
   {
     id: 1,
     productImage: product_two,
     productName: "dust lightweight jacket",
-    productPrice: "85.00",
+    productPrice: 85,
     productAvailable: "50% OFF",
     productAvailableColor: "#FF421D",
     cutOff: 50,
-    // originalPrice: "170.00"
+    productDetails: {
+      cartSize: ["L"],
+      cartAmt: 1
+    }
   },
   {
     id: 2,
     productImage: product_three,
     productName: "karatima outwear",
-    productPrice: "85.00",
+    productPrice: 85,
     productAvailable: "SOLD OUT",
-    productAvailableColor: "#C2272D" 
+    productAvailableColor: "#C2272D" ,
+    productDetails: {
+      cartColor: ["Olive green"],
+      cartAmt: 1
+    }
   },
   {
     id: 3,
     productImage: product_four,
     productName: "white dressed pants",
-    productPrice: "85.00",
+    productPrice: 85,
     productAvailable: "NEW IN",
-    productAvailableColor: "#00A849"
+    productAvailableColor: "#00A849",
+    productDetails: {
+      cartAmt: 1
+    }
   },
   {
     id: 4,
@@ -46,19 +61,28 @@ export const productDetails = [
     productName: "lime punch outerwear",
     productPrice: "109.00   -   $129.00",
     productAvailable: "BACK IN STORE",
-    productAvailableColor: "#AECA2E"
+    productAvailableColor: "#AECA2E",
+    productDetails: {
+      cartSize: ["XL"],
+      cartColor: ["Navy blue"],
+      cartAmt: 3
+    }
   },
   {
     id: 5,
     productImage: product_six,
     productName: "dust lightweight jacket",
-    productPrice: "85.00",
+    productPrice: 85,
     doubleProductAvail: "NEW IN",
     doubleAvailColor: "green",
     productAvailable: "50% OFF",
     productAvailableColor: "red",
     cutOff: 50,
-    // originalPrice: "170.00"
+    productDetails: {
+      cartSize: ["XXL"],
+      cartColor: ["Army green"],
+      cartAmt: 1
+    }
   },
   {
     id: 7,
@@ -66,14 +90,22 @@ export const productDetails = [
     productName: "lime punch outerwear",
     productPrice: "109.00   -   $129.00",
     productAvailable: "BACK IN STORE",
-    productAvailableColor: "#AECA2E"
+    productAvailableColor: "#AECA2E",
+    productDetails: {
+      cartAmt: 5
+    }
   },
   {
     id: 6,
     productImage: product_eight,
     productName: "cocoon davni dress",
-    productPrice: "85.00",
+    productPrice: 85,
     productAvailable: "HOT",
-    productAvailableColor: "#FF421D"
+    productAvailableColor: "#FF421D",
+    productDetails: {
+      cartSize: ["L"],
+      cartColor: ["Moon black"],
+      cartAmt: 3
+    }
   }
 ] 
