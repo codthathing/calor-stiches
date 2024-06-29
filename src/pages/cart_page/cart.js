@@ -13,9 +13,7 @@ const Cart = () => {
       </div>
       <div id="cartProductDiv">
         {productDetails.map((details) => {
-          return (
-            <CartTemplate {...details}></CartTemplate>
-          );
+          return <CartTemplate {...details}></CartTemplate>
         })}
       </div>
       <footer className="navFooter"></footer>

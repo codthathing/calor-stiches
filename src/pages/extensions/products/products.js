@@ -13,11 +13,11 @@ export const productDetails = [
     productImage: product_one,
     productName: "sunflower jumpsuit",
     productPrice: "85.00",
-    productDetails: {
-      cartSize: ["L"],
-      cartColor: ["Olive green"],
-      cartAmt: 1
-    }
+    productDetails: [
+      { cartSize: "L" },
+      { cartColor: "Olive green" },
+    ],
+    cartAmt: 1
   },
   {
     id: 1,
@@ -27,10 +27,10 @@ export const productDetails = [
     productAvailable: "50% OFF",
     productAvailableColor: "#FF421D",
     cutOff: 50,
-    productDetails: {
-      cartSize: ["L"],
-      cartAmt: 1
-    }
+    productDetails: [
+      { cartSize: "L" },
+    ],
+    cartAmt: 1
   },
   {
     id: 2,
@@ -38,11 +38,11 @@ export const productDetails = [
     productName: "karatima outwear",
     productPrice: 85,
     productAvailable: "SOLD OUT",
-    productAvailableColor: "#C2272D" ,
-    productDetails: {
-      cartColor: ["Olive green"],
-      cartAmt: 1
-    }
+    productAvailableColor: "#C2272D",
+    productDetails: [
+      { cartColor: "Olive green" },
+    ],
+    cartAmt: 1
   },
   {
     id: 3,
@@ -51,9 +51,7 @@ export const productDetails = [
     productPrice: 85,
     productAvailable: "NEW IN",
     productAvailableColor: "#00A849",
-    productDetails: {
-      cartAmt: 1
-    }
+    cartAmt: 1
   },
   {
     id: 4,
@@ -62,11 +60,11 @@ export const productDetails = [
     productPrice: "109.00   -   $129.00",
     productAvailable: "BACK IN STORE",
     productAvailableColor: "#AECA2E",
-    productDetails: {
-      cartSize: ["XL"],
-      cartColor: ["Navy blue"],
-      cartAmt: 3
-    }
+    productDetails: [
+      { cartSize: "XL" },
+      { cartColor: "Navy blue" }
+    ],
+    cartAmt: 3
   },
   {
     id: 5,
@@ -78,11 +76,11 @@ export const productDetails = [
     productAvailable: "50% OFF",
     productAvailableColor: "red",
     cutOff: 50,
-    productDetails: {
-      cartSize: ["XXL"],
-      cartColor: ["Army green"],
-      cartAmt: 1
-    }
+    productDetails: [
+      { cartSize: "XXL" },
+      { cartColor: "Army green" },
+    ],
+    cartAmt: 1
   },
   {
     id: 7,
@@ -91,9 +89,7 @@ export const productDetails = [
     productPrice: "109.00   -   $129.00",
     productAvailable: "BACK IN STORE",
     productAvailableColor: "#AECA2E",
-    productDetails: {
-      cartAmt: 5
-    }
+    cartAmt: 5
   },
   {
     id: 6,
@@ -102,10 +98,10 @@ export const productDetails = [
     productPrice: 85,
     productAvailable: "HOT",
     productAvailableColor: "#FF421D",
-    productDetails: {
-      cartSize: ["L"],
-      cartColor: ["Moon black"],
-      cartAmt: 3
-    }
+    productDetails: [
+      { cartSize: "L" },
+      { cartColor: "Moon black" }
+    ],
+    cartAmt: 3
   }
 ] 
