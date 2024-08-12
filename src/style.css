@@ -2039,15 +2039,14 @@
     color: var(--222222);
     font-size: var(--12px);
     font-family: var(--Yantramanav);
+    outline: none;
     border: none;
 }
 
 #searchIcon {
     padding:1.5rem;
-    color: var(--222222);
     font-size: var(--12px);
-    background-color: var(--1B1A1A);
-    color: white;
+    color: var(--222222);
     border: none;
 }
 
