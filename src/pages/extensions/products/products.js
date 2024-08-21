@@ -12,10 +12,10 @@ export const productDetails = [
     id: 0,
     productImage: product_one,
     productName: "sunflower jumpsuit",
-    productPrice: "85.00",
+    productPrice: 85,
     productDetails: [
-      { cartSize: "L" },
       { cartColor: "Olive green" },
+      { cartSize: "L" },
     ],
     cartAmt: 1
   },
@@ -61,10 +61,11 @@ export const productDetails = [
     productAvailable: "BACK IN STORE",
     productAvailableColor: "#AECA2E",
     productDetails: [
+      { cartColor: "Navy blue" },
       { cartSize: "XL" },
-      { cartColor: "Navy blue" }
     ],
-    cartAmt: 3
+    cartAmt: 3,
+    cartPrice: 121
   },
   {
     id: 5,
@@ -77,30 +78,31 @@ export const productDetails = [
     productAvailableColor: "red",
     cutOff: 50,
     productDetails: [
-      { cartSize: "XXL" },
       { cartColor: "Army green" },
+      { cartSize: "XXL" },
     ],
     cartAmt: 1
   },
   {
-    id: 7,
+    id: 6,
     productImage: product_seven,
     productName: "lime punch outerwear",
     productPrice: "109.00   -   $129.00",
     productAvailable: "BACK IN STORE",
     productAvailableColor: "#AECA2E",
-    cartAmt: 5
+    cartAmt: 5,
+    cartPrice: 117
   },
   {
-    id: 6,
+    id: 7,
     productImage: product_eight,
     productName: "cocoon davni dress",
     productPrice: 85,
     productAvailable: "HOT",
     productAvailableColor: "#FF421D",
     productDetails: [
+      { cartColor: "Moon black" },
       { cartSize: "L" },
-      { cartColor: "Moon black" }
     ],
     cartAmt: 3
   }

@@ -18,7 +18,7 @@ const LoginPage = () => {
                 <input type="checkbox" id="registerCheck" /> Remember Me 
                 <span id="forgotBtn" onClick={() => setPresentRegister("FORGOTPASSWORD")}>FORGOT PASSWORD</span>
               </p>
-              <button type="submit" className="registerBtn">LOGIN</button>
+              <button type="submit" className="navBtn registerBtn">LOGIN</button>
               <p onClick={() => setPresentRegister("CREATEACCOUNT")} className="registerNavText">REGISTER</p>
             </form>
           </div>

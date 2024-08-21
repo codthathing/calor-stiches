@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartTemplate = ({ id, productImage, productName, productPrice, productDetails, cartAmt }) => {
+const CartTemplate = ({ id, productImage, productName, productPrice, productDetails, cartAmt, cartPrice }) => {
   return (
     <main key={id} className="cartProductMain">
       <img src={productImage} alt={productName} className="cartProductImage" />
@@ -8,15 +8,15 @@ const CartTemplate = ({ id, productImage, productName, productPrice, productDeta
         <i className="fa-solid fa-xmark cartRemove"></i>
         <section className="cartDetailsSection">
           <h1 className="cartProductName">{productName}</h1>
-          {/* {productDetails.map(({ cartSize, cartColor }) => {
+          {productDetails && productDetails.map(({ cartSize, cartColor }) => {
             return (
               <>
-                {/* <p className="cartProductText cartProductColor">Color: {cartColor}</p>
-                <p className="cartProductText cartProductSize">Size: {cartSize}</p> 
+                {cartColor && <p className="cartProductText cartProductColor">Color: {cartColor}</p>}
+                {cartSize && <p className="cartProductText cartProductSize">Size: {cartSize}</p> }
               </>
             );
-          })} */}
-          <p className="cartProductText cartProductAmt">{cartAmt} * ${productPrice}.00</p>
+          })}
+          <p className="cartProductText cartProductAmt">{cartAmt} * ${cartPrice ? cartPrice : productPrice}.00</p>
         </section>
       </div>
     </main>

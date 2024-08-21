@@ -15,7 +15,7 @@ const ForgotPasswordPage = () => {
             <h1 className="registerHead">Forgotten Password?</h1>
             <form id="registerForm">
               <input type="text" ref={inputFocus} className="registerInput" placeholder="Username or Email Address" required />
-              <button type="submit" className="registerBtn">GET NEW PASSWORD</button>
+              <button type="submit" className="navBtn registerBtn">GET NEW PASSWORD</button>
               <p onClick={() => setPresentRegister("LOGIN")} className="registerNavText">ALREADY HAS AN ACCOUNT</p>
             </form>
           </div>

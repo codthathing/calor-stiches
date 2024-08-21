@@ -1,0 +1,43 @@
+/* Styling for the wishlist page */
+#wishListMain {
+  width: 100%;
+}
+
+.wishListContainers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: var(--12px);
+}
+
+#wishListHeader {
+  background-color: #282828;
+}
+
+#wishListText {
+  color: white;
+  font-weight: bold;
+  font-family: var(--Yantramanav);
+}
+
+#wishListCancel {
+  color: var(--9B9B9B);
+}
+
+#wishListItemSection {
+  padding: 1.5rem;
+}
+
+.defaultText {
+  font-size: var(--12px);
+  font-family: var(--Yantramanav);
+}
+
+#wishListDefaultText {
+  text-align: center;
+}
+
+.wishListLinks {
+  color: black;
+}

@@ -1,0 +1,73 @@
+/* Styling for the search page */
+.navBack {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+}
+
+#searchHeader {
+  padding: 0.85rem;
+}
+
+.navBackIcon {
+  font-size: 1rem;
+  position: relative;
+  left: 97.5%;
+}
+
+.navFooter {
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+}
+
+#searchMain {
+  margin-top: 4rem;
+}
+
+#searchForm {
+  display: grid;
+  grid-template-columns: 85% 15%;
+  align-items: center;
+  margin: 0 1.5rem;
+  border: 1px solid black;
+}
+
+#searchInput {
+  padding: 1.5rem;
+  color: var(--222222);
+  font-size: var(--12px);
+  font-family: var(--Yantramanav);
+  outline: none;
+  border: none;
+}
+
+#searchIcon {
+  padding:1.5rem;
+  font-size: var(--12px);
+  color: var(--222222);
+  border: none;
+}
+
+#searchProductDiv {
+  margin-top: 4rem;
+}
+
+.navHeadText {
+  font-size: var(--24px);
+  font-family: var(--Cormorant);
+  color: var(--1B1A1A);
+}
+
+#searchHead {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#searchProductSection {
+  text-align: center;
+  padding: 0 3rem 3rem 3rem;
+}

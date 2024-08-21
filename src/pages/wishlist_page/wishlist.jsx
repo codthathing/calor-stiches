@@ -17,7 +17,7 @@ const WishList = () => {
             return (
               <p>{x}</p>
             )
-          }) : <p id="wishListDefaultText">There are no products on the Wishlist!</p>}
+          }) : <p id="wishListDefaultText" className="defaultText">There are no products on the Wishlist!</p>}
         </section>
         <div className="wishListContainers" id="wishListLinkDiv">
           <a href="" className="wishListLinks">OPEN WISHLIST PAGE</a>

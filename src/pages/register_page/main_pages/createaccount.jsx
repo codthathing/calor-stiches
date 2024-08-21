@@ -16,7 +16,7 @@ const CreateAccountPage = () => {
             <form id="registerForm">
               <input type="text" ref={inputFocus} className="registerInput" placeholder="User Name" required />
               <input type="text" className="registerInput" placeholder="Email" required />
-              <button type="submit" className="registerBtn">REGISTER</button>
+              <button type="submit" className="navBtn registerBtn">REGISTER</button>
               <p onClick={() => setPresentRegister("LOGIN")} className="registerNavText">ALREADY HAS AN ACCOUNT</p>
             </form>
           </div>
