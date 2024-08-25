@@ -37,7 +37,7 @@ const Cart = () => {
   return (
     <section id="cartSection" ref={addScroll} className="navSections whiteBackSections">
       <div className="navBack" id="cartHeader">
-        <i onClick={() => setCart(false)} ref={removeScroll} class="fa-solid fa-xmark navBackIcon"></i>
+        <i onClick={() => setCart(false)} ref={removeScroll} className="fa-solid fa-xmark navBackIcon"></i>
         <h1 className="navHeadText" id="cartHead">Shopping Cart</h1>
       </div>
       <div id="cartProductDiv">

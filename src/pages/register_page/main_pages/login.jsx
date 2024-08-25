@@ -8,7 +8,7 @@ const LoginPage = () => {
     <>
       <section className="registerSection navSections">
         <main className="mainRegister mainNav">
-          <span className="cancelBtn" onClick={() => setRegister(false)}><i class="fa-solid fa-xmark"></i></span>
+          <span className="cancelBtn" onClick={() => setRegister(false)}><i className="fa-solid fa-xmark"></i></span>
           <div className="registerDiv">
             <h1 className="registerHead">Log in</h1>
             <form id="registerForm">

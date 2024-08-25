@@ -26,7 +26,23 @@
 }
 
 #wishListItemSection {
-  padding: 1.5rem;
+  padding: 1rem;
+}
+
+.wishListDiv {
+  display: grid;
+  grid-template-columns: 10% 25% 25% 40%;
+  grid-gap: 0.25rem;
+  align-items: center;
+}
+
+.wishListImage {
+  height: 8rem;
+  width: 6rem;
+}
+
+.wishListPrice {
+  white-space: pre;
 }
 
 .defaultText {

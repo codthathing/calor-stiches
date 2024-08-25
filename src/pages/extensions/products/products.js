@@ -17,7 +17,9 @@ export const productDetails = [
       { cartColor: "Olive green" },
       { cartSize: "L" },
     ],
-    cartAmt: 1
+    cartAmt: 1,
+    wishlistDate: "August 20, 2024",
+    wishlistStock: "In stock, ready to be shippped"
   },
   {
     id: 1,
@@ -30,7 +32,9 @@ export const productDetails = [
     productDetails: [
       { cartSize: "L" },
     ],
-    cartAmt: 1
+    cartAmt: 1,
+    wishlistDate: "May 31, 2024",
+    wishlistStock: "In stock, ready to be shippped"
   },
   {
     id: 2,
@@ -42,7 +46,9 @@ export const productDetails = [
     productDetails: [
       { cartColor: "Olive green" },
     ],
-    cartAmt: 1
+    cartAmt: 1,
+    wishlistDate: "August 24, 2024",
+    wishlistStock: "In stock, ready to be shippped"
   },
   {
     id: 3,
@@ -51,13 +57,15 @@ export const productDetails = [
     productPrice: 85,
     productAvailable: "NEW IN",
     productAvailableColor: "#00A849",
-    cartAmt: 1
+    cartAmt: 1,
+    wishlistDate: "June 19, 2024",
+    wishlistStock: "In stock, ready to be shippped"
   },
   {
     id: 4,
     productImage: product_five,
     productName: "lime punch outerwear",
-    productPrice: "109.00   -   $129.00",
+    productPrice: "109.00   -   $129",
     productAvailable: "BACK IN STORE",
     productAvailableColor: "#AECA2E",
     productDetails: [
@@ -65,45 +73,53 @@ export const productDetails = [
       { cartSize: "XL" },
     ],
     cartAmt: 3,
-    cartPrice: 121
+    cartPrice: 121,
+    wishlistDate: "September 9, 2024",
+    wishlistStock: "In stock, ready to be shippped"
   },
-  {
-    id: 5,
-    productImage: product_six,
-    productName: "dust lightweight jacket",
-    productPrice: 85,
-    doubleProductAvail: "NEW IN",
-    doubleAvailColor: "green",
-    productAvailable: "50% OFF",
-    productAvailableColor: "red",
-    cutOff: 50,
-    productDetails: [
-      { cartColor: "Army green" },
-      { cartSize: "XXL" },
-    ],
-    cartAmt: 1
-  },
-  {
-    id: 6,
-    productImage: product_seven,
-    productName: "lime punch outerwear",
-    productPrice: "109.00   -   $129.00",
-    productAvailable: "BACK IN STORE",
-    productAvailableColor: "#AECA2E",
-    cartAmt: 5,
-    cartPrice: 117
-  },
-  {
-    id: 7,
-    productImage: product_eight,
-    productName: "cocoon davni dress",
-    productPrice: 85,
-    productAvailable: "HOT",
-    productAvailableColor: "#FF421D",
-    productDetails: [
-      { cartColor: "Moon black" },
-      { cartSize: "L" },
-    ],
-    cartAmt: 3
-  }
+  // {
+  //   id: 5,
+  //   productImage: product_six,
+  //   productName: "dust lightweight jacket",
+  //   productPrice: 85,
+  //   doubleProductAvail: "NEW IN",
+  //   doubleAvailColor: "green",
+  //   productAvailable: "50% OFF",
+  //   productAvailableColor: "red",
+  //   cutOff: 50,
+  //   productDetails: [
+  //     { cartColor: "Army green" },
+  //     { cartSize: "XXL" },
+  //   ],
+  //   cartAmt: 1,
+  //   wishlistDate: "February 14, 2024",
+  //   wishlistStock: "In stock, ready to be shippped"
+  // },
+  // {
+  //   id: 6,
+  //   productImage: product_seven,
+  //   productName: "lime punch outerwear",
+  //   productPrice: "109.00   -   $129",
+  //   productAvailable: "BACK IN STORE",
+  //   productAvailableColor: "#AECA2E",
+  //   cartAmt: 5,
+  //   cartPrice: 117,
+  //   wishlistDate: "April 1, 2024",
+  //   wishlistStock: "In stock, ready to be shippped"
+  // },
+  // {
+  //   id: 7,
+  //   productImage: product_eight,
+  //   productName: "cocoon davni dress",
+  //   productPrice: 85,
+  //   productAvailable: "HOT",
+  //   productAvailableColor: "#FF421D",
+  //   productDetails: [
+  //     { cartColor: "Moon black" },
+  //     { cartSize: "L" },
+  //   ],
+  //   cartAmt: 3,
+  //   wishlistDate: "December 29, 2024",
+  //   wishlistStock: "In stock, ready to be shippped"
+  // }
 ] 

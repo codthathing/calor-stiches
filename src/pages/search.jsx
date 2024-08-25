@@ -14,7 +14,7 @@ const Search = () => {
 
   return (
     <section ref={addScroll} id="searchSection" className="navSections whiteBackSections">
-      <div id="searchHeader" className="navBack"><i ref={removeScroll} onClick={() => setSearch(false)} class="fa-solid fa-xmark navBackIcon"></i></div>
+      <div id="searchHeader" className="navBack"><i ref={removeScroll} onClick={() => setSearch(false)} className="fa-solid fa-xmark navBackIcon"></i></div>
       <main id="searchMain">
         <form id="searchForm">
           <input ref={inputFocus} type="text" id="searchInput" placeholder="What are you looking for?" />

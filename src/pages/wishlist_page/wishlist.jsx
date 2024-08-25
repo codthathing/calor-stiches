@@ -1,22 +1,24 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { ToggleRegister } from "../contextpage";
+import WishlistTemplate from "./wishlisttemplate";
+import { productDetails } from "../extensions/products/products";
+import { useScroll } from "../usescroll";
 
 const WishList = () => {
-  const { setWishList } = useContext(ToggleRegister)
-  const [wishListItem, setWishListItem] = useState([])
+  const { setWishList } = useContext(ToggleRegister);
+  const { presentScroll: addScroll } = useScroll("auto", "hidden");
+  const { presentScroll: removeScroll } = useScroll("hidden", "auto");
 
   return (
-    <section id="wishListSection" className="navSections">
+    <section ref={addScroll} id="wishListSection" className="navSections">
       <main id="wishListMain" className="mainNav">
         <header className="wishListContainers" id="wishListHeader">
-          <p id="wishListText">Wishlist ({wishListItem.length})</p>
-          <span id="wishListCancel" onClick={() => setWishList(false)}><i class="fa-solid fa-xmark"></i></span>
+          <p id="wishListText">Wishlist ({productDetails.length})</p>
+          <span ref={removeScroll} id="wishListCancel" onClick={() => setWishList(false)}><i className="fa-solid fa-xmark"></i></span>
         </header>
         <section id="wishListItemSection">
-          {wishListItem.length > 0 ? wishListItem.map((x) => {
-            return (
-              <p>{x}</p>
-            )
+          {productDetails.length > 0 ? productDetails.map((details) => {
+            return <WishlistTemplate {...details}></WishlistTemplate>
           }) : <p id="wishListDefaultText" className="defaultText">There are no products on the Wishlist!</p>}
         </section>
         <div className="wishListContainers" id="wishListLinkDiv">
