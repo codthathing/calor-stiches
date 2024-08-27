@@ -1,6 +1,13 @@
 /* Styling for the wishlist page */
 #wishListMain {
+  background-color: white;
   width: 100%;
+  height: fit-content;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .wishListContainers {
@@ -9,10 +16,13 @@
   align-items: center;
   padding: 1rem;
   font-size: var(--12px);
+  position: sticky;
+  width: 100%;
 }
 
 #wishListHeader {
   background-color: #282828;
+  top: 0;
 }
 
 #wishListText {
@@ -31,18 +41,39 @@
 
 .wishListDiv {
   display: grid;
-  grid-template-columns: 10% 25% 25% 40%;
+  grid-template-columns: 10% 20% 30% 40%;
   grid-gap: 0.25rem;
   align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 0.5px solid var(--9B9B9B);
+}
+
+.wishListDiv:last-child {
+  border-bottom: none;
+}
+
+.wishListDetails {
+  word-break: keep-all;
 }
 
 .wishListImage {
-  height: 8rem;
-  width: 6rem;
+  height: 6rem;
+  width: 4rem;
 }
 
 .wishListPrice {
-  white-space: pre;
+  margin: 0.25rem 0;
+}
+
+.wishListAvailMain {
+  margin: 0 1rem 1.5rem 0;
+  border-bottom: 1px solid var(--9B9B9B);
+}
+
+.wishListAvailBar {
+  background-color: green;
+  padding: 0.15rem;
+  margin: 0.75rem 0 1.5rem 0;
 }
 
 .defaultText {
@@ -52,6 +83,11 @@
 
 #wishListDefaultText {
   text-align: center;
+}
+
+#wishListLinkDiv {
+  bottom: 0;
+  background-color: white;
 }
 
 .wishListLinks {

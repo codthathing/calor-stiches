@@ -10,8 +10,8 @@ const WishList = () => {
   const { presentScroll: removeScroll } = useScroll("hidden", "auto");
 
   return (
-    <section ref={addScroll} id="wishListSection" className="navSections">
-      <main id="wishListMain" className="mainNav">
+    <section id="wishListSection" className="navSections">
+      <main ref={addScroll} id="wishListMain">
         <header className="wishListContainers" id="wishListHeader">
           <p id="wishListText">Wishlist ({productDetails.length})</p>
           <span ref={removeScroll} id="wishListCancel" onClick={() => setWishList(false)}><i className="fa-solid fa-xmark"></i></span>

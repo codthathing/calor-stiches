@@ -77,49 +77,49 @@ export const productDetails = [
     wishlistDate: "September 9, 2024",
     wishlistStock: "In stock, ready to be shippped"
   },
-  // {
-  //   id: 5,
-  //   productImage: product_six,
-  //   productName: "dust lightweight jacket",
-  //   productPrice: 85,
-  //   doubleProductAvail: "NEW IN",
-  //   doubleAvailColor: "green",
-  //   productAvailable: "50% OFF",
-  //   productAvailableColor: "red",
-  //   cutOff: 50,
-  //   productDetails: [
-  //     { cartColor: "Army green" },
-  //     { cartSize: "XXL" },
-  //   ],
-  //   cartAmt: 1,
-  //   wishlistDate: "February 14, 2024",
-  //   wishlistStock: "In stock, ready to be shippped"
-  // },
-  // {
-  //   id: 6,
-  //   productImage: product_seven,
-  //   productName: "lime punch outerwear",
-  //   productPrice: "109.00   -   $129",
-  //   productAvailable: "BACK IN STORE",
-  //   productAvailableColor: "#AECA2E",
-  //   cartAmt: 5,
-  //   cartPrice: 117,
-  //   wishlistDate: "April 1, 2024",
-  //   wishlistStock: "In stock, ready to be shippped"
-  // },
-  // {
-  //   id: 7,
-  //   productImage: product_eight,
-  //   productName: "cocoon davni dress",
-  //   productPrice: 85,
-  //   productAvailable: "HOT",
-  //   productAvailableColor: "#FF421D",
-  //   productDetails: [
-  //     { cartColor: "Moon black" },
-  //     { cartSize: "L" },
-  //   ],
-  //   cartAmt: 3,
-  //   wishlistDate: "December 29, 2024",
-  //   wishlistStock: "In stock, ready to be shippped"
-  // }
+  {
+    id: 5,
+    productImage: product_six,
+    productName: "dust lightweight jacket",
+    productPrice: 85,
+    doubleProductAvail: "NEW IN",
+    doubleAvailColor: "green",
+    productAvailable: "50% OFF",
+    productAvailableColor: "red",
+    cutOff: 50,
+    productDetails: [
+      { cartColor: "Army green" },
+      { cartSize: "XXL" },
+    ],
+    cartAmt: 1,
+    wishlistDate: "February 14, 2024",
+    wishlistStock: "In stock, ready to be shippped"
+  },
+  {
+    id: 6,
+    productImage: product_seven,
+    productName: "lime punch outerwear",
+    productPrice: "109.00   -   $129",
+    productAvailable: "BACK IN STORE",
+    productAvailableColor: "#AECA2E",
+    cartAmt: 5,
+    cartPrice: 117,
+    wishlistDate: "April 1, 2024",
+    wishlistStock: "In stock, ready to be shippped"
+  },
+  {
+    id: 7,
+    productImage: product_eight,
+    productName: "cocoon davni dress",
+    productPrice: 85,
+    productAvailable: "HOT",
+    productAvailableColor: "#FF421D",
+    productDetails: [
+      { cartColor: "Moon black" },
+      { cartSize: "L" },
+    ],
+    cartAmt: 3,
+    wishlistDate: "December 29, 2024",
+    wishlistStock: "In stock, ready to be shippped"
+  }
 ] 
