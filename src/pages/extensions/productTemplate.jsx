@@ -5,14 +5,14 @@ const ProductTemplate = ({ productAvailable, productAvailableColor, doubleProduc
 
   return (
     <div className="productDiv">
-      {/* <Link to={`/${productName}`}> */}
+      <Link to={`/${productName}`}>
         <section className="orderOptions" style={{ backgroundImage: `url(${productImage})` }}>
           <div className="availDiv">
             {doubleProductAvail && <span className="productAvail paragraphStyles" style={{ backgroundColor: doubleAvailColor }}>{doubleProductAvail}</span>}
             {productAvailable && <span className="productAvail paragraphStyles" style={{ backgroundColor: productAvailableColor }}>{productAvailable}</span>}
           </div>
         </section>
-      {/* </Link> */}
+      </Link>
       <div className="optionBtnsDiv">
         <i className="fa-regular fa-heart optionIcon"></i>
         <p className="paragraphStyles selectOption">SELECT OPTIONS</p>
