@@ -2,8 +2,7 @@ import React from "react";
 
 const CurLangTemplate = () => {
   const curTexts = [
-    { id: 0, curLangText: "(USD $)" },
-    { id: 1, curLangText: "English" }
+    { id: 0, curLangText: "(USD $)" }
   ]
 
   return (
