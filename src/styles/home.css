@@ -9,6 +9,10 @@
 
 #header {
   border-bottom: var(--border_size) solid #F3F2ED;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
 #curLangHead {
@@ -129,6 +133,7 @@
   color: #010101;
   border: none;
   outline: none;
+  text-decoration: none;
 }
 
 #disDiv {
@@ -552,7 +557,7 @@
 /* Styling for mobile and tab */
 @media all and (max-width: 1023px) {
   #displayText {
-      margin: 13vh auto auto auto;
+      margin: 0 auto auto auto;
   }
 
   #pageArticle {
@@ -853,7 +858,7 @@
   }
 
   #frontPage {
-      padding-bottom: 3rem;
+      padding: 12.5rem 0 3rem 0;
   }
 
   #curLangHead {
@@ -958,7 +963,7 @@
   }
 
   .orderOptions {
-      height: 30rem;
+      height: 20rem;
   }
 
   .availDiv {

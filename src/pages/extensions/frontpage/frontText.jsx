@@ -25,7 +25,7 @@ const FrontText = () => {
     <div id="displayText">
       <p id="disParagraph" className="paragraphStyles">YOU CAN HAVE ANYTHING YOU WANT IF YOU DRESS FOR IT</p>
       <h1 id="disHead" className="headStyles">{initialDetails.head}</h1>
-      <button id="shopBtn">SHOP NOW</button>
+      <a href="#productSection" id="shopBtn" type="button">SHOP NOW</a>
       <div id="disDiv">
         <span className="disShowing" style={{ paddingRight: initialDetails.disOnePad }}>01</span>
         <span className="disShowing" style={{ paddingRight: initialDetails.disTwoPad }}>02</span>

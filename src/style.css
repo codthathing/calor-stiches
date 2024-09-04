@@ -18,6 +18,7 @@
 }
 
 @import url('styles/home.css');
+@import url('styles/productreview.css');
 @import url('styles/register.css');
 @import url('styles/search.css');
 @import url('styles/wishlist.css');
