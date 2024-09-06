@@ -1,21 +1,20 @@
 import React, { useContext, useEffect } from "react";
-import { ToggleRegister } from "../contextpage";
-import PageLinkTemplate from "../pagelinks";
+import { ToggleRegister } from "../../contextpage";
+import PageLinkTemplate from "../../pagelinks";
 
-const WishListPage = () => {
+const ProductPage = () => {
 
-  const { setNavbar, setWishList, setToggleSideMenu } = useContext(ToggleRegister);
+  const { setNavbar, setToggleSideMenu } = useContext(ToggleRegister);
 
   useEffect(() => {
     setNavbar(true);
-    setWishList(false);
     setToggleSideMenu(false);
     window.scrollTo(0, 0);
   }, [])
 
   const pageLinkDetails = [
     {id: 0, linkDirect: "/", linkText: "Home", linkArrow: true},
-    {id: 1, linkDirect: "", linkText: "CS wishlist", linkArrow: false},
+    {id: 1, linkDirect: "", linkText: "Product", linkArrow: false},
   ]
 
   return (
@@ -29,4 +28,4 @@ const WishListPage = () => {
   );
 }
 
-export default WishListPage;
+export default ProductPage;

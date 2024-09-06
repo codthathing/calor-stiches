@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef, useEffect } from "react";
 import CurLangTemplate from "./extensions/currencylang";
 import PageLayout from "./pagelayout";
 import Handle from "./extensions/handleIcons/handle";
@@ -8,19 +8,20 @@ import LinkMainTemplate from "./extensions/linktest";
 import Sidemenu from "./extensions/sidemenu/sidemenu";
 import RegisterLayout from "./register_page/registerlayout";
 import { ToggleRegister } from "./contextpage";
-import Search from "./search_page/search";
+import { useHead } from "./usehead";
+import Search from "./search";
 import WishList from "./wishlist_page/wishlist";
 import Cart from "./cart_page/cart";
 
 
 const Home = () => {
 
-  const { register, setRegister, search, setSearch, wishList, setWishList, cart, setCart } = useContext(ToggleRegister);
-  const [toggleSideMenu, setToggleSideMenu] = useState(false)
+  const { register, setRegister, search, setSearch, wishList, setWishList, cart, setCart, toggleSideMenu, setToggleSideMenu } = useContext(ToggleRegister);
+  const { header, navbar } = useHead();
 
   return (
     <>
-      <header id="header">
+      <header id="header" className={header ? "scrollTop" : ""}>
         <div id="curLangHead">
           <p id="curLangOuterText">Delivery time 2-3 working days</p>
           <div id="curLangInnerDiv">
@@ -34,7 +35,7 @@ const Home = () => {
               <Sidemenu></Sidemenu>
             </aside>
           }
-          <div id="logoIcon">
+          <div id="logoIcon" className={navbar ? "scrollDownNavbar" : ""}>
             <h1 id="logo">
               <blockquote abbr="Calor Stiches" id="logoMob">CS</blockquote>
               <span id="logoDesk">Calor Stiches</span>
@@ -42,7 +43,7 @@ const Home = () => {
             <ul id="navIcons">
               <li className="icons"><p id="loginText">LOGIN</p></li>
               <li className="icons">
-                <i id="userIcon" onClick={() => setRegister(true)} className="fa-regular fa-user iconTag"></i>
+                <i id="userIcon" className="fa-regular fa-user iconTag" onClick={() => setRegister(true)}></i>
                 {register && <RegisterLayout></RegisterLayout>}
               </li>
               <li className="icons">

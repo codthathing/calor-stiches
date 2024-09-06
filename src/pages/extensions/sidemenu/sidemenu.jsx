@@ -1,35 +1,43 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Sidemenu = () => {
 
   const [currentSideMenu, setCurrentSideMenu] = useState([
-    { id: 0, menuText: "home", borderStyle: { borderBottom: "1px solid black" } },
-    { id: 1, menuText: "shop", borderStyle: { borderBottom: "" } },
-    { id: 2, menuText: "products", borderStyle: { borderBottom: "" } },
-    { id: 3, menuText: "pages", borderStyle: { borderBottom: "" } },
-    { id: 4, menuText: "blog", borderStyle: { borderBottom: "" } },
-    { id: 5, menuText: "features", borderStyle: { borderBottom: "" } },
+    { id: 0, menuText: "home", link: "/", path: true, borderStyle: { borderBottom: "1px solid black" } },
+    { id: 1, menuText: "shop", link: "", path: "/shop", borderStyle: { borderBottom: "" } },
+    { id: 2, menuText: "products", link: "", path: "/product", borderStyle: { borderBottom: "" } },
+    { id: 3, menuText: "pages", link: "", path: "page", borderStyle: { borderBottom: "" } },
+    { id: 4, menuText: "blog", link: "", path: "blog", borderStyle: { borderBottom: "" } },
+    { id: 5, menuText: "features", link: "", path: "feature", borderStyle: { borderBottom: "" } },
   ])
 
-  const changeBorderStyle = (id) => {
-    let presentMenu = currentSideMenu.filter(x => x.id == id)
-    presentMenu.borderStyle = { borderBottom: "3px solid black" }
-    setCurrentSideMenu([...currentSideMenu, presentMenu])
-    console.log(currentSideMenu)
-    // currentSideMenu.filter(x => x.id == id).map(x => {
-    //   setCurrentSideMenu([...currentSideMenu, { id: id, borderStyle: { ...x.borderStyle, borderBottom: "2px solid black" } }])
-    // })
-  }
+  // const pathLink = window.location.pathname;
+  // const presentPath = currentSideMenu.map((path) => {
+  //   if(path.path && pathLink === "/") {
+  //     // return currentSideMenu[0];
+  //     return {...currentSideMenu[0], borderStyle : {borderBottom: "1px solid black"}};
+  //   }
+  //   // return pathLink.includes(path.path);
+  //   return {...pathLink.includes(path.path), borderStyle : {borderBottom: "1px solid black"}};
+  // });
+
+  // useEffect(() => {
+  //   console.log(presentPath);
+  // }, [])
 
   return (
     <>
       <ul id="sidemenuList">
-        {currentSideMenu.map(({ id, menuText, borderStyle }) => {
+        {currentSideMenu.map(({ id, link, menuText, borderStyle }) => {
           return (
-            <li key={id} className="sideMenuItem" style={borderStyle} onClick={() => changeBorderStyle(id)}>
-              <p className="sideMenuText">{menuText}</p>
-              <i className="fa-solid fa-chevron-down sideMenuIcon"></i>
-            </li>
+            <Link to={link} className="sidemenuLink">
+              <li key={id} className="sideMenuItem" style={borderStyle}>
+                <p className="sideMenuText">{menuText}</p>
+                <i className="fa-solid fa-chevron-down sideMenuIcon"></i>
+              </li>
+            </Link>
           );
         })}
       </ul>

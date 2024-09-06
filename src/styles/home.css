@@ -12,7 +12,13 @@
   position: fixed;
   width: 100%;
   top: 0;
+  bottom: auto;
   z-index: 100;
+}
+
+#header.scrollTop {
+    bottom: 100%;
+    top: auto;
 }
 
 #curLangHead {
@@ -52,9 +58,13 @@
 
 #sidemenuList {
   background-color: white;
-  color: black;
   display: flex;
   flex-direction: column;
+}
+
+.sidemenuLink {
+  color: black;
+  text-decoration: none;
 }
 
 .sideMenuItem {
@@ -81,13 +91,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: white;
+}
+
+#logoIcon.scrollDownNavbar {
+    background-color: white;
+    color: black;
 }
 
 #logo {
   font-family: "Bona Nova", serif;
   font-weight: 600;
   font-style: normal;
-  color: white;
 }
 
 #navIcons {
@@ -97,10 +112,6 @@
 
 .icons {
   list-style: none;
-}
-
-.iconTag {
-  color: white;
 }
 
 #displayText {
@@ -220,6 +231,32 @@
 .productPrice {
   white-space: pre;
   font-family: var(--Yantramanav);
+}
+
+.productList {
+    display: flex;
+    align-items: center;
+    gap: 0 0.35rem;
+}
+
+.productListItem {
+    list-style: none;
+}
+
+.productLink {
+    display: flex;
+    align-items: center;
+    gap: 0 0.35rem;
+    color: black;
+    text-decoration: none;
+}
+
+.productLinkText {
+    font-size: 0.75rem;
+}
+
+.productLinkIcon {
+    font-size: 0.5rem;
 }
 
 .viewButton {

@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { ToggleRegister } from "../contextpage";
-import { productDetails } from "../extensions/products/products";
-import ProductTemplate from "../extensions/productTemplate";
-import { useScroll } from "../usescroll";
-import { useFocus } from "../register_page/main_pages/usefocus";
+import { ToggleRegister } from "./contextpage";
+import { productDetails } from "./extensions/products/products";
+import ProductTemplate from "./extensions/productTemplate";
+import { useScroll } from "./usescroll";
+import { useFocus } from "./register_page/main_pages/usefocus";
 
 const Search = () => {
 

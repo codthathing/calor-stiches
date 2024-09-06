@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { ToggleRegister } from "../../contextpage";
 import FrontText from "./frontText";
 import ProductTemplate from "../productTemplate";
 import { productDetails } from "../products/products";
@@ -14,10 +15,17 @@ import PostTemplate from "../post/post";
 
 const FrontPage = () => {
 
-  const [latestItems, setLatestItems] = useState(hotitems)
+  const [latestItems, setLatestItems] = useState(hotitems);
   const ChangeLatestItem = (newitem) => {
-    setLatestItems(newitem)
+    setLatestItems(newitem);
   }
+  const { setToggleSideMenu, setNavbar } = useContext(ToggleRegister);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setToggleSideMenu(false);
+    setNavbar(false);
+  }, [])
 
   return (
     <>

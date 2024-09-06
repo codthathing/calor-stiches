@@ -3,6 +3,7 @@ import { ToggleRegister } from "../contextpage";
 import WishlistTemplate from "./wishlisttemplate";
 import { productDetails } from "../extensions/products/products";
 import { useScroll } from "../usescroll";
+import { Link } from "react-router-dom";
 
 const WishList = () => {
   const { setWishList } = useContext(ToggleRegister);
@@ -22,7 +23,7 @@ const WishList = () => {
           }) : <p id="wishListDefaultText" className="defaultText">There are no products on the Wishlist!</p>}
         </section>
         <div className="wishListContainers" id="wishListLinkDiv">
-          <a href="" className="wishListLinks">OPEN WISHLIST PAGE</a>
+          <Link to="/shop/wishlist" className="wishListLinks">OPEN WISHLIST PAGE</Link>
           <a href="#productSection" className="wishListLinks" onClick={() => setWishList(false)}>CONTINUE SHOPPING</a>
         </div>
       </main>
