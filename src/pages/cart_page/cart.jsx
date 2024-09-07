@@ -3,6 +3,7 @@ import { ToggleRegister } from "../contextpage";
 import CartTemplate from "./cartTemplate";
 import { productDetails } from "../extensions/products/products";
 import { useScroll } from "../usescroll";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { setCart } = useContext(ToggleRegister);
@@ -27,8 +28,8 @@ const Cart = () => {
           </p>
         </div>
         <div id="cartButtonsDiv">
-          <button className="navBtn" id="cartButton">VIEW CART</button>
-          <button className="navBtn" id="checkoutButton">CHECKOUT</button>
+          <Link to="/shop/cart" className="navBtn" id="cartButton">VIEW CART</Link>
+          <Link to="/shop/checkout" className="navBtn" id="checkoutButton">CHECKOUT</Link>
         </div>
       </main>
     );
