@@ -19,7 +19,6 @@
 
 .mainRegister {
   width: 80%;
-  padding: 1.5rem;
 }
 
 .cancelBtn {
@@ -27,66 +26,118 @@
   left: 100%;
 }
 
+.cancelIcon {
+  color: black;
+}
+
 .registerHead {
-  font-size: var(--20px);
   font-family: var(--Cormorant);
   color: var(--1B1A1A);
-  margin-bottom: 1rem;
 }
 
 .registerInput {
   color: var(--222222);
   font-family: var(--Yantramanav);
   outline: none;
-  padding: 1.5rem;
   border: 1px solid black;
-  font-size: var(--12px);
   width: 100%;
 }
 
-.registerInput:nth-child(1) {
-  margin-bottom: 1rem;
-}
-
-.registerInput:nth-child(2) {
-  margin-bottom: 1rem;
-}
-
 #registerParagraph {
-  font-size: var(--12px);
   font-family: var(--Yantramanav);
   color: var(--1B1A1A);
-  margin-bottom: 1rem;
 }
 
 #registerCheck {
-  vertical-align:middle;
-  margin-right: 0.5rem;
+  vertical-align: middle;
 }
 
 #forgotBtn {
-  margin-left: 0.5rem;
   color: var(--222222);
 }
 
 .navBtn {
   background-color: var(--222222);
   color: white;
-  font-size: var(--12px);
-  padding: 1.25rem 0;
   width: 100%;
   font-family: var(--Yantramanav);
   outline: none;
   text-decoration: none;
 }
 
-.registerBtn {
-  margin-bottom: 1rem;
-}
-
 .registerNavText {
   text-align: center;
   font-family: var(--Yantramanav);
   color: var(--222222);
-  font-size: var(--12px);
+}
+
+
+
+
+
+@media all and (max-width: 767px) {
+
+  .mainRegister {
+    padding: 1.5rem;
+  }
+
+  .registerHead {
+    font-size: var(--20px);
+    margin-bottom: 1rem;
+  }
+
+  .registerInput {
+    font-size: var(--12px);
+    padding: 1.5rem;
+  }
+
+  .registerInput:nth-child(1) {
+    margin-bottom: 1rem;
+  }
+  
+  .registerInput:nth-child(2) {
+    margin-bottom: 1rem;
+  }
+  
+  #registerParagraph {
+    font-size: var(--12px);
+    margin-bottom: 1rem;
+  }
+
+  #registerCheck {
+    margin-right: 0.5rem;
+  }
+
+  #forgotBtn {
+    margin-left: 0.5rem;
+  }
+
+  .navBtn {
+    font-size: var(--12px);
+    padding: 1.25rem 0;
+  }
+
+  .registerBtn {
+    margin-bottom: 1rem;
+  }
+  
+  .registerNavText {
+    font-size: var(--12px);
+  }
+}
+
+
+
+
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+
+
+
+@media all and (min-width: 1024px) {
+
 }

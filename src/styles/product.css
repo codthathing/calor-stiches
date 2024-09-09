@@ -1,4 +1,36 @@
-.otherPages {
-  margin-top: 8rem;
-  padding: 1rem;
+@media all and (min-width: 768px) {
+  .otherPages {
+    margin-top: 10rem;
+  }
+}
+
+
+
+
+
+@media all and (max-width: 767px) {
+  .otherPages {
+    margin-top: 8rem;
+    padding: 1rem;
+  }
+}
+
+
+
+
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .otherPages {
+    padding: 1.75rem;
+  }
+}
+
+
+
+
+
+@media all and (min-width: 1024px) {
+  .otherPages {
+    padding: 1.5rem;
+  }
 }

@@ -59,7 +59,7 @@ const Home = () => {
                 {cart && <Cart></Cart>}
               </li>
               <li className="icons">
-                <i className="fa-solid fa-bars iconTag" onClick={() => setToggleSideMenu(!toggleSideMenu)}></i>
+                <i className={toggleSideMenu ? "fa-solid fa-xmark iconTag" : "fa-solid fa-bars iconTag"} onClick={() => setToggleSideMenu(!toggleSideMenu)}></i>
               </li>
             </ul>
           </div>
