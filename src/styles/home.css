@@ -261,35 +261,6 @@
     color: var(--222222);
 }
 
-.mainCollection {
-    display: flex;
-    justify-content: center;
-}
-
-.collectionMain {
-    width: fit-content;
-    align-self: flex-end;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 50%;
-}
-
-.collectionTopic {
-    font-family: var(--Cormorant);
-    text-transform: capitalize;
-    font-style: italic;
-    color: white;
-    font-weight: var(--500);
-}
-
-.collectionLink {
-    font-family: var(--Yantramanav);
-    color: white;
-    text-decoration: none;
-}
-
 #latestSection {
     border-bottom: var(--border_size) solid #F3F2ED;
     text-align: center;
@@ -332,36 +303,6 @@
     color: var(--1B1A1A);
     font-style: normal;
     font-family: var(--Yantramanav);
-}
-
-.imageDiv {
-    background-color: #F3F2ED;
-}
-
-.displayImage {
-    width: 100%;
-}
-
-.displayTopic {
-    color: var(--222222);
-}
-
-.displayHead {
-    font-family: var(--Cormorant);
-    color: var(--1B1A1A);
-    font-weight: var(--500);
-}
-
-.displayParagraph {
-    color: var(--282828);
-    font-family: var(--Yantramanav);
-}
-
-.displayButton {
-    border: none;
-    background-color: var(--222222);
-    font-family: var(--Yantramanav);
-    color: white;
 }
 
 #videoDiv {
@@ -411,49 +352,6 @@
 
 .serviceParagraph {
     color: var(--282828);
-    font-family: var(--Yantramanav);
-}
-
-#postSection {
-    border-bottom: var(--border_size) solid #F3F2ED;
-}
-
-#postHeadDiv {
-    text-align: center;
-}
-
-#postParagraph {
-    color: var(--282828)
-}
-
-#postHead {
-    font-family: var(--Yantramanav);
-    color: var(--1B1A1A);
-    font-weight: var(--500);
-}
-
-.postImage {
-    width: 100%;
-}
-
-.postDate {
-    color: var(--222222);
-}
-
-.postHead {
-    font-family: var(--Cormorant);
-    color: var(--222222);
-    font-weight: var(--500);
-}
-
-.postParagraph {
-    font-family: var(--Yantramanav);
-    color: var(--282828);
-}
-
-.postRead {
-    display: block;
-    color: var(--222222);
     font-family: var(--Yantramanav);
 }
 
@@ -602,10 +500,6 @@
         margin: 0.75rem 0;
     }
 
-    .postParagraph {
-        margin: 1.25rem 0;
-    }
-
     #newsAside {
         gap: 0 1.5rem;
     }
@@ -725,18 +619,6 @@
         font-size: 0.75rem;
     }
 
-    #collectionSection {
-        display: grid;
-    }
-
-    .mainCollection {
-        padding-bottom: 3.5rem;
-    }
-
-    .collectionTopic {
-        font-size: var(--40px);
-    }
-
     .latestItem {
         padding-bottom: 1rem;
         font-size: var(--17px);
@@ -753,23 +635,6 @@
     #latestSections {
         display: grid;
         grid-gap: 0 3.5rem;
-    }
-
-    .displayTopic {
-        font-size: var(--15px);
-    }
-
-    .displayHead {
-        font-size: var(--65px);
-    }
-
-    .displayParagraph {
-        font-size: var(--17px);
-    }
-
-    .displayButton {
-        font-size: var(--15px);
-        padding: 2rem 3.5rem;
     }
 
     #videoPlayer {
@@ -789,30 +654,6 @@
     }
 
     .serviceParagraph {
-        font-size: var(--15px);
-    }
-
-    #mainPost {
-        display: grid;
-    }
-
-    #postParagraph {
-        font-size: var(--15px);
-    }
-
-    .postImage {
-        height: 37.5rem;
-    }
-
-    .postHead {
-        font-size: var(--30px);
-    }
-
-    .postParagraph {
-        font-size: var(--17px);
-    }
-
-    .postRead {
         font-size: var(--15px);
     }
 
@@ -878,6 +719,7 @@
 
 
 
+/* Styling for mobile alone */
 @media all and (max-width: 767px) {
 
     :root {
@@ -1054,24 +896,6 @@
         margin-top: 1rem;
     }
 
-    #collectionSection {
-        padding: 0 0.5rem 3rem 0.5rem;
-    }
-
-    .mainCollection {
-        height: 31.5rem;
-        margin-bottom: 1rem;
-        padding-bottom: 3.5rem;
-    }
-
-    .collectionTopic {
-        font-size: var(--24px);
-    }
-
-    .collectionLink {
-        font-size: var(--12px);
-    }
-
     #latestSection {
         padding: 0 0.5rem 5rem 0.5rem;
     }
@@ -1094,33 +918,6 @@
     }
 
     #articleAuthor {
-        font-size: var(--12px);
-    }
-
-    .imageDiv {
-        padding: 1.5rem
-    }
-
-    .displayImage {
-        height: 30rem;
-    }
-
-    .mainDisplay {
-        padding: 1.5rem 1.5rem 6rem 1.5rem;
-    }
-
-    .displayHead {
-        margin: 0.75rem 0;
-        font-size: var(--24px);
-    }
-
-    .displayParagraph {
-        font-size: var(--12px);
-        margin-bottom: 2rem;
-    }
-
-    .displayButton {
-        padding: 1.25rem 1.5rem;
         font-size: var(--12px);
     }
 
@@ -1156,39 +953,6 @@
     }
 
     .serviceParagraph {
-        font-size: var(--12px);
-    }
-
-    #postHeadDiv {
-        padding: 2.5rem 4rem 3.5rem 4rem;
-    }
-
-    #postHead {
-        font-size: var(--20px);
-        margin-top: 1rem;
-    }
-
-    .mainPostDiv {
-        padding: 0 1rem 3.5rem 1rem;
-    }
-
-    .postImage {
-        height: 30rem;
-    }
-
-    .postDate {
-        margin: 1rem 0;
-    }
-
-    .postHead {
-        font-size: var(--24px);
-    }
-
-    .postParagraph {
-        font-size: var(--12px);
-    }
-
-    .postRead {
         font-size: var(--12px);
     }
 
@@ -1299,6 +1063,7 @@
 
 
 
+/* Styling for tab alone */
 @media all and (min-width: 768px) and (max-width: 1023px) {
     :root {
         --60px: 3.75rem;
@@ -1413,28 +1178,6 @@
         margin-top: 1.25rem;
     }
 
-    #collectionSection {
-        grid-gap: 1.75rem;
-        padding: 0 0.75rem 5rem 0.75rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    .mainCollection:nth-child(1) {
-        grid-column: 1/3;
-    }
-
-    .mainCollection:nth-child(2) {
-        grid-column: 3/5;
-    }
-
-    .mainCollection:nth-child(3) {
-        grid-column: 2/4;
-    }
-
-    .mainCollection {
-        height: 37.5rem;
-    }
-
     #latestSection {
         padding: 0 0.75rem 5rem 0.75rem;
     }
@@ -1450,26 +1193,6 @@
 
     #pageArticle {
         height: 45vh;
-    }
-
-    .imageDiv {
-        padding: 4rem 7.5rem;
-    }
-
-    .displayImage {
-        height: 67.5rem;
-    }
-
-    .mainDisplay {
-        padding: 2rem 2rem 7rem 1.75rem;
-    }
-
-    .displayHead {
-        margin: 1rem 0;
-    }
-
-    .displayParagraph {
-        margin-bottom: 2.5rem;
     }
 
     #videoDiv {
@@ -1488,37 +1211,6 @@
     #serviceSection {
         grid-gap: 3.5rem;
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    #postHeadDiv {
-        padding: 3rem 4rem 3.5rem 4rem;
-    }
-
-    #postHead {
-        font-size: var(--40px);
-        margin-top: 1rem;
-    }
-
-    #mainPost {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        padding: 0 0.75rem 3rem 0.75rem;
-        grid-gap: 3.5rem;
-    }
-
-    .mainPostDiv:nth-child(1) {
-        grid-column: 1/3;
-    }
-
-    .mainPostDiv:nth-child(2) {
-        grid-column: 3/5;
-    }
-
-    .mainPostDiv:nth-child(3) {
-        grid-column: 2/4;
-    }
-
-    .postDate {
-        margin: 1.75rem 0 0.75rem 0;
     }
 
     #newsSection {
@@ -1577,6 +1269,7 @@
 
 
 
+/* Styling for desktop alone */
 @media all and (min-width: 1024px) {
     :root {
         --85px: 5.3125rem;
@@ -1704,24 +1397,6 @@
         margin-top: 1rem;
     }
 
-    #collectionSection {
-        grid-gap: 0 1.75rem;
-        padding: 0 0.75rem 9rem 0.75rem;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .mainCollection {
-        height: 40rem;
-    }
-
-    .collectionTopic {
-        display: none;
-    }
-
-    .collectionLink {
-        display: none;
-    }
-
     #latestSection {
         padding: 0 0.75rem 9rem 0.75rem;
     }
@@ -1740,57 +1415,6 @@
 
     #pageArticle {
         padding: 7.5rem 20rem;
-    }
-
-    #displaySection {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 10rem 0;
-        margin-bottom: 10rem;
-    }
-
-    #displayDiv {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-
-    #displayDiv:nth-child(even) .imageDiv {
-        grid-column: 2/3;
-    }
-
-    #displayDiv:nth-child(even) .mainDisplay {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-
-    .imageDiv {
-        padding: 4.5rem;
-    }
-
-    .displayImage {
-        height: 37.5rem;
-    }
-
-    .mainDisplay {
-        padding: 2rem 10rem 7rem 10rem;
-    }
-
-    .displayHead {
-        margin: 2.5rem 0;
-        letter-spacing: 2px;
-        word-spacing: 2px;
-    }
-
-    .displayParagraph {
-        letter-spacing: 1.5px;
-        word-spacing: 2.5px;
-        margin-bottom: 4rem;
-    }
-
-    .displayButton {
-        letter-spacing: 1.5px;
-        word-spacing: 2.5px;
     }
 
     #videoDiv {
@@ -1818,29 +1442,6 @@
     .serviceIcon {
         width: 4rem;
         height: 4rem;
-    }
-
-    #postHeadDiv {
-        padding: 9rem 0 4rem 0;
-    }
-
-    #postHead {
-        font-size: var(--45px);
-        margin-top: 1.5rem;
-    }
-
-    #mainPost {
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 0 0.75rem 9rem 0.75rem;
-        grid-gap: 0 3.5rem;
-    }
-
-    .postDate {
-        margin: 2rem 0 1rem 0;
-    }
-
-    .postParagraph {
-        margin: 1.5rem 0;
     }
 
     #newsSection {

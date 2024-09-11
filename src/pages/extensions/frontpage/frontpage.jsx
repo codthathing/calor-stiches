@@ -3,15 +3,12 @@ import { ToggleRegister } from "../../contextpage";
 import FrontText from "./frontText";
 import ProductTemplate from "../productTemplate";
 import { productDetails } from "../products/products";
-import CollectionTemplate from "../collection/collectionTemplate";
 import PageArticle from "../article";
-import DisplayPage from "../display/display";
 import videoPoster from "../../youtube_poster/video_poster.jpeg";
 import ServiceTemplate from "../service/service";
 import { hotitems } from "../hotItems/hotitems";
 import { newarrivals } from "../newArrivals/newarrivals";
 import { onsales } from "../onSale/onsale";
-import PostTemplate from "../post/post";
 
 const FrontPage = () => {
 
@@ -48,10 +45,6 @@ const FrontPage = () => {
         </button>
       </section>
 
-      <section id="collectionSection">
-        <CollectionTemplate></CollectionTemplate>
-      </section>
-
       <section id="latestSection">
         <ul id="navLatest">
           <li className="latestItem" onMouseOver={() => ChangeLatestItem(hotitems)}>HOT ITEMS</li>
@@ -70,10 +63,6 @@ const FrontPage = () => {
 
       <PageArticle></PageArticle>
 
-      <section id="displaySection">
-        <DisplayPage></DisplayPage>
-      </section>
-
       <div id="videoDiv">
         <video id="videoMain" poster={videoPoster} alt="products_adverts"></video>
         <aside id="videoAside">
@@ -83,16 +72,6 @@ const FrontPage = () => {
 
       <section id="serviceSection">
         <ServiceTemplate></ServiceTemplate>
-      </section>
-
-      <section id="postSection">
-        <div id="postHeadDiv">
-          <p id="postParagraph" className="paragraphStyles">FROM THE BLOGS</p>
-          <p id="postHead">Check Out Our Latest Posts</p>
-        </div>
-        <main id="mainPost">
-          <PostTemplate></PostTemplate>
-        </main>
       </section>
     </>
   );

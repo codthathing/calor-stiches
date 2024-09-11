@@ -1,4 +1,8 @@
 /* Styling for the register page */
+:root {
+  --16px: 1rem;
+}
+
 .navSections {
   position: fixed;
   height: 100vh;
@@ -15,10 +19,6 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); 
-}
-
-.mainRegister {
-  width: 80%;
 }
 
 .cancelBtn {
@@ -41,6 +41,7 @@
   outline: none;
   border: 1px solid black;
   width: 100%;
+  padding: 1.5rem;
 }
 
 #registerParagraph {
@@ -63,6 +64,7 @@
   font-family: var(--Yantramanav);
   outline: none;
   text-decoration: none;
+  padding: 1.25rem 0;
 }
 
 .registerNavText {
@@ -75,10 +77,72 @@
 
 
 
+/* Styling for both Tab and desktop */
+@media all and (min-width: 768px) {
+  :root {
+    --24px: 1.5rem;
+  }
+
+  .registerHead {
+    margin-bottom: 1.5rem;
+  }
+
+  .registerInput {
+    font-size: var(--16px);
+  }
+
+  .registerInput:nth-child(1) {
+    margin-bottom: 1.5rem;
+  }
+  
+  .registerInput:nth-child(2) {
+    margin-bottom: 1.5rem;
+  }
+  
+  #registerParagraph {
+    font-size: var(--16px);
+    margin-bottom: 1.5rem;
+  }
+
+  #registerCheck {
+    margin-right: 0.75rem;
+  }
+
+  #forgotBtn {
+    margin-left: 0.75rem;
+  }
+
+  .navBtn {
+    font-size: var(--16px);
+  }
+
+  .registerBtn {
+    margin-bottom: 1.5rem;
+  }
+  
+  .registerNavText {
+    font-size: var(--16px);
+  }
+}
+
+
+
+
+
+/* Styling for mobile alone */
 @media all and (max-width: 767px) {
+  :root {
+    --20px: 1.25rem;
+    --12px: 0.75rem;
+  }
 
   .mainRegister {
+    width: 80%;
     padding: 1.5rem;
+  }
+
+  .cancelIcon {
+    font-size: var(--16px);
   }
 
   .registerHead {
@@ -88,7 +152,6 @@
 
   .registerInput {
     font-size: var(--12px);
-    padding: 1.5rem;
   }
 
   .registerInput:nth-child(1) {
@@ -114,7 +177,6 @@
 
   .navBtn {
     font-size: var(--12px);
-    padding: 1.25rem 0;
   }
 
   .registerBtn {
@@ -130,14 +192,46 @@
 
 
 
+/* Styling for tab alone */
 @media all and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --32px: 2rem;
+  }
 
+  .mainRegister {
+    width: 40%;
+    padding: 2.5rem;
+  }
+
+  .cancelIcon {
+    font-size: var(--24px);
+  }
+
+  .registerHead {
+    font-size: var(--32px);
+  }
 }
 
 
 
 
 
+/* Styling for desktop alone */
 @media all and (min-width: 1024px) {
+  :root {
+    --20px: 1.25rem;
+  }
 
+  .mainRegister {
+    width: 26.5%;
+    padding: 4rem;
+  }
+
+  .cancelIcon {
+    font-size: var(--20px);
+  }
+
+  .registerHead {
+    font-size: var(--24px);
+  }
 }
