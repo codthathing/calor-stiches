@@ -6,7 +6,6 @@
 #cartProductInnerDiv {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid var(--9B9B9B);
 }
 
 .cartRemove {
@@ -32,6 +31,19 @@
   font-family: var(--Yantramanav);
 }
 
+#cartProductDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+#cartProductInnerDiv {
+  flex: 1;
+}
+
+#cartTotalPriceMain {
+  border-top: 1px solid var(--9B9B9B);
+}
+
 #totalPriceDiv {
   display: flex;
   justify-content: space-between;
@@ -44,6 +56,10 @@
 #cartButtonsDiv {
   display: flex;
   flex-direction: column;
+}
+
+.cartButtons {
+  text-align: center;
 }
 
 #checkoutButton {
@@ -67,7 +83,8 @@
   
   #cartProductDiv {
     margin-top: 6rem;
-    padding: 0 1.5rem 3.5rem 1.5rem;
+    padding: 0 1.5rem 0 1.5rem;
+    height: 89%;
   }
   
   #cartProductInnerDiv {
@@ -84,7 +101,8 @@
   }
 
   .cartProductImage {
-    height: 5rem;
+    height: 6rem;
+    width: 4rem;
   }
 
   .cartDetailsSection {
@@ -101,6 +119,10 @@
   
   .cartDefaultText {
     font-size: var(--12px);
+  }
+
+  #cartTotalPriceMain {
+    padding-bottom: 3.5rem;
   }
 
   #totalPriceDiv {

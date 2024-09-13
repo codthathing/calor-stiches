@@ -1,13 +1,29 @@
 /* Styling for the wishlist page */
+:root {
+  --16px: 1rem;
+}
+
 #wishListMain {
   background-color: white;
-  width: 100%;
   height: fit-content;
   max-height: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+#wishListMain::-webkit-scrollbar {
+  width: 2px;
+}
+
+#wishListMain::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+#wishListMain::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--9B9B9B);
 }
 
 .wishListContainers {
@@ -24,12 +40,12 @@
 }
 
 #wishListText {
-  color: white;
   font-weight: bold;
   font-family: var(--Yantramanav);
+  color: white;
 }
 
-#wishListCancel {
+#wishListCanIcon {
   color: var(--9B9B9B);
 }
 
@@ -46,6 +62,10 @@
 
 .wishListDetails {
   word-break: keep-all;
+}
+
+.wishListPrice {
+  margin: 0.25rem 0;
 }
 
 .wishListAvailMain {
@@ -77,10 +97,68 @@
 
 
 
+@media all and (min-width: 768px) {
+  #wishListMain { 
+    left: 0;
+    right: 0;
+  }
+
+  .wishListContainers {
+    padding: 1.25rem 1.5rem;
+    font-size: var(--16px);
+  }
+
+  #wishListItemSection {
+    padding: 1.5rem;
+  }
+
+  .delWishListIcon {
+    font-size: var(--16px);
+  }
+
+  .wishListImage {
+    height: 8rem;
+  }
+
+  .wishListTexts {
+    font-size: var(--16px);
+  }
+
+  .wishListAvailMain {
+    margin: 0 1rem 2rem 0;
+  }
+
+  .wishListAvailBar {
+    padding: 0.20rem;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .defaultText {
+    font-size: var(--16px);
+  }
+}
+
+
+
+
+
 @media all and (max-width: 767px) {
+  :root {
+    --12px: 0.75rem;
+    --16px: 1rem;
+  }
+
+  #wishListMain {
+    width: 100%;
+  }
+
   .wishListContainers {
     padding: 1rem;
     font-size: var(--12px);
+  }
+
+  #wishListCanIcon {
+    font-size: var(--16px);
   }
 
   #wishListItemSection {
@@ -90,17 +168,21 @@
   .wishListDiv {
     grid-gap: 0.25rem;
     padding: 0.75rem 0;
-  }  
+  }
+
+  .delWishListIcon {
+    font-size: var(--12px);
+  }
 
   .wishListImage {
     height: 6rem;
     width: 4rem;
   }
-  
-  .wishListPrice {
-    margin: 0.25rem 0;
+
+  .wishListTexts {
+    font-size: var(--12px);
   }
-  
+
   .wishListAvailMain {
     margin: 0 1rem 1.5rem 0;
   }
@@ -120,7 +202,26 @@
 
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --24px: 1.5rem;
+  }
 
+  #wishListMain {
+    width: 60%;
+  }
+
+  #wishListCanIcon {
+    font-size: var(--24px);
+  }
+
+  .wishListDiv {
+    grid-gap: 0.25rem;
+    padding: 1rem 0;
+  }
+
+  .wishListImage {
+    width: 6rem;
+  }
 }
 
 
@@ -128,5 +229,24 @@
 
 
 @media all and (min-width: 1024px) {
+  :root {
+    --20px: 1.5rem;
+  }
 
+  #wishListMain {
+    width: 35%;
+  }
+
+  #wishListCanIcon {
+    font-size: var(--20px);
+  }
+
+  .wishListDiv {
+    grid-gap: 0.35rem;
+    padding: 1.25rem 0;
+  }
+
+  .wishListImage {
+    width: 6.5rem;
+  }
 }

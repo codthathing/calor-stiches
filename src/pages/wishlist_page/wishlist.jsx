@@ -15,7 +15,7 @@ const WishList = () => {
       <main ref={addScroll} id="wishListMain">
         <header className="wishListContainers" id="wishListHeader">
           <p id="wishListText">Wishlist ({productDetails.length})</p>
-          <span ref={removeScroll} id="wishListCancel" onClick={() => setWishList(false)}><i className="fa-solid fa-xmark"></i></span>
+          <span ref={removeScroll} id="wishListCancel" onClick={() => setWishList(false)}><i id="wishListCanIcon" className="fa-solid fa-xmark"></i></span>
         </header>
         <section id="wishListItemSection">
           {productDetails.length > 0 ? productDetails.map((details) => {

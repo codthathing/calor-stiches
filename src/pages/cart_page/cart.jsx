@@ -28,8 +28,8 @@ const Cart = () => {
           </p>
         </div>
         <div id="cartButtonsDiv">
-          <Link to="/shop/cart" className="navBtn" id="cartButton">VIEW CART</Link>
-          <Link to="/shop/checkout" className="navBtn" id="checkoutButton">CHECKOUT</Link>
+          <Link to="/shop/cart" className="navBtn cartButtons" id="cartButton">VIEW CART</Link>
+          <Link to="/shop/checkout" className="navBtn cartButtons" id="checkoutButton">CHECKOUT</Link>
         </div>
       </main>
     );
@@ -53,7 +53,7 @@ const Cart = () => {
           </> :
           <p className="defaultText" id="cartDefaultText">No products in the cart</p>}
       </div>
-      <footer className="navFooter"></footer>
+      {/* <footer className="navFooter"></footer> */}
     </section>
   );
 }

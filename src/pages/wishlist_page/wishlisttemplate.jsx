@@ -6,16 +6,16 @@ const WishlistTemplate = ({id, productImage, productName, productPrice, wishlist
       <span className="delWishListSpan"><i className="fa-solid fa-xmark delWishListIcon"></i></span>
       <img src={productImage} alt={productName} className="wishListImage"/>
       <div className="wishListDetails">
-        <h1 className="wishListName">{productName}</h1>
-        <p className="wishListPrice">${productPrice}.00</p>
-        <p className="wishListDate">{wishlistDate}</p>
+        <h1 className="wishListName wishListTexts">{productName}</h1>
+        <p className="wishListPrice wishListTexts">${productPrice}.00</p>
+        <p className="wishListDate wishListTexts">{wishlistDate}</p>
       </div>
       <div className="wishListAvailDiv">
         <main className="wishListAvailMain">
-          <p className="wishListAvail">Stock: {wishlistStock}</p>
+          <p className="wishListAvail wishListTexts">Stock: {wishlistStock}</p>
           <div className="wishListAvailBar"></div>
         </main>
-        <p className="wishListAddCart">ADD TO CART</p>
+        <p className="wishListAddCart wishListTexts">ADD TO CART</p>
       </div>
     </div>
   );

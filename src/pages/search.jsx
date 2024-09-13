@@ -18,7 +18,9 @@ const Search = () => {
       <main id="searchMain">
         <form id="searchForm">
           <input ref={inputFocus} type="text" id="searchInput" placeholder="What are you looking for?" />
-          <i className="fa-solid fa-magnifying-glass" id="searchIcon" type="submit"></i>
+          <div id="searchIconDiv">
+            <i className="fa-solid fa-magnifying-glass" id="searchIcon" type="submit"></i>
+          </div>
         </form>
         <div id="searchProductDiv">
           <h1 className="navHeadText" id="searchHead">Popular Product</h1>

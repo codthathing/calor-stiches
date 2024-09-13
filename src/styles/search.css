@@ -1,4 +1,12 @@
 /* Styling for the search page */
+:root {
+  --16px: 1rem;
+}
+
+#searchSection::-webkit-scrollbar {
+  display: none;
+}
+
 .navBack {
   width: 100%;
   background-color: white;
@@ -33,9 +41,13 @@
   border: none;
 }
 
+#searchIconDiv {
+  border: none;
+  text-align: center;
+}
+
 #searchIcon {
   color: var(--222222);
-  border: none;
 }
 
 .navHeadText {
@@ -55,14 +67,44 @@
 
 
 
+/* Styling for both tab and desktop */
+@media all and (min-width: 768px) {
+  :root {
+    --24px: 1.5rem;
+  }
+
+  #searchInput {
+    font-size: var(--16px);
+  }
+
+  #searchIcon {
+    font-size: var(--16px);
+  }
+
+  #searchProductSection {
+    padding: 0 5rem 5rem 5rem;
+    display: grid;
+    gap: 1rem 3rem;
+  }
+}
+
+
+
+
+
+/* Styling for mobile alone */
 @media all and (max-width: 767px) {
+  :root {
+    --12px: 0.75rem;
+    --20px: 1.25rem;
+  }
 
   #searchHeader {
     padding: 0.85rem;
   }
 
   .navBackIcon {
-    font-size: 1rem;
+    font-size: var(--16px);
   }
 
   .navFooter {
@@ -75,15 +117,14 @@
 
   #searchForm {
     margin: 0 1.5rem;
+    padding: 1.5rem 0 1.5rem 1.5rem;
   }
 
   #searchInput {
-    padding: 1.5rem;
     font-size: var(--12px);
   }
 
   #searchIcon {
-    padding:1.5rem;
     font-size: var(--12px);
   }
 
@@ -92,7 +133,7 @@
   }
   
   .navHeadText {
-    font-size: var(--24px)
+    font-size: var(--20px)
   }
 
   #searchHead {
@@ -108,14 +149,95 @@
 
 
 
+/* Styling for tab alone */
 @media all and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --32px: 2rem;
+  }
 
+  #searchHeader {
+    padding: 1.75rem 2rem;
+  }
+
+  .navBackIcon {
+    font-size: var(--24px);
+  }
+
+  .navFooter {
+    padding: 2.75rem 0;
+  }
+
+  #searchMain {
+    margin-top: 6.5rem;
+  }
+
+  #searchForm {
+    margin: 0 6.5rem;
+    padding: 2rem 0 2rem 2rem;
+  }
+
+  #searchProductDiv {
+    margin-top: 3.5rem;
+  }
+  
+  .navHeadText {
+    font-size: var(--32px)
+  }
+
+  #searchHead {
+    margin-bottom: 3.5rem;
+  }
+
+  #searchProductSection {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 
 
 
 
+/* Styling for desktop alone */
 @media all and (min-width: 1024px) {
+  :root {
+    --20px: 1.25rem;
+  }
 
+  #searchHeader {
+    padding: 1.5rem 1.25rem 1rem 1.25rem;
+  }
+
+  .navBackIcon {
+    font-size: var(--20px);
+  }
+
+  .navFooter {
+    padding: 2rem 0;
+  }
+
+  #searchMain {
+    margin-top: 5rem;
+  }
+
+  #searchForm {
+    width: 50%;
+    margin: 0 auto;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+
+  #searchProductDiv {
+    margin-top: 5.5rem;
+  }
+  
+  .navHeadText {
+    font-size: var(--24px)
+  }
+
+  #searchHead {
+    margin-bottom: 2.5rem;
+  }
+
+  #searchProductSection {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
