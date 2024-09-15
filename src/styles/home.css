@@ -38,6 +38,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    cursor: pointer;
 }
 
 .curLangText {
@@ -112,6 +113,7 @@
 
 .icons {
     list-style: none;
+    cursor: pointer;
 }
 
 #displayText {
@@ -144,6 +146,7 @@
     border: none;
     outline: none;
     text-decoration: none;
+    cursor: pointer;
 }
 
 #disDiv {
@@ -564,7 +567,6 @@
     #loginText {
         font-size: var(--17px);
         font-weight: var(--500);
-        color: white;
     }
 
     #userIcon {
@@ -1278,7 +1280,7 @@
     }
 
     #frontPage {
-        padding: 15rem 0 2.75rem 0;
+        padding: 17.5rem 0 2.75rem 0;
     }
 
     #curLangHead {
@@ -1291,6 +1293,7 @@
 
     #curLangInerText {
         font-size: var(--13px);
+        cursor: pointer;
     }
 
     #sidemenuList {

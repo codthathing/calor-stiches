@@ -9,7 +9,7 @@ const ProductReview = () => {
   const [name, setName] = useState("");
   const { productName } = useParams();
   const { pathname } = useLocation();
-  const { setSearch, setNavbar, setToggleSideMenu } = useContext(ToggleRegister);
+  const { setSearch, setNavbar, setCart, setToggleSideMenu } = useContext(ToggleRegister);
 
   useEffect(() => {
     const presentProduct = productDetails.find((product) => product.productName === productName);
@@ -18,6 +18,7 @@ const ProductReview = () => {
     setSearch(false);
     setToggleSideMenu(false);
     setNavbar(true);
+    setCart(false);
   }, [name, pathname])
 
   const pageLinkDetails = [

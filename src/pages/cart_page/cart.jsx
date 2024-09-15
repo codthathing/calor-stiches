@@ -36,24 +36,26 @@ const Cart = () => {
   };
 
   return (
-    <section id="cartSection" ref={addScroll} className="navSections whiteBackSections">
-      <div className="navBack" id="cartHeader">
-        <i onClick={() => setCart(false)} ref={removeScroll} className="fa-solid fa-xmark navBackIcon"></i>
-        <h1 className="navHeadText" id="cartHead">Shopping Cart</h1>
-      </div>
-      <div id="cartProductDiv">
-        {productDetails.length > 0 ?
-          <>
-            <div id="cartProductInnerDiv">
-              {productDetails.map((details) => {
-                return <CartTemplate {...details}></CartTemplate>
-              })}
-            </div>
-            <CartTotalPriceMain></CartTotalPriceMain>
-          </> :
-          <p className="defaultText" id="cartDefaultText">No products in the cart</p>}
-      </div>
-      {/* <footer className="navFooter"></footer> */}
+    <section className="navSections">
+      <main id="cartSection" ref={addScroll} className="whiteBackSections">
+        <div className="navBack cartEnds" id="cartHeader">
+          <i onClick={() => setCart(false)} ref={removeScroll} className="fa-solid fa-xmark navBackIcon"></i>
+          <h1 className="navHeadText" id="cartHead">Shopping Cart</h1>
+        </div>
+        <div id="cartProductDiv">
+          {productDetails.length > 0 ?
+            <>
+              <div id="cartProductInnerDiv">
+                {productDetails.map((details) => {
+                  return <CartTemplate {...details}></CartTemplate>
+                })}
+              </div>
+              <CartTotalPriceMain></CartTotalPriceMain>
+            </> :
+            <p className="defaultText" id="cartDefaultText">No products in the cart</p>}
+        </div>
+        <footer id="cartFooter" className="navFooter cartEnds"></footer>
+      </main>
     </section>
   );
 }

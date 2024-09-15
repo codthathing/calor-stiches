@@ -41,7 +41,7 @@ const Home = () => {
               <span id="logoDesk">Calor Stiches</span>
             </h1>
             <ul id="navIcons">
-              <li className="icons"><p onClick={() => setRegister(true)} id="loginText">LOGIN</p></li>
+            <li className="icons"><p onClick={() => setRegister(true)} id="loginText">LOGIN</p></li>
               <li className="icons">
                 <i id="userIcon" className="fa-regular fa-user iconTag" onClick={() => setRegister(true)}></i>
                 {register && <RegisterLayout></RegisterLayout>}

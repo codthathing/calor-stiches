@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const WishlistTemplate = ({id, productImage, productName, productPrice, wishlistDate, wishlistStock}) => {
+const WishlistTemplate = ({ id, productImage, productName, productPrice, wishlistDate, wishlistStock }) => {
   return (
     <div key={id} className="wishListDiv">
       <span className="delWishListSpan"><i className="fa-solid fa-xmark delWishListIcon"></i></span>
-      <img src={productImage} alt={productName} className="wishListImage"/>
+      <img src={productImage} alt={productName} className="wishListImage" />
       <div className="wishListDetails">
         <h1 className="wishListName wishListTexts">{productName}</h1>
         <p className="wishListPrice wishListTexts">${productPrice}.00</p>

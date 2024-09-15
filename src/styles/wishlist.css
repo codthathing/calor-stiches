@@ -96,7 +96,7 @@
 
 
 
-
+/* Styling for tab and desktop */
 @media all and (min-width: 768px) {
   #wishListMain { 
     left: 0;
@@ -142,6 +142,7 @@
 
 
 
+/* Styling for mobile alone */
 @media all and (max-width: 767px) {
   :root {
     --12px: 0.75rem;
@@ -201,6 +202,7 @@
 
 
 
+/* Styling for tab alone */
 @media all and (min-width: 768px) and (max-width: 1023px) {
   :root {
     --24px: 1.5rem;
@@ -228,6 +230,7 @@
 
 
 
+/* Styling for desktop alone */
 @media all and (min-width: 1024px) {
   :root {
     --20px: 1.5rem;

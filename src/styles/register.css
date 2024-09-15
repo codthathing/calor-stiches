@@ -64,7 +64,11 @@
   font-family: var(--Yantramanav);
   outline: none;
   text-decoration: none;
+}
+
+.registerBtn {
   padding: 1.25rem 0;
+  cursor: pointer;
 }
 
 .registerNavText {

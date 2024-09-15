@@ -13,7 +13,7 @@ const Search = () => {
   const { inputFocus } = useFocus(search);
 
   return (
-    <section ref={addScroll} id="searchSection" className="navSections whiteBackSections">
+    <section ref={addScroll} id="searchSection" className="whiteBackSections">
       <div id="searchHeader" className="navBack"><i ref={removeScroll} onClick={() => setSearch(false)} className="fa-solid fa-xmark navBackIcon"></i></div>
       <main id="searchMain">
         <form id="searchForm">
@@ -31,7 +31,7 @@ const Search = () => {
           </section>
         </div>
       </main>
-      <footer className="navFooter"></footer>
+      <footer id="searchFooter" className="navFooter"></footer>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CartTemplate = ({ id, productImage, productName, productPrice, productDetails, cartAmt, cartPrice }) => {
   return (
@@ -7,12 +8,16 @@ const CartTemplate = ({ id, productImage, productName, productPrice, productDeta
       <div className="cartProductDetails">
         <i className="fa-solid fa-xmark cartRemove"></i>
         <section className="cartDetailsSection">
-          <h1 className="cartProductName">{productName}</h1>
+          <h1 className="cartProductName">
+            <Link style={{ textDecoration: "none", color: "black" }} to={`/product/${productName}`}>
+              {productName}
+            </Link>
+          </h1>
           {productDetails && productDetails.map(({ cartSize, cartColor }) => {
             return (
               <>
                 {cartColor && <p className="cartProductText cartProductColor">Color: {cartColor}</p>}
-                {cartSize && <p className="cartProductText cartProductSize">Size: {cartSize}</p> }
+                {cartSize && <p className="cartProductText cartProductSize">Size: {cartSize}</p>}
               </>
             );
           })}
