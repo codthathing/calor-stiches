@@ -1,6 +1,9 @@
 /* Styling for the cart page */
 :root {
   --16px: 1rem;
+  --222222: #222222;
+  --9B9B9B: #9B9B9B;
+  --Yantramanav: 'Yantramanav', sans-serif;
 }
 
 #cartSection::-webkit-scrollbar {
@@ -22,6 +25,7 @@
 .cartRemove {
   position: absolute;
   right: 0;
+  color: var(--222222);
 }
 
 .cartProductMain {
@@ -34,12 +38,24 @@
   flex-direction: column;
 }
 
+.cartProductText {
+  font-family: var(--Yantramanav);
+  color: var(--222222);
+}
+
 .cartProductName {
   text-transform: capitalize;
 }
 
+.cartProductNameText {
+  text-decoration: none;
+  color: var(--222222);
+  font-family: var(--Yantramanav);
+}
+
 .cartDefaultText {
   font-family: var(--Yantramanav);
+  color: var(--222222);
 }
 
 #cartProductDiv {
@@ -62,6 +78,7 @@
 
 .totalPrice {
   font-family: var(--Yantramanav);
+  color: var(--222222);
 }
 
 #cartButtonsDiv {

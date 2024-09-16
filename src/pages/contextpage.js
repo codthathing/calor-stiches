@@ -9,10 +9,11 @@ export const OptNavProvider = ({children}) => {
   const [cart, setCart] = useState(false);
   const [toggleSideMenu, setToggleSideMenu] = useState(false);
   const [navbar, setNavbar] = useState(false);
+  const [currency, setCurrency] = useState(false);
   const [presentRegister, setPresentRegister] = useState("LOGIN");
 
   return (
-    <ToggleRegister.Provider value={{register, setRegister, presentRegister, setPresentRegister, wishList, setWishList, cart, setCart, search, setSearch, toggleSideMenu, setToggleSideMenu, navbar, setNavbar}}>
+    <ToggleRegister.Provider value={{register, setRegister, presentRegister, setPresentRegister, wishList, setWishList, cart, setCart, search, setSearch, toggleSideMenu, setToggleSideMenu, navbar, setNavbar, currency, setCurrency}}>
       {children}
     </ToggleRegister.Provider>
   );

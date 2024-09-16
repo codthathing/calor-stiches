@@ -1,6 +1,10 @@
 /* Styling for the wishlist page */
 :root {
   --16px: 1rem;
+  --222222: #222222;
+  --9B9B9B: #9B9B9B;
+  --282828: #282828;
+  --Yantramanav: 'Yantramanav', sans-serif;
 }
 
 #wishListMain {
@@ -35,7 +39,7 @@
 }
 
 #wishListHeader {
-  background-color: #282828;
+  background-color: var(--282828);
   top: 0;
 }
 
@@ -58,6 +62,10 @@
 
 .wishListDiv:last-child {
   border-bottom: none;
+}
+
+.delWishListIcon {
+  color: var(--222222);
 }
 
 .wishListDetails {
@@ -90,7 +98,13 @@
 }
 
 .wishListLinks {
-  color: black;
+  color: var(--222222);
+  font-family: var(--Yantramanav);
+}
+
+.wishListTexts {
+  font-family: var(--Yantramanav);
+  color: var(--222222);
 }
 
 

@@ -1,6 +1,10 @@
 /* Styling for the register page */
 :root {
   --16px: 1rem;
+  --1B1A1A: #1B1A1A;
+  --222222: #222222;
+  --Yantramanav: 'Yantramanav', sans-serif;
+  --Cormorant: 'Cormorant Infant', sans-serif;
 }
 
 .navSections {
@@ -27,7 +31,7 @@
 }
 
 .cancelIcon {
-  color: black;
+  color: var(--1B1A1A);
 }
 
 .registerHead {

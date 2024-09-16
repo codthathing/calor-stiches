@@ -1,6 +1,10 @@
 /* Styling for the search page */
 :root {
   --16px: 1rem;
+  --1B1A1A: #1B1A1A;
+  --222222: #222222;
+  --Cormorant: 'Cormorant Infant', sans-serif;
+  --Yantramanav: 'Yantramanav', sans-serif;
 }
 
 #searchSection {
@@ -22,7 +26,7 @@
 }
 
 .navBackIcon {
-  color: black;
+  color: var(--1B1A1A);
   align-self: flex-end;
 }
 

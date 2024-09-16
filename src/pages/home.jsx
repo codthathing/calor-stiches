@@ -12,11 +12,13 @@ import { useHead } from "./usehead";
 import Search from "./search";
 import WishList from "./wishlist_page/wishlist";
 import Cart from "./cart_page/cart";
+import nigeria_flag from "./logo/nigeria-flag.png";
+import america_flag from "./logo/america-flag.png"
 
 
 const Home = () => {
 
-  const { register, setRegister, search, setSearch, wishList, setWishList, cart, setCart, toggleSideMenu, setToggleSideMenu } = useContext(ToggleRegister);
+  const { register, setRegister, search, setSearch, wishList, setWishList, cart, setCart, toggleSideMenu, setToggleSideMenu, currency } = useContext(ToggleRegister);
   const { header, navbar } = useHead();
 
   return (
@@ -27,6 +29,12 @@ const Home = () => {
           <div id="curLangInnerDiv">
             <p id="curLangInerText">United States (USD $)</p>
             <CurLangTemplate></CurLangTemplate>
+            {currency &&
+              <div id="displayCurrency">
+                <img src={nigeria_flag} alt="Nigeria flag" id="curFlag" />
+                <p id="curText">Naira &#8358;</p>
+              </div>
+            }
           </div>
         </div>
         <nav id="headerNav">
@@ -41,7 +49,7 @@ const Home = () => {
               <span id="logoDesk">Calor Stiches</span>
             </h1>
             <ul id="navIcons">
-            <li className="icons"><p onClick={() => setRegister(true)} id="loginText">LOGIN</p></li>
+              <li className="icons"><p onClick={() => setRegister(true)} id="loginText">LOGIN</p></li>
               <li className="icons">
                 <i id="userIcon" className="fa-regular fa-user iconTag" onClick={() => setRegister(true)}></i>
                 {register && <RegisterLayout></RegisterLayout>}

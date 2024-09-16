@@ -32,6 +32,7 @@
 #curLangInnerDiv {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .curLangMain {
@@ -42,6 +43,29 @@
 }
 
 .curLangText {
+    font-family: var(--Yantramanav);
+}
+
+#displayCurrency {
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    padding: 1rem;
+    margin-top: 0.25rem;
+    z-index: 100;
+    display: flex;
+    gap: 0 0.5rem;
+    align-items: center;
+}
+
+#curFlag {
+    width: 2rem;
+    height: 1rem;
+}
+
+#curText {
+    font-size: var(--12px);
+    color: var(--222222);
     font-family: var(--Yantramanav);
 }
 
@@ -199,6 +223,10 @@
     justify-content: space-between;
     align-self: flex-end;
     width: 100%;
+}
+
+.optionIcon {
+    color: var(--222222);
 }
 
 .selectOption {

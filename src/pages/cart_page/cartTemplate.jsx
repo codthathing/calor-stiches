@@ -9,7 +9,7 @@ const CartTemplate = ({ id, productImage, productName, productPrice, productDeta
         <i className="fa-solid fa-xmark cartRemove"></i>
         <section className="cartDetailsSection">
           <h1 className="cartProductName">
-            <Link style={{ textDecoration: "none", color: "black" }} to={`/product/${productName}`}>
+            <Link className="cartProductNameText" to={`/product/${productName}`}>
               {productName}
             </Link>
           </h1>
