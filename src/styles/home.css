@@ -50,23 +50,15 @@
     background-color: white;
     position: absolute;
     top: 100%;
-    padding: 1rem;
-    margin-top: 0.25rem;
     z-index: 100;
     display: flex;
-    gap: 0 0.5rem;
     align-items: center;
 }
 
-#curFlag {
-    width: 2rem;
-    height: 1rem;
-}
-
 #curText {
-    font-size: var(--12px);
     color: var(--222222);
     font-family: var(--Yantramanav);
+    word-break: keep-all;
 }
 
 #headerNav {
@@ -584,6 +576,15 @@
         font-size: var(--13px);
     }
 
+    #displayCurrency {
+        right: 0;
+        margin-top: 0.5rem;
+    }
+    
+    #curText {
+        font-size: var(--16px);
+    }
+
     #logo {
         font-size: var(--44px);
     }
@@ -788,6 +789,21 @@
 
     .curLangIcon {
         font-size: var(--10px);
+    }
+
+    #displayCurrency {
+        padding: 1rem 2.5rem 1rem 1rem;
+        margin-top: 0.25rem;
+        gap: 0 0.5rem;
+    }
+    
+    #curFlag {
+        width: 2rem;
+        height: 1rem;
+    }
+    
+    #curText {
+        font-size: var(--12px);
     }
 
     #sidemenuList {
@@ -1111,6 +1127,16 @@
         display: none !important;
     }
 
+    #displayCurrency {
+        padding: 1.5rem 3.5rem 1.5rem 1.5rem;
+        gap: 0 0.75rem;
+    }
+    
+    #curFlag {
+        width: 4rem;
+        height: 2rem;
+    }
+
     #sidemenuList {
         padding: 2.5rem 1.75rem;
     }
@@ -1322,6 +1348,16 @@
     #curLangInerText {
         font-size: var(--13px);
         cursor: pointer;
+    }
+
+    #displayCurrency {
+        padding: 1.75rem 4rem 1.75rem 1.75rem;
+        gap: 0 1rem;
+    }
+    
+    #curFlag {
+        width: 2rem;
+        height: 1rem;
     }
 
     #sidemenuList {
