@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const WishlistTemplate = ({ id, productImage, productName, productPrice, wishlistDate, wishlistStock }) => {
   return (
@@ -8,7 +7,7 @@ const WishlistTemplate = ({ id, productImage, productName, productPrice, wishlis
       <img src={productImage} alt={productName} className="wishListImage" />
       <div className="wishListDetails">
         <h1 className="wishListName wishListTexts">{productName}</h1>
-        <p className="wishListPrice wishListTexts">${productPrice}.00</p>
+        <p className="wishListPrice wishListTexts">#{productPrice}.00</p>
         <p className="wishListDate wishListTexts">{wishlistDate}</p>
       </div>
       <div className="wishListAvailDiv">

@@ -18,7 +18,7 @@ import america_flag from "./logo/america-flag.png"
 
 const Home = () => {
 
-  const { register, setRegister, search, setSearch, wishList, setWishList, cart, setCart, toggleSideMenu, setToggleSideMenu, currency } = useContext(ToggleRegister);
+  const { register, setRegister, search, setSearch, wishList, setWishList, cart, setCart, toggleSideMenu, setToggleSideMenu } = useContext(ToggleRegister);
   const { header, navbar } = useHead();
 
   return (
@@ -26,16 +26,7 @@ const Home = () => {
       <header id="header" className={header ? "scrollTop" : ""}>
         <div id="curLangHead">
           <p id="curLangOuterText">Delivery time 2-3 working days</p>
-          <div id="curLangInnerDiv">
-            <p id="curLangInerText">United States (USD $)</p>
-            <CurLangTemplate></CurLangTemplate>
-            {currency &&
-              <div id="displayCurrency">
-                <img src={nigeria_flag} alt="Nigeria flag" id="curFlag" />
-                <p id="curText">Naira &#8358;</p>
-              </div>
-            }
-          </div>
+          <CurLangTemplate></CurLangTemplate>
         </div>
         <nav id="headerNav">
           {toggleSideMenu &&

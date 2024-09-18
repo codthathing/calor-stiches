@@ -65,7 +65,7 @@ export const productDetails = [
     id: 4,
     productImage: product_five,
     productName: "lime punch outerwear",
-    productPrice: "109.00   -   $129",
+    productPrice: 121,
     productAvailable: "BACK IN STORE",
     productAvailableColor: "#AECA2E",
     productDetails: [
@@ -73,7 +73,6 @@ export const productDetails = [
       { cartSize: "XL" },
     ],
     cartAmt: 3,
-    cartPrice: 121,
     wishlistDate: "September 9, 2024",
     wishlistStock: "In stock, ready to be shippped"
   },
@@ -99,11 +98,10 @@ export const productDetails = [
     id: 6,
     productImage: product_seven,
     productName: "lime punch outerwear",
-    productPrice: "109.00   -   $129",
+    productPrice: 117,
     productAvailable: "BACK IN STORE",
     productAvailableColor: "#AECA2E",
     cartAmt: 5,
-    cartPrice: 117,
     wishlistDate: "April 1, 2024",
     wishlistStock: "In stock, ready to be shippped"
   },
