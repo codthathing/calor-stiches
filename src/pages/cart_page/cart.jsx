@@ -13,7 +13,7 @@ const Cart = () => {
   const CalTotal = () => {
     let total = 0;
     for (let i = 0; i < productDetails.length; i++) {
-      total += productDetails[i].cartPrice ? productDetails[i].cartPrice * productDetails[i].cartAmt : productDetails[i].productPrice * productDetails[i].cartAmt;
+      total += productDetails[i].averagePrice ? productDetails[i].averagePrice * productDetails[i].cartAmt : productDetails[i].productPrice * productDetails[i].cartAmt;
     }
     return total;
   };

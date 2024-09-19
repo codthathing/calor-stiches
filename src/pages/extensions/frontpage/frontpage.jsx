@@ -16,13 +16,13 @@ const FrontPage = () => {
   const ChangeLatestItem = (newitem) => {
     setLatestItems(newitem);
   }
-  const { setToggleSideMenu, setNavbar } = useContext(ToggleRegister);
+  const { setToggleSideMenu, setNavbar, products } = useContext(ToggleRegister);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     setToggleSideMenu(false);
     setNavbar(false);
-  }, [])
+  }, []);
 
   return (
     <>
@@ -36,7 +36,7 @@ const FrontPage = () => {
           <h1 id="productHead">Featured Products</h1>
         </div>
         <main id="mainProduct">
-          {productDetails.map((details) => {
+          {products.map((details) => {
             return <ProductTemplate key={details.id} {...details}></ProductTemplate>
           })}
         </main>

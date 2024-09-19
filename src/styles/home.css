@@ -29,7 +29,7 @@
     color: white;
 }
 
-#curLangInnerDiv {
+#curInnerDiv {
     display: flex;
     align-items: center;
     position: relative;
@@ -50,10 +50,12 @@
     background-color: white;
     position: absolute;
     top: 100%;
+    right: 0;
     z-index: 100;
     display: flex;
     align-items: center;
     margin-top: -0.00025rem;
+    cursor: pointer;
 }
 
 #curText {
@@ -303,6 +305,7 @@
     font-family: var(--Yantramanav);
     border-bottom: var(--border_size) solid black;
     color: var(--222222);
+    cursor: pointer;
 }
 
 #latestButtonText {
@@ -575,10 +578,6 @@
 
     .curLangText {
         font-size: var(--13px);
-    }
-
-    #displayCurrency {
-        right: 0;
     }
     
     #curText {
@@ -1340,7 +1339,7 @@
         padding: 1rem 3rem
     }
 
-    #curLangInnerDiv {
+    #curInnerDiv {
         gap: 0 1.5rem;
     }
 

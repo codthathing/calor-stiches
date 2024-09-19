@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CartTemplate = ({ id, productImage, productName, productPrice, productDetails, cartAmt }) => {
+const CartTemplate = ({ id, productImage, productName, averagePrice, productPrice, productDetails, cartAmt }) => {
   return (
     <main key={id} className="cartProductMain">
       <img src={productImage} alt={productName} className="cartProductImage" />
@@ -21,7 +21,9 @@ const CartTemplate = ({ id, productImage, productName, productPrice, productDeta
               </>
             );
           })}
-          <p className="cartProductText cartProductAmt">{cartAmt} * #{productPrice}.00</p>
+          <p className="cartProductText cartProductAmt">
+            {cartAmt} * {averagePrice ? `₦${averagePrice}.00` : `₦${productPrice}.00`}
+            </p>
         </section>
       </div>
     </main>

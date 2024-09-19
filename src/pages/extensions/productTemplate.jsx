@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ToggleRegister } from "../contextpage";
 
-const ProductTemplate = ({ productAvailable, productAvailableColor, doubleProductAvail, doubleAvailColor, productImage, productName, cutOff, originalPrice, productPrice }) => {
+const ProductTemplate = ({ productAvailable, productAvailableColor, doubleProductAvail, doubleAvailColor, productImage, productName, cutOff, productPrice, priceOne, priceTwo, averagePrice }) => {
+  const { curSymbol } = useContext(ToggleRegister);
 
   return (
     <div className="productDiv">
@@ -21,8 +23,10 @@ const ProductTemplate = ({ productAvailable, productAvailableColor, doubleProduc
       <section className="productNamePrice">
         <p className="productName">{productName}</p>
         <div className="priceDiv">
-          {cutOff && <span className="productPrice originalPrice">#{(100 / cutOff) * productPrice}.00</span>}
-          <span className="productPrice" style={{ color: cutOff ? "#FF0000" : "#222222" }}>#{productPrice}.00</span>
+          {cutOff && <span className="productPrice originalPrice">{curSymbol}{((100 / cutOff) * productPrice).toFixed(2)}</span>}
+          <span className="productPrice" style={{ color: cutOff ? "#FF0000" : "#222222" }}>
+            {averagePrice ? `${curSymbol}${priceOne.toFixed(2)} - ${curSymbol}${priceTwo.toFixed(2)}` : `${curSymbol}${productPrice.toFixed(2)}` }
+          </span>
         </div>
       </section>
     </div>

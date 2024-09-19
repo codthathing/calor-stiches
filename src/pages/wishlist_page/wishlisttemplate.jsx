@@ -1,13 +1,15 @@
 import React from "react";
 
-const WishlistTemplate = ({ id, productImage, productName, productPrice, wishlistDate, wishlistStock }) => {
+const WishlistTemplate = ({ id, productImage, productName, productPrice, priceOne, priceTwo, averagePrice, wishlistDate, wishlistStock }) => {
   return (
     <div key={id} className="wishListDiv">
       <span className="delWishListSpan"><i className="fa-solid fa-xmark delWishListIcon"></i></span>
       <img src={productImage} alt={productName} className="wishListImage" />
       <div className="wishListDetails">
         <h1 className="wishListName wishListTexts">{productName}</h1>
-        <p className="wishListPrice wishListTexts">#{productPrice}.00</p>
+        <p className="wishListPrice wishListTexts">
+          {averagePrice ? `₦${priceOne}.00 - ₦${priceTwo}.00` : `₦${productPrice}.00`}
+        </p>
         <p className="wishListDate wishListTexts">{wishlistDate}</p>
       </div>
       <div className="wishListAvailDiv">
