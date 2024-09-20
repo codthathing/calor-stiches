@@ -2,21 +2,17 @@ import React, { useContext, useEffect, useState } from "react";
 import { ToggleRegister } from "../../contextpage";
 import FrontText from "./frontText";
 import ProductTemplate from "../productTemplate";
-import { productDetails } from "../products/products";
 import PageArticle from "../article";
 import videoPoster from "../../youtube_poster/video_poster.jpeg";
 import ServiceTemplate from "../service/service";
-import { hotitems } from "../hotItems/hotitems";
-import { newarrivals } from "../newArrivals/newarrivals";
-import { onsales } from "../onSale/onsale";
 
 const FrontPage = () => {
 
-  const [latestItems, setLatestItems] = useState(hotitems);
+  const { setToggleSideMenu, setNavbar, products, hotItems, newArrivals, onSales } = useContext(ToggleRegister);
+  const [latestItems, setLatestItems] = useState(hotItems);
   const ChangeLatestItem = (newitem) => {
     setLatestItems(newitem);
-  }
-  const { setToggleSideMenu, setNavbar, products } = useContext(ToggleRegister);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -47,9 +43,9 @@ const FrontPage = () => {
 
       <section id="latestSection">
         <ul id="navLatest">
-          <li className="latestItem" onMouseOver={() => ChangeLatestItem(hotitems)}>HOT ITEMS</li>
-          <li className="latestItem" onMouseOver={() => ChangeLatestItem(newarrivals)}>NEW ARRIVALS</li>
-          <li className="latestItem" onMouseOver={() => ChangeLatestItem(onsales)} style={{ color: '#FF421D', borderBottomColor: '#FF421D' }}>ON SALE</li>
+          <li className="latestItem" onMouseOver={() => ChangeLatestItem(hotItems)}>HOT ITEMS</li>
+          <li className="latestItem" onMouseOver={() => ChangeLatestItem(newArrivals)}>NEW ARRIVALS</li>
+          <li className="latestItem" onMouseOver={() => ChangeLatestItem(onSales)} style={{ color: '#FF421D', borderBottomColor: '#FF421D' }}>ON SALE</li>
         </ul>
         <section id="latestSections">
           {latestItems.map((details) => {

@@ -14,4 +14,4 @@ const ChangeProductNaira = (details) => {
   }
 }
 
-export {ChangeProductDollar, ChangeProductNaira};
+export { ChangeProductDollar, ChangeProductNaira }

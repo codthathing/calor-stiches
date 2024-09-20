@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ToggleRegister } from "../contextpage";
 
 const CartTemplate = ({ id, productImage, productName, averagePrice, productPrice, productDetails, cartAmt }) => {
+  const { curSymbol } = useContext(ToggleRegister);
+
   return (
     <main key={id} className="cartProductMain">
       <img src={productImage} alt={productName} className="cartProductImage" />
@@ -22,7 +25,7 @@ const CartTemplate = ({ id, productImage, productName, averagePrice, productPric
             );
           })}
           <p className="cartProductText cartProductAmt">
-            {cartAmt} * {averagePrice ? `₦${averagePrice}.00` : `₦${productPrice}.00`}
+            {cartAmt} * {averagePrice ? `${curSymbol}${averagePrice.toFixed(2)}` : `${curSymbol}${productPrice.toFixed(2)}`}
             </p>
         </section>
       </div>

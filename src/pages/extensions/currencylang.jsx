@@ -7,16 +7,22 @@ import { ChangeProductDollar, ChangeProductNaira } from "./conversion";
 const CurLangTemplate = () => {
   const [currency, setCurrency] = useState(false);
   const [curDetails, setCurDetails] = useState({ preNation: "Nigeria (Naira ₦)", preCur: "(Naira ₦)", curFlag: america_flag, curName: "USD $" });
-  const { products, setProducts, setCurSymbol } = useContext(ToggleRegister);
+  const { products, setProducts, setCurSymbol, hotItems, setHotItems, newArrivals, setNewArrivals, onSales, setOnSales } = useContext(ToggleRegister);
 
   const ChangeCurrency = () => {
     if (curDetails.preCur == "(Naira ₦)") {
       setCurDetails({ preNation: "United states (USD $)", preCur: "(USD $)", curFlag: nigeria_flag, curName: "Naira ₦" });
       setProducts(products.map((details) => ChangeProductDollar(details)));
+      setHotItems(hotItems.map((details) => ChangeProductDollar(details)));
+      setNewArrivals(newArrivals.map((details) => ChangeProductDollar(details)));
+      setOnSales(onSales.map((details) => ChangeProductDollar(details)));
       setCurSymbol("$");
     } else if (curDetails.preCur == "(USD $)") {
       setCurDetails({ preNation: "Nigeria (Naira ₦)", preCur: "(Naira ₦)", curFlag: america_flag, curName: "USD $" });
       setProducts(products.map((details) => ChangeProductNaira(details)));
+      setHotItems(hotItems.map((details) => ChangeProductNaira(details)));
+      setNewArrivals(newArrivals.map((details) => ChangeProductNaira(details)));
+      setOnSales(onSales.map((details) => ChangeProductNaira(details)));
       setCurSymbol("₦");
     }
     setCurrency(false);

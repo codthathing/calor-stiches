@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
 import { ToggleRegister } from "./contextpage";
-import { productDetails } from "./extensions/products/products";
 import ProductTemplate from "./extensions/productTemplate";
 import { useScroll } from "./usescroll";
 import { useFocus } from "./register_page/main_pages/usefocus";
 
 const Search = () => {
 
-  const { setSearch, search } = useContext(ToggleRegister)
+  const { setSearch, search, products } = useContext(ToggleRegister)
   const { presentScroll: addScroll } = useScroll("auto", "hidden");
   const { presentScroll: removeScroll } = useScroll("hidden", "auto");
   const { inputFocus } = useFocus(search);
@@ -25,7 +24,7 @@ const Search = () => {
         <div id="searchProductDiv">
           <h1 className="navHeadText" id="searchHead">Popular Product</h1>
           <section id="searchProductSection">
-            {productDetails.map((details) => {
+            {products.map((details) => {
               return <ProductTemplate key={details.id} {...details}></ProductTemplate>
             })}
           </section>

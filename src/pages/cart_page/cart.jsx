@@ -1,19 +1,18 @@
 import React, { useContext } from "react";
 import { ToggleRegister } from "../contextpage";
 import CartTemplate from "./cartTemplate";
-import { productDetails } from "../extensions/products/products";
 import { useScroll } from "../usescroll";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { setCart } = useContext(ToggleRegister);
+  const { setCart, products, curSymbol } = useContext(ToggleRegister);
   const { presentScroll: addScroll } = useScroll("auto", "hidden");
   const { presentScroll: removeScroll } = useScroll("hidden", "auto");
 
   const CalTotal = () => {
     let total = 0;
-    for (let i = 0; i < productDetails.length; i++) {
-      total += productDetails[i].averagePrice ? productDetails[i].averagePrice * productDetails[i].cartAmt : productDetails[i].productPrice * productDetails[i].cartAmt;
+    for (let i = 0; i < products.length; i++) {
+      total += products[i].averagePrice ? products[i].averagePrice * products[i].cartAmt : products[i].productPrice * products[i].cartAmt;
     }
     return total;
   };
@@ -24,7 +23,7 @@ const Cart = () => {
         <div id="totalPriceDiv">
           <p className="totalPrice" id="totalPriceText">Subtotal:</p>
           <p className="totalPrice" id="totalPriceValue">
-            $<CalTotal></CalTotal>.00
+            {curSymbol}{CalTotal().toFixed(2)}
           </p>
         </div>
         <div id="cartButtonsDiv">
@@ -43,10 +42,10 @@ const Cart = () => {
           <h1 className="navHeadText" id="cartHead">Shopping Cart</h1>
         </div>
         <div id="cartProductDiv">
-          {productDetails.length > 0 ?
+          {products.length > 0 ?
             <>
               <div id="cartProductInnerDiv">
-                {productDetails.map((details) => {
+                {products.map((details) => {
                   return <CartTemplate {...details}></CartTemplate>
                 })}
               </div>

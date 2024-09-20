@@ -1,5 +1,8 @@
 import React, { createContext, useState } from "react";
 import { productDetails } from "./extensions/products/products";
+import { hotitems } from "./extensions/hotItems/hotitems";
+import { newarrivals } from "./extensions/newArrivals/newarrivals";
+import { onsales } from "./extensions/onSale/onsale";
 
 export const ToggleRegister = createContext(); 
 
@@ -12,10 +15,13 @@ export const OptNavProvider = ({children}) => {
   const [navbar, setNavbar] = useState(false);
   const [presentRegister, setPresentRegister] = useState("LOGIN");
   const [products, setProducts] = useState(productDetails);
+  const [hotItems, setHotItems] = useState(hotitems);
+  const [newArrivals, setNewArrivals] = useState(newarrivals);
+  const [onSales, setOnSales] = useState(onsales);
   const [curSymbol, setCurSymbol] = useState("₦");
 
   return (
-    <ToggleRegister.Provider value={{register, setRegister, presentRegister, setPresentRegister, wishList, setWishList, cart, setCart, search, setSearch, toggleSideMenu, setToggleSideMenu, navbar, setNavbar, products, setProducts, curSymbol, setCurSymbol}}>
+    <ToggleRegister.Provider value={{register, setRegister, presentRegister, setPresentRegister, wishList, setWishList, cart, setCart, search, setSearch, toggleSideMenu, setToggleSideMenu, navbar, setNavbar, products, setProducts, curSymbol, setCurSymbol, hotItems, setHotItems, newArrivals, setNewArrivals, onSales, setOnSales}}>
       {children}
     </ToggleRegister.Provider>
   );

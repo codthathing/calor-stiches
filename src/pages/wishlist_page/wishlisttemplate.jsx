@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ToggleRegister } from "../contextpage";
 
 const WishlistTemplate = ({ id, productImage, productName, productPrice, priceOne, priceTwo, averagePrice, wishlistDate, wishlistStock }) => {
+  const { curSymbol } = useContext(ToggleRegister);
+  
   return (
     <div key={id} className="wishListDiv">
       <span className="delWishListSpan"><i className="fa-solid fa-xmark delWishListIcon"></i></span>
@@ -8,7 +11,7 @@ const WishlistTemplate = ({ id, productImage, productName, productPrice, priceOn
       <div className="wishListDetails">
         <h1 className="wishListName wishListTexts">{productName}</h1>
         <p className="wishListPrice wishListTexts">
-          {averagePrice ? `₦${priceOne}.00 - ₦${priceTwo}.00` : `₦${productPrice}.00`}
+          {averagePrice ? `${curSymbol}${priceOne.toFixed(2)} - ${curSymbol}${priceTwo.toFixed(2)}` : `${curSymbol}${productPrice.toFixed(2)}`}
         </p>
         <p className="wishListDate wishListTexts">{wishlistDate}</p>
       </div>
