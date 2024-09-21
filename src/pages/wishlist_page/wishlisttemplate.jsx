@@ -1,15 +1,20 @@
 import React, { useContext } from "react";
 import { ToggleRegister } from "../contextpage";
+import { Link } from "react-router-dom";
 
 const WishlistTemplate = ({ id, productImage, productName, productPrice, priceOne, priceTwo, averagePrice, wishlistDate, wishlistStock }) => {
   const { curSymbol } = useContext(ToggleRegister);
-  
+
   return (
     <div key={id} className="wishListDiv">
       <span className="delWishListSpan"><i className="fa-solid fa-xmark delWishListIcon"></i></span>
       <img src={productImage} alt={productName} className="wishListImage" />
       <div className="wishListDetails">
-        <h1 className="wishListName wishListTexts">{productName}</h1>
+        <h1 className="wishListName wishListTexts">
+          <Link className="productNameText" to={`/shop/${productName}`}>
+            {productName}
+          </Link>
+        </h1>
         <p className="wishListPrice wishListTexts">
           {averagePrice ? `${curSymbol}${priceOne.toFixed(2)} - ${curSymbol}${priceTwo.toFixed(2)}` : `${curSymbol}${productPrice.toFixed(2)}`}
         </p>

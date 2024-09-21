@@ -12,8 +12,6 @@ import { useHead } from "./usehead";
 import Search from "./search";
 import WishList from "./wishlist_page/wishlist";
 import Cart from "./cart_page/cart";
-import nigeria_flag from "./logo/nigeria-flag.png";
-import america_flag from "./logo/america-flag.png"
 
 
 const Home = () => {

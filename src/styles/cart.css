@@ -47,7 +47,7 @@
   text-transform: capitalize;
 }
 
-.cartProductNameText {
+.productNameText {
   text-decoration: none;
   color: var(--222222);
   font-family: var(--Yantramanav);
