@@ -11,7 +11,7 @@ const WishlistTemplate = ({ id, productImage, productName, productPrice, priceOn
       <img src={productImage} alt={productName} className="wishListImage" />
       <div className="wishListDetails">
         <h1 className="wishListName wishListTexts">
-          <Link className="productNameText" to={`/shop/${productName}`}>
+          <Link className="productNameText" to={`shop/${productName}`}>
             {productName}
           </Link>
         </h1>
