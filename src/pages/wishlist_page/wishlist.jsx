@@ -5,7 +5,7 @@ import { useScroll } from "../usescroll";
 import { Link } from "react-router-dom";
 
 const WishList = () => {
-  const { setWishList, products } = useContext(ToggleRegister);
+  const { setWishList, wishlistItems } = useContext(ToggleRegister);
   const { presentScroll: addScroll } = useScroll("auto", "hidden");
   const { presentScroll: removeScroll } = useScroll("hidden", "auto");
 
@@ -13,11 +13,11 @@ const WishList = () => {
     <section id="wishListSection" className="navSections">
       <main ref={addScroll} id="wishListMain">
         <header className="wishListContainers" id="wishListHeader">
-          <p id="wishListText">Wishlist ({products.length})</p>
+          <p id="wishListText">Wishlist ({wishlistItems.length})</p>
           <span ref={removeScroll} id="wishListCancel" onClick={() => setWishList(false)}><i id="wishListCanIcon" className="fa-solid fa-xmark"></i></span>
         </header>
         <section id="wishListItemSection">
-          {products.length > 0 ? products.map((details) => {
+          {wishlistItems.length > 0 ? wishlistItems.map((details) => {
             return <WishlistTemplate {...details}></WishlistTemplate>
           }) : <p id="wishListDefaultText" className="defaultText">There are no products on the Wishlist!</p>}
         </section>

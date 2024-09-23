@@ -3,11 +3,15 @@ import { ToggleRegister } from "../contextpage";
 import { Link } from "react-router-dom";
 
 const WishlistTemplate = ({ id, productImage, productName, productPrice, priceOne, priceTwo, averagePrice, wishlistDate, wishlistStock }) => {
-  const { curSymbol } = useContext(ToggleRegister);
+  const { curSymbol, wishlistItems, setWishlistItems } = useContext(ToggleRegister);
+  const RemoveWishlistItem = (id) => {
+    let remainderItems = wishlistItems.filter((items) => items.id != id);
+    setWishlistItems(remainderItems);
+  };
 
   return (
     <div key={id} className="wishListDiv">
-      <span className="delWishListSpan"><i className="fa-solid fa-xmark delWishListIcon"></i></span>
+      <span className="delWishListSpan"><i onClick={() => RemoveWishlistItem(id)} className="fa-solid fa-xmark delWishListIcon"></i></span>
       <img src={productImage} alt={productName} className="wishListImage" />
       <div className="wishListDetails">
         <h1 className="wishListName wishListTexts">

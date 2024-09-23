@@ -5,14 +5,14 @@ import { useScroll } from "../usescroll";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { setCart, products, curSymbol } = useContext(ToggleRegister);
+  const { setCart, cartItems, curSymbol } = useContext(ToggleRegister);
   const { presentScroll: addScroll } = useScroll("auto", "hidden");
   const { presentScroll: removeScroll } = useScroll("hidden", "auto");
 
   const CalTotal = () => {
     let total = 0;
-    for (let i = 0; i < products.length; i++) {
-      total += products[i].averagePrice ? products[i].averagePrice * products[i].cartAmt : products[i].productPrice * products[i].cartAmt;
+    for (let i = 0; i < cartItems.length; i++) {
+      total += cartItems[i].averagePrice ? cartItems[i].averagePrice * cartItems[i].cartAmt : cartItems[i].productPrice * cartItems[i].cartAmt;
     }
     return total;
   };
@@ -42,10 +42,10 @@ const Cart = () => {
           <h1 className="navHeadText" id="cartHead">Shopping Cart</h1>
         </div>
         <div id="cartProductDiv">
-          {products.length > 0 ?
+          {cartItems.length > 0 ?
             <>
               <div id="cartProductInnerDiv">
-                {products.map((details) => {
+                {cartItems.map((details) => {
                   return <CartTemplate {...details}></CartTemplate>
                 })}
               </div>

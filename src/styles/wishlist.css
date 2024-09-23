@@ -86,6 +86,7 @@
 
 .defaultText {
   font-family: var(--Yantramanav);
+  color: var(--222222);
 }
 
 #wishListDefaultText {

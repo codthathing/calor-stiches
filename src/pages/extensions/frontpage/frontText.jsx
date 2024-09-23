@@ -26,7 +26,7 @@ const FrontText = () => {
       <p id="disParagraph" className="paragraphStyles">YOU CAN HAVE ANYTHING YOU WANT IF YOU DRESS FOR IT</p>
       <h1 id="disHead" className="headStyles">{initialDetails.head}</h1>
       <button id="shopBtn" type="button">
-        <a style={{textDecoration:"none"}} href="#productSection">SHOP NOW</a>
+        <a style={{textDecoration:"none", color: "#222222"}} href="#productSection">SHOP NOW</a>
       </button>
       <div id="disDiv">
         <span className="disShowing" style={{ paddingRight: initialDetails.disOnePad }}>01</span>
