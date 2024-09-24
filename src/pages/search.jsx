@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ToggleRegister } from "./contextpage";
-import ProductTemplate from "./extensions/productTemplate";
+import ProductTemplate from "./extensions/productFunc/productTemplate";
 import { useScroll } from "./usescroll";
 import { useFocus } from "./register_page/main_pages/usefocus";
 

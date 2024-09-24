@@ -74,7 +74,7 @@ export const productDetails = [
       { cartColor: "Navy blue" },
       { cartSize: "XL" },
     ],
-    cartAmt: 3,
+    cartAmt: 1,
     wishlistDate: "September 9, 2024",
     wishlistStock: "In stock, ready to be shippped"
   },
@@ -105,7 +105,7 @@ export const productDetails = [
     averagePrice: 117,
     productAvailable: "BACK IN STORE",
     productAvailableColor: "#AECA2E",
-    cartAmt: 5,
+    cartAmt: 1,
     wishlistDate: "April 1, 2024",
     wishlistStock: "In stock, ready to be shippped"
   },
@@ -120,7 +120,7 @@ export const productDetails = [
       { cartColor: "Moon black" },
       { cartSize: "L" },
     ],
-    cartAmt: 3,
+    cartAmt: 1,
     wishlistDate: "December 29, 2024",
     wishlistStock: "In stock, ready to be shippped"
   }

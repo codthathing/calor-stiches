@@ -1,11 +1,11 @@
-import React, { useState, useContext, useRef, useEffect } from "react";
-import CurLangTemplate from "./extensions/currencylang";
+import React, { useContext } from "react";
+import CurLangTemplate from "../pages/extensions/currency/currencylang";
 import PageLayout from "./pagelayout";
 import Handle from "./extensions/handleIcons/handle";
 import ContactTemplate from "./extensions/contact";
 import Payment from "./extensions/paymentIcons/payment";
 import LinkMainTemplate from "./extensions/linktest";
-import Sidemenu from "./extensions/sidemenu/sidemenu";
+import Sidemenu from "./extensions/sidemenu";
 import RegisterLayout from "./register_page/registerlayout";
 import { ToggleRegister } from "./contextpage";
 import { useHead } from "./usehead";

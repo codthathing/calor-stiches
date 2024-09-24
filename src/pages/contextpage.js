@@ -1,19 +1,20 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { productDetails } from "./extensions/products/products";
 import { hotitems } from "./extensions/hotItems/hotitems";
 import { newarrivals } from "./extensions/newArrivals/newarrivals";
 import { onsales } from "./extensions/onSale/onsale";
-import product_one from "../pages/extensions/products/productImages/design_one.jpeg";
 
 export const ToggleRegister = createContext();
+const savedWishlistItems = localStorage.getItem('wishlistItems');
+const savedCartItems = localStorage.getItem('cartItems');
 
 export const OptNavProvider = ({ children }) => {
   const [register, setRegister] = useState(false);
   const [search, setSearch] = useState(false);
   const [wishList, setWishList] = useState(false);
-  const [wishlistItems, setWishlistItems] = useState([]);
+  const [wishlistItems, setWishlistItems] = useState(savedWishlistItems ? JSON.parse(savedWishlistItems) : []);
   const [cart, setCart] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(savedCartItems ? JSON.parse(savedCartItems) : []);
   const [toggleSideMenu, setToggleSideMenu] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const [presentRegister, setPresentRegister] = useState("LOGIN");

@@ -6,6 +6,7 @@ const CartTemplate = ({ id, productImage, productName, averagePrice, productPric
   const { curSymbol, cartItems, setCartItems } = useContext(ToggleRegister);
   const RemoveCartItem = (id) => {
     let remainderItems = cartItems.filter((items) => items.id != id);
+    localStorage.setItem("cartItems", JSON.stringify(remainderItems));
     setCartItems(remainderItems);
   };
 

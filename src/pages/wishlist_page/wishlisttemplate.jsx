@@ -6,6 +6,7 @@ const WishlistTemplate = ({ id, productImage, productName, productPrice, priceOn
   const { curSymbol, wishlistItems, setWishlistItems } = useContext(ToggleRegister);
   const RemoveWishlistItem = (id) => {
     let remainderItems = wishlistItems.filter((items) => items.id != id);
+    localStorage.setItem("wishlistItems", JSON.stringify(remainderItems));
     setWishlistItems(remainderItems);
   };
 

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ToggleRegister } from "../../contextpage";
 import FrontText from "./frontText";
-import ProductTemplate from "../productTemplate";
+import ProductTemplate from "../productFunc/productTemplate";
 import PageArticle from "../article";
 import videoPoster from "../../youtube_poster/video_poster.jpeg";
 import ServiceTemplate from "../service/service";

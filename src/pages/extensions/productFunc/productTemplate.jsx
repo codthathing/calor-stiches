@@ -1,35 +1,11 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ToggleRegister } from "../contextpage";
+import { ToggleRegister } from "../../contextpage";
+import AddToWishList from "./addtowishlist";
+import AddToCart from "./addtocart";
 
 const ProductTemplate = ({ id, productAvailable, productAvailableColor, doubleProductAvail, doubleAvailColor, productImage, productName, cutOff, productPrice, priceOne, priceTwo, averagePrice }) => {
-  const { curSymbol, products, wishlistItems, setWishList, cartItems } = useContext(ToggleRegister);
-
-  const AddToWishList = (id) => {
-    const selectedItem = products.find((item) => item.id == id);
-    const { wishlistDate, wishlistStock } = selectedItem;
-    if (!wishlistItems.some(item => item.productName === selectedItem.productName)) {
-      if (selectedItem.priceOne && selectedItem.priceTwo && selectedItem.averagePrice) {
-        wishlistItems.push({ id: wishlistItems.length, productImage, productName, priceOne, priceTwo, averagePrice, wishlistDate, wishlistStock });
-      } else {
-        wishlistItems.push({ id: wishlistItems.length, productImage, productName, productPrice, wishlistDate, wishlistStock });
-      };
-    };
-    setWishList(true);
-  };
-
-  const AddToCart = (id) => {
-    const selectedItem = products.find((item) => item.id == id);
-    const { productDetails, cartAmt } = selectedItem;
-    // if (wishlistItems.some(item => item.productName === selectedItem.productName)) {
-      
-    // };
-    if (selectedItem.averagePrice) {
-      cartItems.push({ id: cartItems.length, productImage, productName, averagePrice, productDetails, cartAmt });
-    } else {
-      cartItems.push({ id: cartItems.length, productImage, productName, productPrice, productDetails, cartAmt });
-    };
-  }
+  const { curSymbol } = useContext(ToggleRegister);
 
   return (
     <div className="productDiv">
@@ -42,8 +18,8 @@ const ProductTemplate = ({ id, productAvailable, productAvailableColor, doublePr
         </section>
       </Link>
       <div className="optionBtnsDiv">
-        <div className="optionDiv"><i className="fa-regular fa-heart optionIcon" onClick={() => AddToWishList(id)}></i></div>
-        <p className="paragraphStyles selectOption" onClick={() => AddToCart(id)}>ADD TO CART</p>
+        <AddToWishList id={id}></AddToWishList>
+        <AddToCart id={id}></AddToCart>
         <div className="optionDiv"><i class="fa-regular fa-eye optionIcon"></i></div>
       </div>
       <section className="productNamePrice">

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import nigeria_flag from "../logo/nigeria-flag.png";
-import america_flag from "../logo/america-flag.png";
-import { ToggleRegister } from "../contextpage";
+import nigeria_flag from "../../logo/nigeria-flag.png";
+import america_flag from "../../logo/america-flag.png";
+import { ToggleRegister } from "../../contextpage";
 import { ChangeProductDollar, ChangeProductNaira } from "./conversion";
 
 const CurLangTemplate = () => {
