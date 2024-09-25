@@ -1,8 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ToggleRegister } from "../../contextpage";
 
 const AddToWishList = ({ id }) => {
   const { products, wishlistItems, setWishList } = useContext(ToggleRegister);
+  const [showWishlistText, setShowWishlistText] = useState(false);
 
   const AddToWishListFunc = (id) => {
     const selectedItem = products.find((item) => item.id == id);
@@ -15,13 +16,16 @@ const AddToWishList = ({ id }) => {
       };
       localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
     };
-    setWishList(true);
-  }
+    setTimeout(() => {
+      setWishList(true);
+      setShowWishlistText(false);
+    }, 500);
+  };
 
   return (
     <div className="optionDiv optionDivWishlist">
-      <i className="fa-regular fa-heart optionIcon optioIconWishlist" onClick={() => AddToWishListFunc(id)}></i>
-      <p className="wishlistOptionText">Add to Wishlist</p>
+      <i className="fa-regular fa-heart optionIcon optioIconWishlist" onMouseEnter={() => setShowWishlistText(true)} onClick={() => AddToWishListFunc(id)}></i>
+      {showWishlistText && <p className="wishlistOptionText">Add to Wishlist</p>}
     </div>
   );
 };

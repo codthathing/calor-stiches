@@ -229,10 +229,6 @@
     position: relative;
 }
 
-.optioIconWishlist:hover + .wishlistOptionText {
-    display: block;
-}
-
 .wishlistOptionText {
     position: absolute;
     left: 100%;
@@ -241,7 +237,6 @@
     color: white;
     font-family: var(--Yantramanav);
     z-index: 100;
-    display: none;
     border-radius: 0.5rem;
 }
 
