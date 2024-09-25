@@ -14,8 +14,8 @@ export const productDetails = [
     productName: "sunflower jumpsuit",
     productPrice: 85,
     productDetails: [
-      { cartColor: "Olive green" },
-      { cartSize: "L" },
+      {idOne: 0, cartColor: "Olive green" },
+      {idTwo: 0, cartSize: "L" },
     ],
     cartAmt: 1,
     wishlistDate: "August 20, 2024",
@@ -30,7 +30,7 @@ export const productDetails = [
     productAvailableColor: "#FF421D",
     cutOff: 50,
     productDetails: [
-      { cartSize: "L" },
+      {idTwo: 0, cartSize: "L" },
     ],
     cartAmt: 1,
     wishlistDate: "May 31, 2024",
@@ -44,7 +44,7 @@ export const productDetails = [
     productAvailable: "SOLD OUT",
     productAvailableColor: "#C2272D",
     productDetails: [
-      { cartColor: "Olive green" },
+      {idOne: 0, cartColor: "Olive green" },
     ],
     cartAmt: 1,
     wishlistDate: "August 24, 2024",
@@ -71,8 +71,8 @@ export const productDetails = [
     productAvailable: "BACK IN STORE",
     productAvailableColor: "#AECA2E",
     productDetails: [
-      { cartColor: "Navy blue" },
-      { cartSize: "XL" },
+      {idOne: 0, cartColor: "Navy blue" },
+      {idTwo: 0, cartSize: "XL" },
     ],
     cartAmt: 1,
     wishlistDate: "September 9, 2024",
@@ -89,8 +89,8 @@ export const productDetails = [
     productAvailableColor: "red",
     cutOff: 50,
     productDetails: [
-      { cartColor: "Army green" },
-      { cartSize: "XXL" },
+      {idOne: 0, cartColor: "Army green" },
+      {idTwo: 0, cartSize: "XXL" },
     ],
     cartAmt: 1,
     wishlistDate: "February 14, 2024",
@@ -117,8 +117,8 @@ export const productDetails = [
     productAvailable: "HOT",
     productAvailableColor: "#FF421D",
     productDetails: [
-      { cartColor: "Moon black" },
-      { cartSize: "L" },
+      {idOne: 0, cartColor: "Moon black" },
+      {idTwo: 0, cartSize: "L" },
     ],
     cartAmt: 1,
     wishlistDate: "December 29, 2024",

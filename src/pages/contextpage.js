@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useReducer, useState } from "react";
 import { productDetails } from "./extensions/products/products";
 import { hotitems } from "./extensions/hotItems/hotitems";
 import { newarrivals } from "./extensions/newArrivals/newarrivals";
@@ -23,9 +23,26 @@ export const OptNavProvider = ({ children }) => {
   const [newArrivals, setNewArrivals] = useState(newarrivals);
   const [onSales, setOnSales] = useState(onsales);
   const [curSymbol, setCurSymbol] = useState("₦");
+  const changeStyles = (state, action) => {
+    if (action.display === "ADD") {
+      return { ...state, showText: true, textBackground: "#00A849", defaultText: "Item added to Wishlist" };
+    } else if (action.display === "NOACTION") {
+      return { ...state, showText: true, textBackground: "#FF421D", defaultText: "Item present in Wishlist" };
+    } else if (action.display === "REMOVE") {
+      return { ...state, showText: true, textBackground: "#C2272D", defaultText: "Item removed from wishlist" };
+    } else if (action.display === "CLOSE") {
+      return { ...state, showText: false, textBackground: "", defaultText: "" };
+    }
+  };
+  const wishlistTextStyle = {
+    showText: false,
+    textBackground: "",
+    defaultText: ""
+  };
+  const [state, dispatch] = useReducer(changeStyles, wishlistTextStyle);
 
   return (
-    <ToggleRegister.Provider value={{ register, setRegister, presentRegister, setPresentRegister, wishList, setWishList, cart, setCart, search, setSearch, toggleSideMenu, setToggleSideMenu, navbar, setNavbar, products, setProducts, curSymbol, setCurSymbol, hotItems, setHotItems, newArrivals, setNewArrivals, onSales, setOnSales, wishlistItems, setWishlistItems, cartItems, setCartItems }}>
+    <ToggleRegister.Provider value={{ register, setRegister, presentRegister, setPresentRegister, wishList, setWishList, cart, setCart, search, setSearch, toggleSideMenu, setToggleSideMenu, navbar, setNavbar, products, setProducts, curSymbol, setCurSymbol, hotItems, setHotItems, newArrivals, setNewArrivals, onSales, setOnSales, wishlistItems, setWishlistItems, cartItems, setCartItems, state, dispatch }}>
       {children}
     </ToggleRegister.Provider>
   );

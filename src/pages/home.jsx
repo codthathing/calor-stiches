@@ -52,7 +52,7 @@ const Home = () => {
                 {wishList && <WishList></WishList>}
               </li>
               <li className="icons">
-                <i class="fa-solid fa-bag-shopping iconTag" onClick={() => setCart(true)}></i>
+                <i className="fa-solid fa-bag-shopping iconTag" onClick={() => setCart(true)}></i>
                 {cart && <Cart></Cart>}
               </li>
               <li className="icons">

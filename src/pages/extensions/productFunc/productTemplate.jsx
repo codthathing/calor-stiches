@@ -20,7 +20,7 @@ const ProductTemplate = ({ id, productAvailable, productAvailableColor, doublePr
       <div className="optionBtnsDiv">
         <AddToWishList id={id}></AddToWishList>
         <AddToCart id={id}></AddToCart>
-        <div className="optionDiv"><i class="fa-regular fa-eye optionIcon"></i></div>
+        <div className="optionDiv"><i className="fa-regular fa-eye optionIcon"></i></div>
       </div>
       <section className="productNamePrice">
         <p className="productName">{productName}</p>

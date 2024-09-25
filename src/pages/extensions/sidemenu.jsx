@@ -17,7 +17,7 @@ const Sidemenu = () => {
   useEffect(() => {
     const pathLink = window.location.pathname;
     const presentPath = currentSideMenu.map((path) => {
-      if (!path.path && pathLink == "/") {
+      if (!path.path && pathLink === "/") {
         return { ...path, borderStyle: { borderBottom: "1px solid black" } };
       } else if (pathLink.includes(path.path)) {
         return { ...path, borderStyle: { borderBottom: "1px solid black" } }
@@ -26,7 +26,7 @@ const Sidemenu = () => {
       }
     });
     setCurrentSideMenu(presentPath);
-  }, [])
+  }, [currentSideMenu]);
 
   return (
     <>

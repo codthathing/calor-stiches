@@ -31,16 +31,22 @@
 }
 
 .wishListContainers {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: sticky;
   width: 100%;
 }
 
 #wishListHeader {
-  background-color: var(--282828);
   top: 0;
+}
+
+.wishlistInnerContainers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#wishlistHeaderDiv {
+  background-color: var(--282828);
 }
 
 #wishListText {
@@ -51,6 +57,12 @@
 
 #wishListCanIcon {
   color: var(--9B9B9B);
+}
+
+#wishlistInfoText {
+  color: white;
+  font-family: var(--Yantramanav);
+  text-align: center;
 }
 
 .wishListDiv {
@@ -119,9 +131,16 @@
   }
 
   .wishListContainers {
-    padding: 1.25rem 1.5rem;
     font-size: var(--16px);
   }
+
+  .wishlistInnerContainers {
+    padding: 1.25rem 1.5rem;
+  }
+
+  #wishlistInfoText {
+    padding: 0.5rem 0;
+  } 
 
   #wishListItemSection {
     padding: 1.5rem;
@@ -169,12 +188,19 @@
   }
 
   .wishListContainers {
-    padding: 1rem;
     font-size: var(--12px);
+  }
+
+  .wishlistInnerContainers {
+    padding: 1rem;
   }
 
   #wishListCanIcon {
     font-size: var(--16px);
+  }
+
+  #wishlistInfoText {
+    padding: 0.25rem 0;
   }
 
   #wishListItemSection {

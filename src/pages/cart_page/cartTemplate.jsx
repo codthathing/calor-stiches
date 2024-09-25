@@ -5,7 +5,7 @@ import { ToggleRegister } from "../contextpage";
 const CartTemplate = ({ id, productImage, productName, averagePrice, productPrice, productDetails, cartAmt }) => {
   const { curSymbol, cartItems, setCartItems } = useContext(ToggleRegister);
   const RemoveCartItem = (id) => {
-    let remainderItems = cartItems.filter((items) => items.id != id);
+    let remainderItems = cartItems.filter((items) => items.id !== id);
     localStorage.setItem("cartItems", JSON.stringify(remainderItems));
     setCartItems(remainderItems);
   };
@@ -17,15 +17,15 @@ const CartTemplate = ({ id, productImage, productName, averagePrice, productPric
         <i className="fa-solid fa-xmark cartRemove" onClick={() => RemoveCartItem(id)}></i>
         <section className="cartDetailsSection">
           <h1 className="cartProductName">
-            <Link className="productNameText" to={`/product/${productName}`}>
+            <Link key={id} className="productNameText" to={`/product/${productName}`}>
               {productName}
             </Link>
           </h1>
-          {productDetails && productDetails.map(({ cartSize, cartColor }) => {
+          {productDetails && productDetails.map(({ idOne, idTwo, cartSize, cartColor }) => {
             return (
               <>
-                {cartColor && <p className="cartProductText cartProductColor">Color: {cartColor}</p>}
-                {cartSize && <p className="cartProductText cartProductSize">Size: {cartSize}</p>}
+                {cartColor && <p key={idOne} className="cartProductText cartProductColor">Color: {cartColor}</p>}
+                {cartSize && <p key={idTwo} className="cartProductText cartProductSize">Size: {cartSize}</p>}
               </>
             );
           })}
