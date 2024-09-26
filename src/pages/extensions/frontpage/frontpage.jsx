@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { ToggleRegister } from "../../contextpage";
 import FrontText from "./frontText";
 import ProductTemplate from "../productFunc/productTemplate";
+import CollectionTemplate from "../collection/collectionTemplate";
 import PageArticle from "../article";
 import videoPoster from "../../youtube_poster/video_poster.jpeg";
 import ServiceTemplate from "../service/service";
@@ -47,6 +48,10 @@ const FrontPage = () => {
       <Routes>
         <Route path="/:productName" element={<ProductView />}></Route>
       </Routes>
+
+      <section id="collectionSection">
+        <CollectionTemplate></CollectionTemplate>
+      </section>
 
       <section id="latestSection">
         <ul id="navLatest">

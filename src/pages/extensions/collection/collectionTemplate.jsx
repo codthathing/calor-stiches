@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import dressCollection from "./collectImages/design_nine.jpeg";
 import tshirtCollection from "./collectImages/design_ten.jpeg";
 import outwearCollection from "./collectImages/design_eleven.jpeg";
@@ -17,7 +18,7 @@ const CollectionTemplate = () => {
           <div key={id} style={{backgroundImage: `url(${collectionImage})`, backgroundPosition: 'center', backgroundSize: 'cover'}} className="mainCollection">
             <main className="collectionMain">
               <h1 className="collectionTopic">{collectionName}</h1>
-              <a href="" className="paragraphStyles collectionLink">VIEW COLLECTION</a>
+              <Link to="/product" className="paragraphStyles collectionLink">VIEW COLLECTION</Link>
             </main>
           </div>
         );
