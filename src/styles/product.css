@@ -1,3 +1,36 @@
+:root {
+  --222222: #222222;
+  --Yantramanav: 'Yantramanav', sans-serif;
+}
+
+#productViewMain {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 60%;
+  height: fit-content;
+  padding: 1rem;
+}
+
+#productViewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#productViewText {
+  color: var(--222222);
+  font-family: var(--Yantramanav);
+}
+
+
+
+
+
 @media all and (min-width: 768px) {
   .otherPages {
     margin-top: 10rem;

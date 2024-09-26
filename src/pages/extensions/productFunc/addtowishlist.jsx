@@ -34,7 +34,7 @@ const AddToWishList = ({ id }) => {
         onMouseEnter={() => setShowWishlistText(true)} 
         onMouseLeave={() => setShowWishlistText(false)} 
         onClick={() => AddToWishListFunc(id)}></i>
-      {showWishlistText && <p className="wishlistOptionText">Add to Wishlist</p>}
+      {showWishlistText && <p className="optionText wishlistOptionText">Add to Wishlist</p>}
     </div>
   );
 };

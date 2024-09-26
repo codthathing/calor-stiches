@@ -1,15 +1,16 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
+import { Routes, Route, Link } from "react-router-dom";
 import { ToggleRegister } from "../../contextpage";
 import FrontText from "./frontText";
 import ProductTemplate from "../productFunc/productTemplate";
 import PageArticle from "../article";
 import videoPoster from "../../youtube_poster/video_poster.jpeg";
 import ServiceTemplate from "../service/service";
+import ProductView from "../products/productview";
 
 const FrontPage = () => {
 
-  const { setToggleSideMenu, setNavbar, products, hotItems, newArrivals, onSales } = useContext(ToggleRegister);
-  const [latestItems, setLatestItems] = useState(hotItems);
+  const { setToggleSideMenu, setNavbar, products, hotItems, newArrivals, onSales, latestItems, setLatestItems } = useContext(ToggleRegister);
   const ChangeLatestItem = (newitem) => {
     setLatestItems(newitem);
   };
@@ -37,15 +38,21 @@ const FrontPage = () => {
           })}
         </main>
         <button id="productButton" className="viewButton">
-          <p id="productButtonText" className="paragraphStyles">VIEW ALL</p>
+          <Link style={{ textDecoration: "none", color: "#222222" }} to="/product">
+            <p id="productButtonText" className="paragraphStyles">VIEW ALL</p>
+          </Link>
         </button>
       </section>
 
+      <Routes>
+        <Route path="/:productName" element={<ProductView />}></Route>
+      </Routes>
+
       <section id="latestSection">
         <ul id="navLatest">
-          <li className="latestItem" onMouseOver={() => ChangeLatestItem(hotItems)}>HOT ITEMS</li>
-          <li className="latestItem" onMouseOver={() => ChangeLatestItem(newArrivals)}>NEW ARRIVALS</li>
-          <li className="latestItem" onMouseOver={() => ChangeLatestItem(onSales)} style={{ color: '#FF421D', borderBottomColor: '#FF421D' }}>ON SALE</li>
+          <li className="latestItem" onMouseEnter={() => ChangeLatestItem(hotItems)}>HOT ITEMS</li>
+          <li className="latestItem" onMouseEnter={() => ChangeLatestItem(newArrivals)}>NEW ARRIVALS</li>
+          <li className="latestItem" onMouseEnter={() => ChangeLatestItem(onSales)} style={{ color: '#FF421D', borderBottomColor: '#FF421D' }}>ON SALE</li>
         </ul>
         <section id="latestSections">
           {latestItems.map((details) => {
@@ -53,7 +60,9 @@ const FrontPage = () => {
           })}
         </section>
         <button id="latestButton" className="viewButton">
-          <p id="latestButtonText" className="paragraphStyles">VIEW ALL</p>
+          <Link style={{ textDecoration: "none", color: "#222222" }} to="/product">
+            <p id="latestButtonText" className="paragraphStyles">VIEW ALL</p>
+          </Link>
         </button>
       </section>
 

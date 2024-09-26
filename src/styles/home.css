@@ -53,7 +53,6 @@
     z-index: 100;
     display: flex;
     align-items: center;
-    margin-top: -0.00025rem;
     cursor: pointer;
     white-space: nowrap;
 }
@@ -194,10 +193,9 @@
     font-weight: var(--500);
 }
 
-.orderOptions {
+.productInnerDiv {
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
 }
 
 .availDiv {
@@ -220,24 +218,28 @@
     width: 100%;
 }
 
+.optionDiv {
+    position: relative;
+}
+
 .optionIcon {
     color: var(--222222);
     cursor: pointer;
 }
 
-.optionDivWishlist {
-    position: relative;
-}
-
-.wishlistOptionText {
+.optionText {
     position: absolute;
-    left: 100%;
     white-space: nowrap;
     background-color: var(--222222);
     color: white;
     font-family: var(--Yantramanav);
     z-index: 100;
     border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+.wishlistOptionText {
+    left: 100%;
 }
 
 .wishlistOptionText::before {
@@ -250,6 +252,17 @@
 .selectOption {
     color: var(--222222);
     cursor: pointer;
+}
+
+.viewOptionText {
+    right: 100%;
+}
+
+.viewOptionText::after {
+    content: '';
+    position: absolute;
+    border: 5px solid;
+    border-color: transparent transparent transparent var(--222222);
 }
 
 .optionDiv:first-child {
@@ -305,6 +318,7 @@
     border: var(--border_size) solid var(--222222);
     width: fit-content;
     outline: none;
+    cursor: pointer;
 }
 
 #productButtonText {
@@ -657,13 +671,8 @@
         grid-gap: 0 3.5rem;
     }
 
-    .wishlistOptionText {
-        padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+    .optionText {
         font-size: var(--16px);
-    }
-
-    .wishlistOptionText::before {
-        left: -7.5%;
     }
 
     .productAvail {
@@ -944,14 +953,17 @@
         padding: 0.75rem 1.5rem;
     }
 
-    .wishlistOptionText {
-        padding: 0.5rem 1.5rem 0.5rem 0.75rem;
-        bottom: 15%;
+    .optionText {
+        bottom: 10%;
         font-size: var(--12px);
     }
 
     .wishlistOptionText::before {
-        left: -8.5%;
+        left: -12%;
+    }
+
+    .viewOptionText::after {
+        right: -15%;
     }
 
     .productNamePrice {
@@ -1257,10 +1269,18 @@
 
     .optionDiv:last-child {
         padding: 1.25rem 2rem;
-    }    
-    
-    .wishlistOptionText {
-        bottom: 22.5%;
+    }
+
+    .optionText {
+        bottom: 30%;
+    }
+
+    .wishlistOptionText::before {
+        left: -10.5%;
+    }
+
+    .viewOptionText::after {
+        right: -12.15%;
     }
 
     .productNamePrice {
@@ -1465,7 +1485,7 @@
     }
 
     .orderOptions {
-        height: 25rem;
+        height: 20rem;
     }
 
     .availDiv {
@@ -1476,8 +1496,13 @@
         padding: 0.25rem 0.5rem;
     }
 
+    .productDiv:hover .optionBtnsDiv {
+        visibility: visible;
+    }
+
     .optionBtnsDiv {
         padding: 1.25rem 0;
+        visibility: hidden;
     }
 
     .optionIcon {
@@ -1492,8 +1517,16 @@
         padding: 0.75rem 1.75rem;
     }
 
-    .wishlistOptionText {
-        bottom: 7%;
+    .optionText {
+        bottom: 15%;
+    }
+
+    .wishlistOptionText::before {
+        left: -10%;
+    }
+
+    .viewOptionText::after {
+        right: -13%;
     }
 
     .productNamePrice {

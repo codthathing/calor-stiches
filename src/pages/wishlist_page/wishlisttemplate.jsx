@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { ToggleRegister } from "../contextpage";
 import { Link } from "react-router-dom";
+import AddToCart from "../extensions/productFunc/addtocart";
 
 const WishlistTemplate = ({ id, productImage, productName, productPrice, priceOne, priceTwo, averagePrice, wishlistDate, wishlistStock }) => {
-  const { curSymbol, wishlistItems, setWishlistItems, dispatch } = useContext(ToggleRegister);
+  const { curSymbol, wishlistItems, setWishlistItems, dispatch, setWishList } = useContext(ToggleRegister);
   const RemoveWishlistItem = (id) => {
     let remainderItems = wishlistItems.filter((items) => items.id !== id);
     localStorage.setItem("wishlistItems", JSON.stringify(remainderItems));
@@ -20,7 +21,7 @@ const WishlistTemplate = ({ id, productImage, productName, productPrice, priceOn
       <img src={productImage} alt={productName} className="wishListImage" />
       <div className="wishListDetails">
         <h1 className="wishListName wishListTexts">
-          <Link key={id} className="productNameText" to={`shop/${productName}`}>
+          <Link key={id} className="productNameText" onClick={() => setWishList(false)} to={`/${productName}`}>
             {productName}
           </Link>
         </h1>
@@ -34,7 +35,7 @@ const WishlistTemplate = ({ id, productImage, productName, productPrice, priceOn
           <p className="wishListAvail wishListTexts">Stock: {wishlistStock}</p>
           <div className="wishListAvailBar"></div>
         </main>
-        <p className="wishListAddCart wishListTexts">ADD TO CART</p>
+        <AddToCart id={id}></AddToCart>
       </div>
     </div>
   );

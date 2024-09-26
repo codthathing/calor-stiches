@@ -22,6 +22,7 @@ export const OptNavProvider = ({ children }) => {
   const [hotItems, setHotItems] = useState(hotitems);
   const [newArrivals, setNewArrivals] = useState(newarrivals);
   const [onSales, setOnSales] = useState(onsales);
+  const [latestItems, setLatestItems] = useState(hotItems);
   const [curSymbol, setCurSymbol] = useState("₦");
   const changeStyles = (state, action) => {
     if (action.display === "ADD") {
@@ -42,7 +43,7 @@ export const OptNavProvider = ({ children }) => {
   const [state, dispatch] = useReducer(changeStyles, wishlistTextStyle);
 
   return (
-    <ToggleRegister.Provider value={{ register, setRegister, presentRegister, setPresentRegister, wishList, setWishList, cart, setCart, search, setSearch, toggleSideMenu, setToggleSideMenu, navbar, setNavbar, products, setProducts, curSymbol, setCurSymbol, hotItems, setHotItems, newArrivals, setNewArrivals, onSales, setOnSales, wishlistItems, setWishlistItems, cartItems, setCartItems, state, dispatch }}>
+    <ToggleRegister.Provider value={{ register, setRegister, presentRegister, setPresentRegister, wishList, setWishList, cart, setCart, search, setSearch, toggleSideMenu, setToggleSideMenu, navbar, setNavbar, products, setProducts, curSymbol, setCurSymbol, hotItems, setHotItems, newArrivals, setNewArrivals, onSales, setOnSales, wishlistItems, setWishlistItems, cartItems, setCartItems, state, dispatch, latestItems, setLatestItems }}>
       {children}
     </ToggleRegister.Provider>
   );
