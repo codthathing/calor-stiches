@@ -65,7 +65,7 @@ const FrontPage = () => {
           })}
         </section>
         <button id="latestButton" className="viewButton">
-          <Link style={{ textDecoration: "none", color: "#222222" }} to="/product">
+          <Link style={{ textDecoration: "none", color: "#222222" }} to="/product/latest-items">
             <p id="latestButtonText" className="paragraphStyles">VIEW ALL</p>
           </Link>
         </button>

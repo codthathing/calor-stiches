@@ -4,8 +4,9 @@ import dressCollection from "./collectImages/design_nine.jpeg";
 import tshirtCollection from "./collectImages/design_ten.jpeg";
 import outwearCollection from "./collectImages/design_eleven.jpeg";
 
+export let collections;
 const CollectionTemplate = () => {
-  const collections = [
+  collections = [
     { id: 0, collectionImage: dressCollection, collectionName: "dresses" },
     { id: 1, collectionImage: tshirtCollection, collectionName: "t-shirts" },
     { id: 2, collectionImage: outwearCollection, collectionName: "outerwear" }
@@ -15,10 +16,10 @@ const CollectionTemplate = () => {
     <>
       {collections.map(({ id, collectionImage, collectionName }) => {
         return (
-          <div key={id} style={{backgroundImage: `url(${collectionImage})`, backgroundPosition: 'center', backgroundSize: 'cover'}} className="mainCollection">
+          <div key={id} style={{ backgroundImage: `url(${collectionImage})`, backgroundPosition: 'center', backgroundSize: 'cover' }} className="mainCollection">
             <main className="collectionMain">
               <h1 className="collectionTopic">{collectionName}</h1>
-              <Link to="/product" className="paragraphStyles collectionLink">VIEW COLLECTION</Link>
+              <Link to={`/product/collection/${collectionName}`} className="paragraphStyles collectionLink">VIEW COLLECTION</Link>
             </main>
           </div>
         );
