@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { ToggleRegister } from "../../contextpage";
 import FrontText from "./frontText";
@@ -12,8 +12,23 @@ import ProductView from "../products/productview";
 const FrontPage = () => {
 
   const { setToggleSideMenu, setNavbar, products, hotItems, newArrivals, onSales, latestItems, setLatestItems } = useContext(ToggleRegister);
+  const [latestBorder, setLatestBorder] = useState(false);
   const ChangeLatestItem = (newitem) => {
     setLatestItems(newitem);
+    setLatestBorder(true);
+  };
+
+  const latestObject = [
+    { id: 0, latestText: "HOT ITEMS", latestArray: hotItems, borderBool: true, borderStyle: "1px solid black" },
+    { id: 1, latestText: "NEW ARRIVALS", latestArray: newArrivals, borderBool: false, borderStyle: "" },
+    { id: 2, latestText: "ON SALE", latestArray: onSales, borderBool: false, borderStyle: "" }
+  ];
+  const LatestLinks = () => {
+    return (
+      latestObject.map(({ id, latestText, latestArray, borderBool, borderStyle }) => {
+        return <li key={id} className="latestItem" style={{ borderBottom: borderBool ? borderStyle : "" }} onMouseEnter={() => ChangeLatestItem(latestArray)}>{latestText}</li>
+      })
+    );
   };
 
   useEffect(() => {
@@ -55,9 +70,7 @@ const FrontPage = () => {
 
       <section id="latestSection">
         <ul id="navLatest">
-          <li className="latestItem" onMouseEnter={() => ChangeLatestItem(hotItems)}>HOT ITEMS</li>
-          <li className="latestItem" onMouseEnter={() => ChangeLatestItem(newArrivals)}>NEW ARRIVALS</li>
-          <li className="latestItem" onMouseEnter={() => ChangeLatestItem(onSales)} style={{ color: '#FF421D', borderBottomColor: '#FF421D' }}>ON SALE</li>
+          <LatestLinks></LatestLinks>
         </ul>
         <section id="latestSections">
           {latestItems.map((details) => {

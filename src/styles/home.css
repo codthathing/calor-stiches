@@ -370,7 +370,6 @@
 .latestItem {
     list-style: none;
     font-family: var(--Yantramanav);
-    border-bottom: var(--border_size) solid black;
     color: var(--222222);
     cursor: pointer;
 }
