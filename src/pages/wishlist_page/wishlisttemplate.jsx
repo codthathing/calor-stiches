@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ToggleRegister } from "../contextpage";
 import { Link } from "react-router-dom";
-import AddToCart from "../extensions/productFunc/addtocart";
+import AddToCart from "../productFunc/addtocart";
 
 const WishlistTemplate = ({ id, productImage, productName, productPrice, priceOne, priceTwo, averagePrice, wishlistDate, wishlistStock }) => {
   const { curSymbol, wishlistItems, setWishlistItems, dispatch, setWishList } = useContext(ToggleRegister);

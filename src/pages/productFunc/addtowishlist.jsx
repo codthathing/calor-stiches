@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { ToggleRegister } from "../../contextpage";
+import { ToggleRegister } from "../contextpage";
 
 const AddToWishList = ({ id }) => {
   const { products, wishlistItems, setWishList, dispatch } = useContext(ToggleRegister);

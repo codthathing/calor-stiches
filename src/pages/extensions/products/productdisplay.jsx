@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { ToggleRegister } from "../../contextpage";
-import ProductTemplate from "../productFunc/productTemplate";
+import ProductTemplate from "../../productFunc/productTemplate";
 
 const ProductDisplay = () => {
   const { latestItems, setToggleSideMenu } = useContext(ToggleRegister);

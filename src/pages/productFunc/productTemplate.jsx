@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { ToggleRegister } from "../../contextpage";
+import { ToggleRegister } from "../contextpage";
 import AddToWishList from "./addtowishlist";
 import AddToCart from "./addtocart";
 

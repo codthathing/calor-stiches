@@ -1,9 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { ToggleRegister } from "../../contextpage";
 import FrontText from "./frontText";
-import ProductTemplate from "../productFunc/productTemplate";
+import ProductTemplate from "../../productFunc/productTemplate";
 import CollectionTemplate from "../collection/collectionTemplate";
+import LatestLinks from "../latestlinks";
 import PageArticle from "../article";
 import videoPoster from "../../youtube_poster/video_poster.jpeg";
 import ServiceTemplate from "../service/service";
@@ -11,25 +12,7 @@ import ProductView from "../products/productview";
 
 const FrontPage = () => {
 
-  const { setToggleSideMenu, setNavbar, products, hotItems, newArrivals, onSales, latestItems, setLatestItems } = useContext(ToggleRegister);
-  const [latestBorder, setLatestBorder] = useState(false);
-  const ChangeLatestItem = (newitem) => {
-    setLatestItems(newitem);
-    setLatestBorder(true);
-  };
-
-  const latestObject = [
-    { id: 0, latestText: "HOT ITEMS", latestArray: hotItems, borderBool: true, borderStyle: "1px solid black" },
-    { id: 1, latestText: "NEW ARRIVALS", latestArray: newArrivals, borderBool: false, borderStyle: "" },
-    { id: 2, latestText: "ON SALE", latestArray: onSales, borderBool: false, borderStyle: "" }
-  ];
-  const LatestLinks = () => {
-    return (
-      latestObject.map(({ id, latestText, latestArray, borderBool, borderStyle }) => {
-        return <li key={id} className="latestItem" style={{ borderBottom: borderBool ? borderStyle : "" }} onMouseEnter={() => ChangeLatestItem(latestArray)}>{latestText}</li>
-      })
-    );
-  };
+  const { setToggleSideMenu, setNavbar, products, latestItems } = useContext(ToggleRegister);
 
   useEffect(() => {
     window.scrollTo(0, 0);

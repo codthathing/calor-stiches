@@ -1,5 +1,5 @@
 import React, { useContext, useReducer } from "react";
-import { ToggleRegister } from "../../contextpage";
+import { ToggleRegister } from "../contextpage";
 
 const AddToCart = ({ id }) => {
   const { products, cartItems } = useContext(ToggleRegister);
