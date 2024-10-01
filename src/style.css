@@ -5,6 +5,10 @@
     outline: none;
 }
 
+*:active {
+    background-color: none;
+}
+
 :root {
     --Yantramanav: 'Yantramanav', sans-serif;
     --Cormorant: 'Cormorant Infant', sans-serif;
