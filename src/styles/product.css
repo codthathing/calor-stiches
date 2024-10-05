@@ -3,6 +3,12 @@
   --Yantramanav: 'Yantramanav', sans-serif;
 }
 
+#productReviewMain {
+  margin: 2.5rem 0;
+}
+
+
+
 #productViewMain {
   background-color: white;
   position: absolute;
