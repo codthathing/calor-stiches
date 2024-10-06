@@ -7,6 +7,68 @@
   margin: 2.5rem 0;
 }
 
+#productReviewImages {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+#productSideImages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem 0;
+}
+
+.productSizeList {
+  list-style: none;
+}
+
+.productSizeImage {
+  width: 4.5rem;
+  height: 6rem;
+}
+
+#productMainImageDiv {
+  padding-right: 0.75rem;
+}
+
+#productMainImage {
+  width: 100%;
+  height: 32.25rem;
+}
+
+#productDetailsDiv {
+  margin-top: 2.5rem;
+  border-bottom: 1px solid black;
+}
+
+#productDetailName {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+#productDetailReview {
+  margin: 1rem 0;
+}
+
+#productDetailDesc {
+  margin-bottom: 1rem;
+}
+
+#productPrep {
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+}
+
+#productPrepText {
+  margin-bottom: 0.5rem;
+}
+
+#productPrepDiv {
+  padding: 0.15rem;
+  background-color: green;
+}
+
 
 
 #productViewMain {
