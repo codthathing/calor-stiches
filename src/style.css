@@ -5,13 +5,17 @@
     outline: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Roboto&family=Yantramanav&display=swap');
+
+
 *:active {
     background-color: none;
 }
 
 :root {
-    --Yantramanav: 'Yantramanav', sans-serif;
-    --Cormorant: 'Cormorant Infant', sans-serif;
+    --Yantramanav: "Yantramanav", sans-serif;
+    --Cormorant: "Cormorant Infant", sans-serif;
+    --Roboto: "Roboto", sans-serif;
     --12px: 0.75rem;
     --border_size: 1px;
     --616161: #616161;
@@ -19,6 +23,7 @@
     --1B1A1A: #1B1A1A;
     --222222: #222222;
     --9B9B9B: #9B9B9B;
+    --F3F2ED: #F3F2ED;
     --500: 500;
 }
 

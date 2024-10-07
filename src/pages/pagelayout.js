@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import FrontPage from "./extensions/frontpage/frontpage";
-import ProductReview from "./extensions/products/productreview";
+import ProductReview from "./extensions/products/productreview/productreview";
 import CollectionPage from "./extensions/collection/collectionpage";
 import ProductPage from "./extensions/products/productpage";
 import ProductDisplay from "./extensions/products/productdisplay";
