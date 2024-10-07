@@ -64,7 +64,7 @@ const ProductReview = () => {
         <div id="productColor" className="productDivs">
           <p id="productColorText">Color Green</p>
           <main id="productColorMain">
-            <div className="productColorMainDiv" style={{ backgroundColor: "green" }}></div>
+            <div className="productColorMainDiv" style={{ backgroundColor: "#00A849" }}></div>
             <p className="productColorMainText">Green</p>
           </main>
         </div>
