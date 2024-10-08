@@ -8,7 +8,7 @@
 }
 
 #header {
-    border-bottom: var(--border_size) solid #F3F2ED;
+    border-bottom: var(--border_size) solid var(--F3F2ED);
     position: fixed;
     width: 100%;
     top: 0;
@@ -277,6 +277,7 @@
     text-transform: capitalize;
     font-family: var(--Yantramanav);
     color: var(--1B1A1A);
+    text-align: center;
 }
 
 .priceDiv {
@@ -293,24 +294,6 @@
 .productPrice {
     white-space: pre;
     font-family: var(--Yantramanav);
-}
-
-.productList {
-    display: flex;
-    align-items: center;
-    gap: 0 0.35rem;
-}
-
-.productListItem {
-    list-style: none;
-}
-
-.productLink {
-    display: flex;
-    align-items: center;
-    gap: 0 0.35rem;
-    color: black;
-    text-decoration: none;
 }
 
 .viewButton {
@@ -355,7 +338,7 @@
 }
 
 #latestSection {
-    border-bottom: var(--border_size) solid #F3F2ED;
+    border-bottom: var(--border_size) solid var(--F3F2ED);
     text-align: center;
 }
 
@@ -411,7 +394,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid #F3F2ED;
+    border: 1px solid var(--F3F2ED);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -429,7 +412,6 @@
 
 #serviceSection {
     display: grid;
-    border-bottom: var(--border_size) solid #F3F2ED;
 }
 
 .serviceDiv {
@@ -449,6 +431,7 @@
 
 #newsSection {
     display: grid;
+    border-top: var(--border_size) solid var(--F3F2ED);
 }
 
 .contactMain {
@@ -517,7 +500,7 @@
 }
 
 #storeSection {
-    border-bottom: var(--border_size) solid var(--9B9B9B);
+    border-bottom: var(--border_size) solid var(--F3F2ED);
 }
 
 #storeHead {
@@ -712,14 +695,6 @@
 
     .productPrice {
         font-size: var(--17px);
-    }
-
-    .productLinkText {
-        font-size: 1rem;
-    }
-
-    .productLinkIcon {
-        font-size: 0.75rem;
     }
 
     #collectionSection {
@@ -1020,14 +995,6 @@
 
     .productPrice {
         font-size: var(--8px);
-    }
-
-    .productLinkText {
-        font-size: 0.75rem;
-    }
-
-    .productLinkIcon {
-        font-size: 0.5rem;
     }
 
     .viewButton {

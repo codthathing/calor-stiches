@@ -38,6 +38,7 @@ const ProductReview = () => {
           return <PageLinkTemplate {...details}></PageLinkTemplate>
         })}
       </ul>
+
       <main id="productReviewMain">
         <picture id="productReviewImages">
           <ul id="productSideImages">
@@ -51,101 +52,116 @@ const ProductReview = () => {
             <img src={productImage} alt="" id="productMainImage imageSize" className="imageSize" />
           </div>
         </picture>
-        <div id="productDetailsDiv">
-          <p id="productDetailName">Heeloo</p>
-          <span id="productDetailPrice">$85.00</span>
-          <p id="productDetailReview">(1 customer review / Add review)</p>
-          <p id="productDetailDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam vitae provident odio, suscipit repellendus vero in voluptas molestias alias doloremque nihil recusandae ratione totam optio, deserunt sint dignissimos placeat ex!</p>
-        </div>
-        <div id="productPrep" className="productDivs">
-          <p id="productPrepText">Stock: In stock, ready to be shipped</p>
-          <div id="productPrepDiv"></div>
-        </div>
-        <div id="productColor" className="productDivs">
-          <p id="productColorText">Color Green</p>
-          <main id="productColorMain">
-            <div className="productColorMainDiv" style={{ backgroundColor: "#00A849" }}></div>
-            <p className="productColorMainText">Green</p>
-          </main>
-        </div>
-        <div id="productSize" className="productDivs">
-          <div id="productSizeDiv">
-            <p id="productSizeDetail" className="productSizeText">Size L</p>
-            <p id="productSizeChart" className="productSizeText">SIZE CHARTS</p>
+
+        <div id="productReviewDiv">
+          <div id="productDetailsDiv">
+            <p id="productDetailName">Heeloo</p>
+            <span id="productDetailPrice">$85.00</span>
+            <p id="productDetailReview">(1 customer review / Add review)</p>
+            <p id="productDetailDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam vitae provident odio, suscipit repellendus vero in voluptas molestias alias doloremque nihil recusandae ratione totam optio, deserunt sint dignissimos placeat ex!</p>
           </div>
-          <main id="productSizeMain">
-            <p className="productSizeMainText">L</p>
-          </main>
-        </div>
-        <div id="productFunctions" className="productDivs">
-          <div id="productToCart">
-            <div id="productToCartDiv">
-              <div className="productToCartInnerDiv">1</div>
-              <div className="productToCartInnerDiv">+</div>
-              <div className="productToCartInnerDiv">-</div>
+          <div id="productPrep" className="productDivs">
+            <p id="productPrepText">Stock: In stock, ready to be shipped</p>
+            <div id="productPrepDiv"></div>
+          </div>
+          <div id="productColor" className="productDivs">
+            <p id="productColorText">Color Green</p>
+            <main id="productColorMain">
+              <div className="productColorMainDiv" style={{ backgroundColor: "#00A849" }}></div>
+              <p className="productColorMainText">Green</p>
+            </main>
+          </div>
+          <div id="productSize" className="productDivs">
+            <div id="productSizeDiv">
+              <p id="productSizeDetail" className="productSizeText">Size L</p>
+              <p id="productSizeChart" className="productSizeText">SIZE CHARTS</p>
             </div>
-            <button type="button" id="productToCartButton">ADD TO CART</button>
+            <main id="productSizeMain">
+              <p className="productSizeMainText">L</p>
+            </main>
           </div>
-          <div id="productToWishlist">
-            <i className="fa-regular fa-heart" id="productWishlistIcon"></i>
-            <p id="productWishlistText">ADD TO WISHLIST</p>
-          </div>
-        </div>
-        <div id="productDelivery">
-          <div id="productDeliveryInfo">
-            <div className="productDeliveryInfoInnerDiv">
-              <img src={serviceIcon} alt="" className="productDeliveryInfoIcons" />
-              <p className="productDeliveryInfoTexts">Free shipping on US orders $90+</p>
+          <div id="productFunctions" className="productDivs">
+            <div id="productToCart">
+              <div id="productToCartDiv">
+                <div className="productToCartInnerDiv">1</div>
+                <div className="productToCartInnerDiv">+</div>
+                <div className="productToCartInnerDiv">-</div>
+              </div>
+              <button type="button" id="productToCartButton">ADD TO CART</button>
             </div>
-            <div className="productDeliveryInfoInnerDiv">
-              <img src={serviceIcon} alt="" className="productDeliveryInfoIcons" />
-              <p className="productDeliveryInfoTexts">Free shipping on US orders $90+</p>
+            <div id="productToWishlist">
+              <i className="fa-regular fa-heart" id="productWishlistIcon"></i>
+              <p id="productWishlistText">ADD TO WISHLIST</p>
             </div>
           </div>
-          <div id="productDeliveryPayment">
-            <p id="productDeliveryPaymentText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas autem ipsum unde veritatis laboriosam placeat quia illo asperiores distinctio consectetur.</p>
-            <div id="productDeliveryPaymentDiv">
-              <Payment></Payment>
+          <div id="productDelivery">
+            <div id="productDeliveryInfo">
+              <div className="productDeliveryInfoInnerDiv">
+                <img src={serviceIcon} alt="" className="productDeliveryInfoIcons" />
+                <p className="productDeliveryInfoTexts">Free shipping on US orders $90+</p>
+              </div>
+              <div className="productDeliveryInfoInnerDiv">
+                <img src={serviceIcon} alt="" className="productDeliveryInfoIcons" />
+                <p className="productDeliveryInfoTexts">Free shipping on US orders $90+</p>
+              </div>
+              <div className="productDeliveryInfoInnerDiv">
+                <img src={serviceIcon} alt="" className="productDeliveryInfoIcons" />
+                <p className="productDeliveryInfoTexts">Free shipping on US orders $90+</p>
+              </div>
             </div>
-          </div>
-          <div id="productDeliveryDetails">
-            <p className="productDeliveryDetailsTexts">SKU: <span className="productDeliveryDetailsInnerText">ED5690042</span> <span className="productDeliveryDetailsSpan">|</span></p>
-          </div>
-          <div id="productHandles">
-            <Handle></Handle>
-          </div>
-        </div>
-        <div id="productAbout">
-          <main id="productAboutMain">
-            <p className="productAboutMainTexts">DESCRIPTION</p>
-            <p className="productAboutMainTexts">REVIEW</p>
-          </main>
-          <p id="productAboutText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae maxime veniam molestias ex odit quas ipsum tempore sint. Sunt ea, quam illo officiis quasi ut molestias delectus impedit facere vel quia quibusdam! Harum, non, accusantium magnam deserunt, tenetur vero dolores itaque officiis esse placeat deleniti? Voluptates beatae minima unde nisi.</p>
-          <div id="productAboutDiv">
-            <div className="productAboutInnerDiv">
-              <img src={serviceIcon} alt="" className="productAboutInnerImage" />
-              <p className="productAboutInnerText">Machine wash max. 30ºC. Short spin.</p>
+            <div id="productDeliveryPayment">
+              <p id="productDeliveryPaymentText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas autem ipsum unde veritatis laboriosam placeat quia illo asperiores distinctio consectetur.</p>
+              <div id="productDeliveryPaymentDiv">
+                <Payment></Payment>
+              </div>
             </div>
-            <div className="productAboutInnerDiv">
-              <img src={serviceIcon} alt="" className="productAboutInnerImage" />
-              <p className="productAboutInnerText">Machine wash max. 30ºC. Short spin.</p>
+            <div id="productDeliveryDetails">
+              <p className="productDeliveryDetailsTexts">SKU: <span className="productDeliveryDetailsInnerText">ED5690042</span> <span className="productDeliveryDetailsSpan">|</span></p>
+              <p className="productDeliveryDetailsTexts">SKU: <span className="productDeliveryDetailsInnerText">ED5690042</span></p>
             </div>
-            <div className="productAboutInnerDiv">
-              <img src={serviceIcon} alt="" className="productAboutInnerImage" />
-              <p className="productAboutInnerText">Machine wash max. 30ºC. Short spin.</p>
+            <div id="productHandles">
+              <Handle></Handle>
             </div>
           </div>
         </div>
-      </main>
+      </main >
+
+      <div id="productAbout">
+        <main id="productAboutMain">
+          <p className="productAboutMainTexts">DESCRIPTION</p>
+          <p className="productAboutMainTexts">REVIEW</p>
+        </main>
+        <p id="productAboutText">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae maxime veniam molestias ex odit quas ipsum tempore sint. Sunt ea, quam illo officiis quasi ut molestias delectus impedit facere vel quia quibusdam! Harum, non, accusantium magnam deserunt, tenetur vero dolores itaque officiis esse placeat deleniti? Voluptates beatae minima unde nisi.
+          <div id="productAboutTextInnerDiv">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ullam. Similique, veritatis error. Voluptas labore earum atque et ad libero, nisi officia. At impedit, incidunt autem fuga illum excepturi magnam obcaecati, adipisci debitis laboriosam explicabo, amet atque velit. Aliquid repellat perspiciatis consectetur magni alias exercitationem numquam facilis a animi error culpa, voluptate similique nesciunt. Voluptate natus dicta dolor eligendi reprehenderit sequi amet saepe sunt quo repellat omnis atque quibusdam aperiam, nesciunt asperiores perferendis earum quis culpa quidem odit quia unde? Cupiditate veniam nulla id asperiores adipisci repellendus, doloribus minus quis voluptatem? Eligendi neque error dicta adipisci nesciunt mollitia vero vitae.
+            <div id="productAboutDiv">
+              <div className="productAboutInnerDiv">
+                <img src={serviceIcon} alt="" className="productAboutInnerImage" />
+                <p className="productAboutInnerText">Machine wash max. 30ºC. Short spin.</p>
+              </div>
+              <div className="productAboutInnerDiv">
+                <img src={serviceIcon} alt="" className="productAboutInnerImage" />
+                <p className="productAboutInnerText">Machine wash max. 30ºC. Short spin.</p>
+              </div>
+              <div className="productAboutInnerDiv">
+                <img src={serviceIcon} alt="" className="productAboutInnerImage" />
+                <p className="productAboutInnerText">Machine wash max. 30ºC. Short spin.</p>
+              </div>
+            </div>
+          </div>
+        </p>
+      </div>
+
       <div id="productRelatedDiv">
         <p id="productRelatedText">Related products</p>
-        <main id="productRelatedText">
+        <main id="productRelatedMain">
           {products.map((products) => {
             return <ProductTemplate {...products}></ProductTemplate>
           })}
         </main>
       </div>
-    </div>
+    </div >
   );
 }
 
