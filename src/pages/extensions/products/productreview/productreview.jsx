@@ -54,44 +54,44 @@ const ProductReview = () => {
         </picture>
 
         <div id="productReviewDiv">
-          <div id="productDetailsDiv">
-            <p id="productDetailName">Heeloo</p>
-            <span id="productDetailPrice">$85.00</span>
+          <div className="productDetailsDiv">
+            <p className="productDetailName">Heeloo</p>
+            <span className="productDetailPrice">$85.00</span>
             <p id="productDetailReview">(1 customer review / Add review)</p>
-            <p id="productDetailDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam vitae provident odio, suscipit repellendus vero in voluptas molestias alias doloremque nihil recusandae ratione totam optio, deserunt sint dignissimos placeat ex!</p>
+            <p className="productDetailDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam vitae provident odio, suscipit repellendus vero in voluptas molestias alias doloremque nihil recusandae ratione totam optio, deserunt sint dignissimos placeat ex!</p>
           </div>
-          <div id="productPrep" className="productDivs">
-            <p id="productPrepText">Stock: In stock, ready to be shipped</p>
-            <div id="productPrepDiv"></div>
+          <div id="productPrepReview" className="productDivs">
+            <p className="productPrepText">Stock: In stock, ready to be shipped</p>
+            <div className="productPrepDiv"></div>
           </div>
-          <div id="productColor" className="productDivs">
-            <p id="productColorText">Color Green</p>
-            <main id="productColorMain">
+          <div id="productColorReview" className="productDivs">
+            <p className="productColorText">Color Green</p>
+            <main className="productColorMain">
               <div className="productColorMainDiv" style={{ backgroundColor: "#00A849" }}></div>
               <p className="productColorMainText">Green</p>
             </main>
           </div>
-          <div id="productSize" className="productDivs">
-            <div id="productSizeDiv">
-              <p id="productSizeDetail" className="productSizeText">Size L</p>
-              <p id="productSizeChart" className="productSizeText">SIZE CHARTS</p>
+          <div id="productSizeReview" className="productDivs">
+            <div className="productSizeDiv">
+              <p className="productSizeText">Size L</p>
+              <p className="productSizeText">SIZE CHARTS</p>
             </div>
-            <main id="productSizeMain">
+            <main className="productSizeMain">
               <p className="productSizeMainText">L</p>
             </main>
           </div>
-          <div id="productFunctions" className="productDivs">
-            <div id="productToCart">
-              <div id="productToCartDiv">
+          <div id="productFunctionsReview" className="productDivs">
+            <div className="productToCart">
+              <div className="productToCartDiv">
                 <div className="productToCartInnerDiv">1</div>
                 <div className="productToCartInnerDiv">+</div>
                 <div className="productToCartInnerDiv">-</div>
               </div>
-              <button type="button" id="productToCartButton">ADD TO CART</button>
+              <button type="button" className="productToCartButton">ADD TO CART</button>
             </div>
-            <div id="productToWishlist">
-              <i className="fa-regular fa-heart" id="productWishlistIcon"></i>
-              <p id="productWishlistText">ADD TO WISHLIST</p>
+            <div className="productToWishlist">
+              <i className="fa-regular fa-heart productWishlistIcon"></i>
+              <p className="productWishlistText">ADD TO WISHLIST</p>
             </div>
           </div>
           <div id="productDelivery">
@@ -115,7 +115,7 @@ const ProductReview = () => {
                 <Payment></Payment>
               </div>
             </div>
-            <div id="productDeliveryDetails">
+            <div className="productDeliveryDetails">
               <p className="productDeliveryDetailsTexts">SKU: <span className="productDeliveryDetailsInnerText">ED5690042</span> <span className="productDeliveryDetailsSpan">|</span></p>
               <p className="productDeliveryDetailsTexts">SKU: <span className="productDeliveryDetailsInnerText">ED5690042</span></p>
             </div>
