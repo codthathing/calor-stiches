@@ -160,6 +160,7 @@
 .productToWishlist {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .productWishlistText {
@@ -278,15 +279,15 @@
   margin: auto;
 }
 
-#productViewMain::-webkit-scrollbar {
+#productViewMainDiv::-webkit-scrollbar {
   width: 2px;
 }
 
-#productViewMain::-webkit-scrollbar-track {
+#productViewMain::-webkit-scrollbar-track, #productViewMainDiv::-webkit-scrollbar-track {
   background-color: white;
 }
 
-#productViewMain::-webkit-scrollbar-thumb {
+#productViewMain::-webkit-scrollbar-thumb, #productViewMainDiv::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   background-color: var(--9B9B9B);
 }
@@ -300,8 +301,9 @@
   right: 0;
 }
 
-#productViewImage {
-  width: 100%;
+#productViewImageDiv {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #productReviewLinkDiv {
@@ -510,6 +512,7 @@
 
   #productReviewLink {
     font-size: var(--16px);
+    margin-top: 2rem;
   }
 }
 
@@ -755,7 +758,7 @@
     font-size: var(--12px);
   }
 
-  #productViewImage {
+  #productViewImageDiv {
     height: 21.25rem;
   }
 
@@ -765,6 +768,7 @@
 
   #productReviewLink {
     font-size: var(--12px);
+    margin-top: 1rem;
   }
 }
 
@@ -871,7 +875,7 @@
     height: 90vh;
   }
 
-  #productViewImage {
+  #productViewImageDiv {
     height: 30rem;
   }
 }
@@ -992,8 +996,17 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  #productViewImage {
-    height: 55vh;
+  #productViewMainDiv::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  #productViewMainDiv::-webkit-scrollbar-track {
+    background-color: white;
+  }
+  
+  #productViewMainDiv::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: var(--9B9B9B);
   }
 
   #productViewMainDiv {

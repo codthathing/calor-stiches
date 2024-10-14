@@ -20,7 +20,9 @@ const ProductTemplate = ({ id, productAvailable, productAvailableColor, doublePr
           </section>
         </Link>
         <div className="optionBtnsDiv">
-          <AddToWishList id={id}></AddToWishList>
+          <div className="optionDiv optionDivWishlist">
+            <AddToWishList id={id} showText={false} showIcon={true}></AddToWishList>
+          </div>
           <AddToCart id={id}></AddToCart>
           <div className="optionDiv">
             <Link to={`/${productName}`}>
