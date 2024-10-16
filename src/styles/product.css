@@ -283,11 +283,13 @@
   width: 2px;
 }
 
-#productViewMain::-webkit-scrollbar-track, #productViewMainDiv::-webkit-scrollbar-track {
+#productViewMain::-webkit-scrollbar-track,
+#productViewMainDiv::-webkit-scrollbar-track {
   background-color: white;
 }
 
-#productViewMain::-webkit-scrollbar-thumb, #productViewMainDiv::-webkit-scrollbar-thumb {
+#productViewMain::-webkit-scrollbar-thumb,
+#productViewMainDiv::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   background-color: var(--9B9B9B);
 }
@@ -316,6 +318,168 @@
   color: var(--222222);
   font-family: var(--Yantramanav);
 }
+
+
+
+
+
+
+
+.productShownDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productFilterDiv {
+  position: relative;
+}
+
+.productTexIcontDiv {
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+  cursor: pointer;
+}
+
+.productShownText {
+  color: var(--282828);
+  font-family: var(--Roboto);
+}
+
+.productIcons {
+  color: var(--222222);
+}
+
+.productTexts {
+  color: var(--222222);
+  font-family: var(--Roboto);
+}
+
+.productInnerDivs {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--222222);
+  position: absolute;
+  right: 0;
+  background-color: #FFFFFF;
+  text-wrap: nowrap;
+}
+
+.productFilterTexts {
+  color: var(--222222);
+  font-family: var(--Roboto);
+  cursor: pointer;
+}
+
+.productFilterTexts:hover {
+  background-color: var(--222222);
+  color: #FFFFFF;
+}
+
+.productNavigationDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.productNavigationText {
+  color: var(--222222);
+  font-family: var(--Roboto);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+#productFilterIconTextDiv {
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+}
+
+.productFilterSectionMainFixed {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#productFilterOptionsSection {
+  width: 100%;
+  background-color: #1B1A1AB3;
+}
+
+#productFilterOptionsMain {
+  background-color: #FFFFFF;
+}
+
+#productFilterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--F3F2ED);
+  position: sticky;
+  top: 0;
+}
+
+#filterHeaderText {
+  font-family: var(--Cormorant);
+  color: var(--1B1A1A);
+}
+
+.productFilterText {
+  color: var(--1B1A1A);
+  font-family: var(--Roboto);
+}
+
+.productFilterSections {
+  display: flex;
+  flex-direction: column;
+}
+
+.productFilterDivs {
+  display: flex;
+  align-items: center;
+}
+
+.filterCheckbox {
+  accent-color: var(--222222);
+  border: 1px solid var(--222222);
+}
+
+.filterTextsLength {
+  font-family: var(--Roboto);
+  color: var(--222222);
+}
+
+.filterPriceRange {
+  width: 100%;
+}
+
+.filterPriceValueTexts {
+  font-family: var(--Roboto);
+  color: var(--282828);
+}
+
+.filterColorInnerDivs {
+  border-radius: 50%;
+  background-color: red;
+}
+
+#productFilterFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+
 
 
 
@@ -514,7 +678,75 @@
     font-size: var(--16px);
     margin-top: 2rem;
   }
+
+  .productShownDiv {
+    margin-bottom: 2rem;
+  }
+
+  .productInnerDivs {
+    margin-top: 1rem;
+  }
+
+  .productShownText {
+    font-size: var(--16px);
+  }
+
+  .productIcons {
+    font-size: var(--16px);
+  }
+
+  .productTexts {
+    font-size: var(--16px);
+  }
+
+  .productInnerDivs {
+    padding: 1.5rem 0;
+  }
+
+  .productFilterTexts {
+    font-size: var(--16px);
+    padding: 0.35rem 5rem 0.35rem 1rem;
+  }
+
+  .productFilterSection {
+    display: grid;
+    gap: 0 3.5rem;
+  }
+
+  .productNavigationDiv {
+    gap: 0 2rem;
+  }
+
+  .productNavigationText {
+    font-size: var(--16px);
+  }
+
+  .productFilterMainDivs {
+    padding: 3rem;
+  }
+
+  .productFilterSections {
+    gap: 0.25rem 0;
+  }
+
+  .productFilterDivs {
+    gap: 0 0.75rem;
+  }
+
+  .filterTextsLength {
+    font-size: var(--16px);
+  }
+
+  .filterColorInnerDivs {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  #productFilterFooter {
+    padding: 3rem;
+  }
 }
+
 
 
 
@@ -528,7 +760,7 @@
 
   .otherPages {
     margin-top: 8rem;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
   }
 
   .productLinkText {
@@ -539,7 +771,7 @@
     font-size: 0.5rem;
   }
 
-  #productReviewMain {
+  .productMains {
     margin-top: 2.5rem;
   }
 
@@ -770,6 +1002,78 @@
     font-size: var(--12px);
     margin-top: 1rem;
   }
+
+  .productShownDiv {
+    margin-bottom: 1rem;
+  }
+
+  .productShownText {
+    font-size: var(--12px);
+  }
+
+  .productTexts {
+    font-size: var(--12px);
+  }
+
+  .productIcons {
+    font-size: var(--12px);
+  }
+
+  .productFilterTexts {
+    font-size: var(--12px);
+    padding: 0.35rem 4rem 0.35rem 0.75rem;
+  }
+
+  .productInnerDivs {
+    padding: 0.75rem 0;
+    margin-top: 0.5rem;
+  }
+
+  .productNavigationDiv {
+    gap: 0 1rem;
+  }
+
+  .productNavigationText {
+    font-size: var(--12px);
+  }
+
+  #productFilterOptionsMain {
+    width: 100%;
+  }
+
+  .productFilterMainDivs {
+    padding: 2rem;
+  }
+
+  #filterHeaderText {
+    font-size: var(--16px);
+  }
+
+  .productFilterText {
+    margin-bottom: 1rem;
+    font-size: var(--16px);
+  }
+
+  .productFilterSections {
+    gap: 0.75rem 0;
+  }
+
+  .productFilterDivs {
+    gap: 0 0.5rem;
+  }
+
+  .filterTextsLength {
+    font-size: var(--12px);
+  }
+
+  .filterColorInnerDivs {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  #productFilterFooter {
+    padding: 2rem;
+  }
 }
 
 
@@ -787,8 +1091,8 @@
     padding: 1.75rem;
   }
 
-  #productReviewMain {
-    margin-top: 6rem;
+  .productMains {
+    margin-top: 3rem;
   }
 
   #productReviewImages {
@@ -878,6 +1182,23 @@
   #productViewImageDiv {
     height: 30rem;
   }
+
+  .productFilterSection {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #productFilterOptionsMain {
+    width: 50%;
+  }
+
+  #filterHeaderText {
+    font-size: var(--24px);
+  }
+
+  .productFilterText {
+    margin-bottom: 1.5rem;
+    font-size: var(--24px);
+  }
 }
 
 
@@ -895,8 +1216,12 @@
     padding: 1.5rem;
   }
 
+  .productMains {
+    margin-top: 4rem;
+  }
+
   #productReviewMain {
-    margin: 5rem 0;
+    margin-bottom: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 5rem;
@@ -999,11 +1324,11 @@
   #productViewMainDiv::-webkit-scrollbar {
     width: 2px;
   }
-  
+
   #productViewMainDiv::-webkit-scrollbar-track {
     background-color: white;
   }
-  
+
   #productViewMainDiv::-webkit-scrollbar-thumb {
     border-radius: 1rem;
     background-color: var(--9B9B9B);
@@ -1024,5 +1349,22 @@
 
   #productDeliveryDetailsView {
     display: none;
+  }
+
+  .productFilterSection {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  #productFilterOptionsMain {
+    width: 30%;
+  }
+
+  #filterHeaderText {
+    font-size: var(--20px);
+  }
+
+  .productFilterText {
+    margin-bottom: 1rem;
+    font-size: var(--20px);
   }
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { ToggleRegister } from "../../contextpage";
 import FrontText from "./frontText";
@@ -13,6 +13,7 @@ import ProductView from "../products/productview";
 const FrontPage = () => {
 
   const { setToggleSideMenu, setNavbar, products, latestItems } = useContext(ToggleRegister);
+  const [ showVideoPlayer, setShowVideoPlayer ] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -69,10 +70,12 @@ const FrontPage = () => {
 
       <PageArticle></PageArticle>
 
-      <div id="videoDiv">
+      <div id="videoDiv" 
+        onMouseEnter={() => setShowVideoPlayer(true)}
+        onMouseLeave={() => setShowVideoPlayer(false)}>
         <video id="videoMain" poster={videoPoster} alt="products_adverts"></video>
         <aside id="videoAside">
-          {false ? <i className="fa-solid fa-chevron-right" id="videoPlayer"></i> : <p id="videoPlay" className="paragraphStyles">PLAY VIDEO</p>}
+          {showVideoPlayer ? <p id="videoPlay" className="paragraphStyles">PLAY VIDEO</p> : <i className="fa-solid fa-chevron-right" id="videoPlayer"></i>}
         </aside>
       </div>
 

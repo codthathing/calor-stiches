@@ -23,7 +23,7 @@ const ProductReview = () => {
     setToggleSideMenu(false);
     setNavbar(true);
     setCart(false);
-  }, [product, pathname])
+  }, [pathname, productName, products, setCart, setNavbar, setSearch, setToggleSideMenu])
 
   const pageLinkDetails = [
     { id: 0, linkDirect: "/", linkText: "Home", linkArrow: true },
@@ -39,7 +39,7 @@ const ProductReview = () => {
         })}
       </ul>
 
-      <main id="productReviewMain">
+      <main id="productReviewMain" className="productMains">
         <picture id="productReviewImages">
           <ul id="productSideImages">
             <li className="productSizeList imageSize"><img src={productImage} alt="" className="productSizeImage imageSize" /></li>

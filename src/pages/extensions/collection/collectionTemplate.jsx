@@ -4,12 +4,11 @@ import dressCollection from "./collectImages/design_nine.jpeg";
 import tshirtCollection from "./collectImages/design_ten.jpeg";
 import outwearCollection from "./collectImages/design_eleven.jpeg";
 
-export let collections;
 const CollectionTemplate = () => {
-  collections = [
-    { id: 0, collectionImage: dressCollection, collectionName: "dresses" },
-    { id: 1, collectionImage: tshirtCollection, collectionName: "t-shirts" },
-    { id: 2, collectionImage: outwearCollection, collectionName: "outerwear" }
+  const collections = [
+    { id: 0, collectionImage: dressCollection, collectionName: "Dresses" },
+    { id: 1, collectionImage: tshirtCollection, collectionName: "T-shirts" },
+    { id: 2, collectionImage: outwearCollection, collectionName: "Outerwear" }
   ]
 
   return (
