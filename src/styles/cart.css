@@ -100,6 +100,206 @@
 
 
 
+
+
+
+.cartQuantityDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+#cartUpdateBtn {
+  background-color: var(--222222);
+  color: #FFFFFF;
+  margin: 2rem 0;
+}
+
+.cartPriceValueDiv {
+  display: flex;
+  border-bottom: 1px solid var(--F3F2ED);
+  padding: 2rem 0;
+}
+
+#cartShippingAddressDiv {
+  border-bottom: 1px solid var(--F3F2ED);
+  padding: 2rem 0;
+}
+
+#cartShippingDiv {
+  display: flex;
+}
+
+#cartShippingSpan {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#cartAddressText {
+  cursor: pointer;
+}
+
+#cartAddressDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartAddressInputs {
+  border: 1px solid var(--222222);
+}
+
+.cartAddressBtn {
+  width: fit-content;
+  color: #FFFFFF;
+  background-color: var(--222222);
+}
+
+.cartTotalValue {
+  font-weight: 600;
+}
+
+#cartCheckoutButton {
+  background-color: var(--222222);
+  color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+#checkoutLoginDiv {
+  border: 1px solid var(--F3F2ED);
+  display: flex;
+}
+
+.billForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.billLabelInputDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.billInput {
+  padding: 1.5rem;
+  border: 1px solid var(--222222);
+}
+
+#billOtherMain {
+  gap: 0 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+#billOtherCheckbox {
+  accent-color: var(--222222);
+}
+
+#billOptTextDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+#billOptTextArea {
+  border: 1px solid var(--222222);
+}
+
+#orderOptionDiv {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--F3F2ED);
+}
+
+#orderProductMain {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderProductPriceDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--F3F2ED);
+}
+
+.orderProductNameAmt {
+  text-transform: capitalize;
+}
+
+.orderSubTotalDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--F3F2ED);
+}
+
+#orderPaymentDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.paymentButtonText {
+  display: flex;
+  align-items: center;
+}
+
+.paymentButton {
+  accent-color: var(--222222);
+}
+
+.paymentMethodDetails {
+  background-color: var(--F3F2ED);
+}
+
+#termsDiv {
+  display: flex;
+  align-items: center;
+}
+
+#termsCheckbox {
+  accent-color: var(--222222);
+}
+
+#placeOrderBtn {
+  background-color: var(--222222);
+  color: #FFFFFF;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1023px) {
+  #productCartTopicsDiv {
+    display: none;
+  }
+
+  .cartPriceValueDiv {
+    justify-content: space-between;
+  }
+
+  #cartShippingDiv {
+    justify-content: space-between;
+  }
+}
+
+
+
+
+
+
+
+
 /* Styling for tab and desktop */
 @media all and (min-width: 768px) {
   #cartSection {
@@ -125,7 +325,7 @@
   .cartProductText {
     font-size: var(--16px);
   }
-  
+
   .cartDefaultText {
     font-size: var(--16px);
   }
@@ -153,6 +353,157 @@
   #cartFooter {
     padding: 1.75rem 0;
   }
+
+  #cartUpdateBtnDiv {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #cartUpdateBtn {
+    font-size: var(--16px);
+    padding: 1.25rem 2.5rem;
+  }
+
+  #cartTotalText {
+    margin: 2rem 0;
+  }
+
+  #cartAddressText {
+    font-size: var(--16px);
+  }
+
+  #cartCheckoutButton {
+    padding: 1.25rem 2.5rem;
+    font-size: var(--16px);
+    margin: 2rem 0 5rem 0;
+  }
+
+  #cartAddressDiv {
+    gap: 1.5rem 0;
+  }
+
+  .cartAddressInputs {
+    padding: 1.5rem;
+    font-size: var(--16px);
+  }
+
+  .cartAddressBtn {
+    padding: 1.25rem 2.5rem;
+    font-size: var(--16px);
+  }
+
+  #checkoutLoginDiv {
+    justify-content: space-between;
+  }
+
+  .checkoutLoginTexts {
+    font-size: var(--16px);
+  }
+
+  #billOrderSection {
+    margin: 2.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .billOrderText {
+    margin-bottom: 1.75rem;
+  }
+
+  .billForm {
+    gap: 1.75rem 0;
+  }
+
+  .billLabel {
+    font-size: var(--16px);
+  }
+
+  .billInput {
+    font-size: var(--16px);
+  }
+
+  #billOtherMain {
+    margin-bottom: 1.75rem;
+  }
+
+  #billOtherText {
+    font-size: var(--16px);
+  }
+
+  #billOptText {
+    font-size: var(--16px);
+  }
+
+  #billOptTextArea {
+    padding: 1.5rem;
+    font-size: var(--16px);
+  }
+
+  #orderOptionDiv {
+    padding: 1rem 0;
+  }
+
+  .orderOptionText {
+    font-size: var(--16px);
+  }
+
+  .orderProductPriceDiv {
+    padding: 2rem 0;
+  }
+
+  .orderProductNameAmt {
+    font-size: var(--16px);
+  }
+
+  .orderPriceValue {
+    font-size: var(--16px);
+  }
+
+  .orderSubTotalDiv {
+    padding: 2.5rem 0;
+  }
+
+  .orderSubTotalText {
+    font-size: var(--16px);
+  }
+
+  .orderSubTotalValue {
+    font-size: var(--16px);
+  }
+
+  .paymentButtonText {
+    gap: 0 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .paymentText {
+    font-size: var(--16px);
+  }
+
+  .paymentMethodDetails {
+    font-size: var(--16px);
+  }
+
+  #personalInfoText {
+    margin-bottom: 1.5rem;
+    font-size: var(--16px);
+  }
+
+  #termsDiv {
+    margin: 1.5rem 0;
+  }
+
+  #termsText {
+    font-size: var(--16px);
+  }
+
+  #placeOrderBtn {
+    font-size: var(--16px);
+  }
+
+  #placeOrderBtn {
+    padding: 1.25rem 0;
+  }
 }
 
 
@@ -168,12 +519,12 @@
   #cartHeader {
     padding: 1.25rem 1.25rem 1.25rem 2.35rem;
   }
-  
+
   #cartProductDiv {
     margin-top: 6rem;
     padding: 0 1.5rem 0 1.5rem;
   }
-  
+
   #cartProductInnerDiv {
     gap: 1.5rem 0;
     padding-bottom: 1.5rem;
@@ -203,7 +554,7 @@
   .cartProductText {
     font-size: var(--12px);
   }
-  
+
   .cartDefaultText {
     font-size: var(--12px);
   }
@@ -231,6 +582,188 @@
   #cartFooter {
     padding: 1.5rem 0;
   }
+
+  .cartQuantityDiv {
+    padding: 0.75rem 0;
+  }
+
+  #cartUpdateBtn {
+    font-size: var(--12px);
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+
+  #cartTotalText {
+    margin: 1rem 0;
+    font-size: var(--16px);
+  }
+
+  .cartPriceText {
+    font-size: var(--16px);
+  }
+
+  #cartShippingText {
+    font-size: var(--16px);
+  }
+
+  #cartAddressText {
+    font-size: var(--12px);
+  }
+
+  #cartAddressDiv {
+    margin: 0.5rem 0;
+    gap: 0.75rem 0;
+  }
+
+  .cartAddressInputs {
+    padding: 1rem;
+    font-size: var(--12px);
+  }
+
+  .cartAddressBtn {
+    padding: 0.75rem 1.25rem;
+    font-size: var(--12px);
+  }
+
+  #cartCheckoutButton {
+    padding: 0.75rem 1.25rem;
+    font-size: var(--12px);
+    margin: 2rem 0 4rem 0;
+  }
+
+  #checkoutMain {
+    margin-top: 3rem;
+  }
+
+  #checkoutLoginDiv {
+    padding: 2rem;
+    flex-direction: column;
+    gap: 1rem 0;
+  }
+
+  .checkoutLoginTexts {
+    font-size: var(--12px);
+  }
+
+  .billOrderDiv {
+    margin: 2rem 0;
+  }
+
+  .billOrderText {
+    margin-bottom: 1.5rem;
+    font-size: var(--16px);
+  }
+
+  .billForm {
+    gap: 1.25rem 0;
+  }
+
+  .billLabelInputDiv {
+    gap: 0.25rem 0;
+  }
+
+  .billLabel {
+    font-size: var(--12px);
+  }
+
+  .billInput {
+    font-size: var(--12px);
+  }
+
+  #billOtherAddresssDiv {
+    margin: 1.5rem 0;
+  }
+
+  #billOtherMain {
+    margin-bottom: 1.5rem;
+  }
+
+  #billOtherText {
+    font-size: var(--12px);
+  }
+
+  #billOptTextDiv {
+    gap: 0.25rem 0;
+  }
+
+  #billOptText {
+    font-size: var(--12px);
+  }
+
+  #billOptTextArea {
+    font-size: var(--12px);
+    padding: 1rem;
+  }
+
+  #orderOptionDiv {
+    padding: 0.75rem 0;
+  }
+
+  .orderOptionText {
+    font-size: var(--12px);
+  }
+
+  .orderProductPriceDiv {
+    padding: 1rem 0;
+  }
+
+  .orderProductNameAmt {
+    font-size: var(--12px);
+  }
+
+  .orderPriceValue {
+    font-size: var(--12px);
+  }
+
+  .orderSubTotalDiv {
+    padding: 1.5rem 0;
+  }
+
+  .orderSubTotalText {
+    font-size: var(--12px);
+  }
+
+  .orderSubTotalValue {
+    font-size: var(--12px);
+  }
+
+  #orderPaymentDiv {
+    gap: 1rem 0;
+    padding: 1rem 0;
+  }
+
+  .paymentButtonText {
+    gap: 0 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .paymentText {
+    font-size: var(--12px);
+  }
+
+  .paymentMethodDetails {
+    padding: 1rem;
+    font-size: var(--12px);
+  }
+
+  #personalInfoText {
+    margin-bottom: 1rem;
+    font-size: var(--12px);
+  }
+
+  #termsDiv {
+    margin: 1rem 0;
+    gap: 0 0.75rem;
+  }
+
+  #termsText {
+    font-size: var(--12px);
+  }
+
+  #placeOrderBtn {
+    padding: 0.75rem 0;
+    font-size: var(--12px);
+  }
 }
 
 
@@ -254,11 +787,11 @@
   #cartHeader {
     padding: 2rem;
   }
-  
+
   #cartProductDiv {
     padding: 0 2rem 0 2rem;
   }
-  
+
   #cartProductInnerDiv {
     gap: 2rem 0;
     padding-bottom: 2rem;
@@ -271,6 +804,67 @@
 
   .cartProductName {
     font-size: var(--24px);
+  }
+
+  .cartQuantityDiv {
+    padding: 1rem 0;
+  }
+
+  #cartTotalText {
+    font-size: var(--24px);
+  }
+
+  .cartPriceText {
+    font-size: var(--24px);
+  }
+
+  #cartShippingText {
+    font-size: var(--24px);
+  }
+
+  #cartAddressDiv {
+    margin: 0.75rem 0;
+  }
+
+  #checkoutMain {
+    margin-top: 4rem;
+  }
+
+  #checkoutLoginDiv {
+    padding: 2.5rem;
+  }
+
+  #billOrderSection {
+    gap: 0 2rem;
+  }
+
+  .billOrderText {
+    font-size: var(--24px);
+  }
+
+  .billLabelInputDiv {
+    gap: 0.5rem 0;
+  }
+
+  #billOtherAddresssDiv {
+    margin: 1.75rem 0;
+  }
+
+  #billOptTextDiv {
+    gap: 0.5rem 0;
+  }
+
+  #orderPaymentDiv {
+    gap: 1.5rem 0;
+    padding: 2rem 0;
+  }
+
+  .paymentMethodDetails {
+    padding: 1.5rem 1rem;
+  }
+
+  #termsDiv {
+    gap: 0 1rem;
   }
 }
 
@@ -296,11 +890,11 @@
   #cartHeader {
     padding: 2.5rem 2.5rem 2.5rem 3rem;
   }
-  
+
   #cartProductDiv {
     padding: 0 2.5rem 0 3rem;
   }
-  
+
   #cartProductInnerDiv {
     gap: 2.5rem 0;
     padding-bottom: 2.5rem;
@@ -313,5 +907,88 @@
 
   .cartProductName {
     font-size: var(--20px);
+  }
+
+  #productCartTopicsDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 12.5%;
+  }
+
+  .cartPriceValueDiv {
+    gap: 0 20%;
+  }
+
+  #cartTotalText {
+    font-size: var(--20px);
+  }
+
+  .cartPriceText {
+    font-size: var(--20px);
+  }
+
+  #cartShippingDiv {
+    gap: 0 13.5%;
+  }
+
+  #cartShippingText {
+    font-size: var(--20px);
+  }
+
+  #cartAddressDiv {
+    margin: 0.75rem 0 0.75rem 23.5%;
+  }
+
+  #checkoutMain {
+    margin-top: 6rem;
+  }
+
+  #checkoutLoginDiv {
+    padding: 2rem;
+  }
+
+  #billOrderSection {
+    gap: 0 3rem;
+  }
+
+  .billOrderText {
+    font-size: var(--20px);
+  }
+
+  .billLabelInputDiv {
+    gap: 0.25rem 0;
+  }
+
+  #billOtherAddresssDiv {
+    margin: 2rem 0;
+  }
+
+  #billOptTextDiv {
+    gap: 0.25rem 0;
+  }
+
+  #orderOptionDiv {
+    padding-right: 5rem;
+  }
+
+  .orderProductPriceDiv {
+    padding-right: 5rem;
+  }
+
+  .orderSubTotalDiv {
+    padding-right: 5rem;
+  }
+
+  #orderPaymentDiv {
+    gap: 1rem 0;
+    padding: 2.5rem 0;
+  }
+
+  .paymentMethodDetails {
+    padding: 1rem;
+  }
+
+  #termsDiv {
+    gap: 0 0.5rem;
   }
 }

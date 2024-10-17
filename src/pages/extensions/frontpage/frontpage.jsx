@@ -19,7 +19,7 @@ const FrontPage = () => {
     window.scrollTo(0, 0);
     setToggleSideMenu(false);
     setNavbar(false);
-  }, []);
+  }, [setNavbar, setToggleSideMenu]);
 
   return (
     <>

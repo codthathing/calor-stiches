@@ -123,9 +123,84 @@
 
 
 
+
+
+
+
+.wishlistCartDiv {
+  border-bottom: 1px solid var(--F3F2ED);
+}
+
+.wishlistCartDiv:first-child {
+  border-top: 1px solid var(--F3F2ED);
+}
+
+.wishlistCartImageNameDiv {
+  display: flex;
+}
+
+.wishlistToCartBtn {
+  background-color: var(--222222);
+  color: #FFFFFF;
+}
+
+#wishlistHandleShare {
+  display: flex;
+}
+
+.wishlistHandleDiv {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+@media all and (max-width: 1023px) {
+  #productWishlistTopicsDiv {
+    display: none;
+  }
+
+  .wishlistCartIconImageTextDiv {
+    position: relative;
+  }
+  
+  .wishlistCartDeleteIcon {
+    position: absolute;
+  }
+
+  .wishlistCartPriceValueDiv {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .wishlistStatusDiv {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .wishlistToCartDiv {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 /* Styling for tab and desktop */
 @media all and (min-width: 768px) {
-  #wishListMain { 
+  #wishListMain {
     left: 0;
     right: 0;
   }
@@ -140,7 +215,7 @@
 
   #wishlistInfoText {
     padding: 0.5rem 0;
-  } 
+  }
 
   #wishListItemSection {
     padding: 1.5rem;
@@ -168,6 +243,54 @@
   }
 
   .defaultText {
+    font-size: var(--16px);
+  }
+
+  .wishlistCartDeleteIcon {
+    font-size: var(--16px);
+  }
+
+  .wishlistCartImageNameDiv {
+    gap: 0 1.5rem;
+  }
+
+  .wishlistCartMainImage {
+    height: 8rem;
+    width: 6rem;
+  }
+
+  .wishlistDate {
+    font-size: var(--16px);
+  }
+
+  .wishlistCartPriceValue {
+    font-size: var(--16px);
+  }
+
+  .wishlistStatus {
+    font-size: var(--16px);
+  }
+
+  .wishlistToCartBtn {
+    font-size: var(--16px);
+    padding: 1.25rem 2.5rem;
+  }
+
+  #wishlistHandleShare {
+    gap: 0 3rem;
+    padding: 2rem 0;
+  }
+
+  .wishlistHandleDiv {
+    gap: 0 0.75rem;
+  }
+
+  .wislistHandleShareImg {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .wishlistHandleText {
     font-size: var(--16px);
   }
 }
@@ -237,6 +360,84 @@
   .defaultText {
     font-size: var(--12px);
   }
+
+  .productWishlistCartMain {
+    margin-top: 1.5rem;
+  }
+
+  .wishlistCartDiv {
+    padding: 0.75rem 0;
+  }
+
+  .wishlistCartDeleteIcon {
+    left: 0.25rem; 
+    top: 0.15rem;
+    font-size: var(--12px);
+  }
+
+  .wishlistCartImageNameDiv {
+    gap: 0 1rem;
+  }
+
+  .wishlistCartMainImage {
+    height: 5rem;
+    width: 4rem;
+  }
+
+  .wishlistCartName {
+    font-size: var(--16px);
+  }
+
+  .wishlistDate {
+    font-size: var(--12px);
+  }
+
+  .wishlistCartPriceValueDiv {
+    padding: 1rem 0;
+  }
+
+  .wishlistCartPriceText {
+    font-size: var(--16px);
+  }
+
+  .wishlistCartPriceValue {
+    font-size: var(--12px);
+  }
+
+  .wishlistStatusDiv {
+    padding: 1rem 0;
+  }
+
+  .wishlistStatusText {
+    font-size: var(--16px);
+  }
+
+  .wishlistStatus {
+    font-size: var(--12px);
+  }
+
+  .wishlistToCartBtn {
+    font-size: var(--12px);
+    padding: 0.75rem 1.25rem;
+  }
+
+  #wishlistHandleShare {
+    gap: 0 2rem;
+    padding: 1rem 0;
+  }
+
+  .wishlistHandleDiv {
+    gap: 0 0.5rem;
+  }
+
+  .wislistHandleShareImg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .wishlistHandleText {
+    font-size: var(--12px);
+  }
 }
 
 
@@ -265,6 +466,39 @@
   .wishListImage {
     width: 6rem;
   }
+
+  .productWishlistCartMain {
+    margin-top: 2rem;
+  }
+
+  .wishlistCartDiv {
+    padding: 1rem 0;
+  }
+
+  .wishlistCartDeleteIcon {
+    left: 0.5rem;
+    top: 0.5rem;
+  }
+
+  .wishlistCartName {
+    font-size: var(--24px);
+  }
+
+  .wishlistCartPriceValueDiv {
+    padding: 2rem 0;
+  }
+
+  .wishlistCartPriceText {
+    font-size: var(--24px);
+  }
+
+  .wishlistStatusDiv {
+    padding: 2rem 0;
+  }
+
+  .wishlistStatusText {
+    font-size: var(--24px);
+  }
 }
 
 
@@ -292,5 +526,53 @@
 
   .wishListImage {
     width: 6.5rem;
+  }
+
+  .productWishlistCartMain {
+    margin-top: 4rem;
+  }
+
+  #productWishlistTopicsDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin-left: 10rem;
+  }
+
+  .wishlistCartTopicTexts {
+    font-size: var(--20px);
+  }
+
+  .wishlistCartDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .wishlistCartIconImageTextDiv {
+    display: flex;
+    align-items: center;
+    gap: 0 1.5rem;
+  }
+
+  .wishlistCartImageNameDiv {
+    align-items: center;
+  }
+
+  .wishlistCartName {
+    font-size: var(--20px);
+  }
+
+  .wishlistCartPriceText {
+    display: none;
+  }
+
+  .wishlistStatusText {
+    display: none;
+  }
+
+  #wishlistHandleShare {
+    justify-content: center;
   }
 }

@@ -1,6 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { ToggleRegister } from "../contextpage";
 import PageLinkTemplate from "../pagelinks";
+import wishlistImage from "../extensions/products/productImages/design_eight.jpeg";
+import facebook from "../extensions/handleIcons/iconmonstr-facebook-4-240.png";
+import twitter from "../extensions/handleIcons/iconmonstr-twitter-4-240.png";
 
 const WishListPage = () => {
 
@@ -14,8 +17,8 @@ const WishListPage = () => {
   }, [])
 
   const pageLinkDetails = [
-    {id: 0, linkDirect: "/", linkText: "Home", linkArrow: true},
-    {id: 1, linkDirect: "", linkText: "CS wishlist", linkArrow: false},
+    { id: 0, linkDirect: "/", linkText: "Home", linkArrow: true },
+    { id: 1, linkDirect: "", linkText: "CS wishlist", linkArrow: false },
   ]
 
   return (
@@ -25,6 +28,73 @@ const WishListPage = () => {
           return <PageLinkTemplate {...details}></PageLinkTemplate>
         })}
       </ul>
+      <main className="productWishlistCartMain">
+        <section className="productWishlistCartSection">
+          <div id="productWishlistTopicsDiv">
+            <p className="wishlistCartTopicTexts">Products</p>
+            <p className="wishlistCartTopicTexts">Price</p>
+            <p className="wishlistCartTopicTexts">Stock Status</p>
+          </div>
+          <main>
+            <div className="wishlistCartDiv">
+              <div className="wishlistCartIconImageTextDiv">
+                <i className="fa-solid fa-xmark wishlistCartDeleteIcon"></i>
+                <div className="wishlistCartImageNameDiv">
+                  <img src={wishlistImage} alt="" className="wishlistCartMainImage" />
+                  <div className="wishlistNameDateDiv">
+                    <p className="wishlistCartName">Apple Cinnam Pants</p>
+                    <p className="wishlistDate">0ctober 7, 2024</p>
+                  </div>
+                </div>
+              </div>
+              <div className="wishlistCartPriceValueDiv">
+                <p className="wishlistCartPriceText">Price</p>
+                <p className="wishlistCartPriceValue">$20.00</p>
+              </div>
+              <div className="wishlistStatusDiv">
+                <p className="wishlistStatusText">Stock Status</p>
+                <p className="wishlistStatus">In Stock</p>
+              </div>
+              <div className="wishlistToCartDiv">
+                <button className="wishlistToCartBtn">ADD TO CART</button>
+              </div>
+            </div>
+            <div className="productWishlistDiv">
+              <div className="productWishlistIconImageTextDiv">
+                <i className="fa-solid fa-xmark wishlistDelteIcon"></i>
+                <div className="wishlistImageNameDiv">
+                  <img src={wishlistImage} alt="" className="wishlistMainImage" />
+                  <div className="wishlistNameDateDiv">
+                    <p className="wishlistName">Apple Cinnam Pants</p>
+                    <p className="wishlistDate">0ctober 7, 2024</p>
+                  </div>
+                </div>
+              </div>
+              <div className="wishlistPriceValueDiv">
+                <p className="wishlistPriceText">Price</p>
+                <p className="wishlistPriceValue">$20.00</p>
+              </div>
+              <div className="wishlistStatusDiv">
+                <p className="wishlistStatusText">Stock Status</p>
+                <p className="wishlistStatus">In Stock</p>
+              </div>
+              <div className="wishlistToCartDiv">
+                <button className="wishlistToCartBtn">ADD TO CART</button>
+              </div>
+            </div>
+          </main>
+        </section>
+        <div id="wishlistHandleShare">
+          <div className="wishlistHandleDiv">
+            <img src={facebook} alt="" className="wislistHandleShareImg" />
+            <p className="wishlistHandleText">SHARE</p>
+          </div>
+          <div className="wishlistHandleDiv">
+            <img src={twitter} alt="" className="wislistHandleShareImg" />
+            <p className="wishlistHandleText">TWEET</p>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
