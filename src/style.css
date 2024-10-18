@@ -27,10 +27,10 @@
     --500: 500;
 }
 
-@import url('styles/home.css');
-@import url('styles/product.css');
-@import url('styles/register.css');
-@import url('styles/search.css');
-@import url('styles/wishlist.css');
-@import url('styles/cart.css');
-@import url('styles/collection.css');
+@import url('pages/pages_styles/home.css');
+@import url('pages/pages_styles/product.css');
+@import url('pages/pages_styles/register.css');
+@import url('pages/pages_styles/search.css');
+@import url('pages/pages_styles/wishlist.css');
+@import url('pages/pages_styles/cart.css');
+@import url('pages/pages_styles/collection.css');

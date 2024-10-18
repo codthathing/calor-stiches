@@ -1,8 +1,8 @@
-import React, { createContext, useReducer, useState } from "react";
-import { productDetails } from "./extensions/products/products";
-import { hotitems } from "./extensions/hotItems/hotitems";
-import { newarrivals } from "./extensions/newArrivals/newarrivals";
-import { onsales } from "./extensions/onSale/onsale";
+import { createContext, useReducer, useState } from "react";
+import { productDetails } from "./body/frontpage/innerpages/products";
+import { hotitems } from "./body/frontpage/innerpages/hotitems";
+import { newarrivals } from "./body/frontpage/innerpages/newarrivals";
+import { onsales } from "./body/frontpage/innerpages/onsale";
 
 export const ToggleRegister = createContext();
 const savedWishlistItems = localStorage.getItem('wishlistItems');
