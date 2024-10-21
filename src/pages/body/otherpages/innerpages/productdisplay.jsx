@@ -1,10 +1,14 @@
 import { useState, useContext, useEffect } from "react";
 import { ToggleRegister } from "../../../contextpage";
 import ProductTemplate from "../../frontpage/innerpages/products_func/productTemplate";
+import { useScroll } from "../../../header/usescroll";
 import PageLinkTemplate from "../pagelinks";
 
 const ProductDisplay = () => {
   const { latestItems, setToggleSideMenu, products } = useContext(ToggleRegister);
+  const {presentScroll: addScroll} = useScroll("auto", "hidden");
+  const {presentScroll: removeScroll} = useScroll("hidden", "auto");
+
   useEffect(() => {
     window.scrollTo(0, 0);
     setToggleSideMenu(false);
@@ -18,11 +22,31 @@ const ProductDisplay = () => {
   const shownProducts = 4;
   const pageNumbers = [];
   const [showFilterDiv, setShowFilterDiv] = useState(false);
-  const [ showFilterSection, setShowFilterSection ] = useState(false);
+  const [showFilterSection, setShowFilterSection] = useState(false);
 
   for (let i = 0; i < Math.floor(products.length / shownProducts); i++) {
     pageNumbers.push(i);
   };
+
+
+  let min = 20;
+  let max = 170;
+
+  const [minValue, setMinValue] = useState(min);
+  const [maxValue, setMaxValue] = useState(max);
+
+  const handleMinChange = (event) => {
+    const value = Math.min(Number(event.target.value), maxValue - 1);
+    setMinValue(value);
+  };
+
+  const handleMaxChange = (event) => {
+    const value = Math.max(Number(event.target.value), minValue + 1);
+    setMaxValue(value);
+  };
+
+
+
 
   return (
     <div className="otherPages">
@@ -82,20 +106,26 @@ const ProductDisplay = () => {
           </div>
           <div className="productFilterMainDivs">
             <p className="productFilterText">Price</p>
-            <section id="productFilterPriceSection">
-              <input type="range" name="" id="" className="filterPriceRange" />
-              <div id="filterPriceInnerDiv">
-                <p className="filterPriceValueTexts">${20}</p>
-                <p className="filterPriceValueTexts"></p>
-              </div>
-            </section>
+            <div id="productFilterSlider">
+              <input type="range" min={min} max={max} value={minValue} onChange={handleMinChange} className="filterPriceRange thumb thumb--left" />
+              <input type="range" min={min} max={max} value={maxValue} onChange={handleMaxChange} className="filterPriceRange thumb thumb--right" />
+              <div id="productFilterSliderTrack"></div>
+              <div id="productFilterSliderRange" style={{ left: `${((minValue - min) / (max - min)) * 100}%`, right: `${100 - ((maxValue - min) / (max - min)) * 100}%` }}></div>
+            </div>
+            <div id="filterPriceInnerDiv">
+              <p className="filterPriceValueTexts">${minValue}</p>
+              <p className="filterPriceValueTexts">${maxValue}</p>
+            </div>
           </div>
           <div className="productFilterMainDivs">
             <p className="productFilterText">Color</p>
             <section className="productFilterSections">
-              <div className="productFilterDivs">
-                <div className="filterColorInnerDivs"></div>
-                <p className="filterTextsLength">Red ({0})</p>
+              <div className="productFilterColorDiv">
+                <div className="productFilterDivs">
+                  <div className="filterColorInnerDivs"></div>
+                  <p className="filterTextsLength">Red ({0})</p>
+                </div>
+                <input type="checkbox" name="" id="" className="filterCheckbox" />
               </div>
             </section>
           </div>

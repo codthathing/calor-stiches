@@ -16,6 +16,15 @@
   text-decoration: none;
 }
 
+.productLinkText {
+  color: var(--282828);
+  font-family: var(--Roboto);
+}
+
+.productLinkIcon {
+  color: var(--222222);
+}
+
 #productReviewImages {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -331,6 +340,10 @@
   align-items: center;
 }
 
+#productFilterIconTextDiv {
+  cursor: pointer;
+}
+
 .productFilterDiv {
   position: relative;
 }
@@ -349,6 +362,7 @@
 
 .productIcons {
   color: var(--222222);
+  cursor: pointer;
 }
 
 .productTexts {
@@ -419,11 +433,16 @@
   background-color: #FFFFFF;
 }
 
+#productFilterOptionsMain::-webkit-scrollbar {
+  display: none;
+}
+
 #productFilterHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--F3F2ED);
+  background-color: white;
   position: sticky;
   top: 0;
 }
@@ -458,13 +477,57 @@
   color: var(--222222);
 }
 
+#productFilterSlider {
+  position: relative;
+}
+
 .filterPriceRange {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
   width: 100%;
+  height: 0;
+  z-index: 3;
+  top: 0.20rem;
+}
+
+.filterPriceRange::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 0.5rem;
+  height: 1.25rem;
+  background-color: var(--222222);
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+#productFilterSliderTrack {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #DDD;
+  z-index: 1;
+}
+
+#productFilterSliderRange {
+  position: absolute;
+  height: 5px;
+  background-color: var(--222222);
+  z-index: 2;
+}
+
+#filterPriceInnerDiv {
+  display: flex;
+  justify-content: space-between;
 }
 
 .filterPriceValueTexts {
   font-family: var(--Roboto);
   color: var(--282828);
+}
+
+.productFilterColorDiv {
+  display: flex;
+  justify-content: space-between;
 }
 
 .filterColorInnerDivs {
@@ -473,9 +536,8 @@
 }
 
 #productFilterFooter {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  width: 100%;
   background-color: white;
 }
 
@@ -734,6 +796,10 @@
   }
 
   .filterTextsLength {
+    font-size: var(--16px);
+  }
+
+  .filterPriceValueTexts {
     font-size: var(--16px);
   }
 
@@ -1039,6 +1105,7 @@
 
   #productFilterOptionsMain {
     width: 100%;
+    padding-bottom: 3rem;
   }
 
   .productFilterMainDivs {
@@ -1046,7 +1113,7 @@
   }
 
   #filterHeaderText {
-    font-size: var(--16px);
+    font-size: var(--20px);
   }
 
   .productFilterText {
@@ -1066,6 +1133,14 @@
     font-size: var(--12px);
   }
 
+  #filterPriceInnerDiv {
+    margin-top: 2.5rem;
+  }
+
+  .filterPriceValueTexts {
+    font-size: var(--12px);
+  }
+
   .filterColorInnerDivs {
     height: 1.25rem;
     width: 1.25rem;
@@ -1073,6 +1148,7 @@
 
   #productFilterFooter {
     padding: 2rem;
+    width: 100%;
   }
 }
 
@@ -1189,15 +1265,24 @@
 
   #productFilterOptionsMain {
     width: 50%;
+    padding-bottom: 4.5rem;
   }
 
   #filterHeaderText {
-    font-size: var(--24px);
+    font-size: var(--32px);
   }
 
   .productFilterText {
     margin-bottom: 1.5rem;
     font-size: var(--24px);
+  }
+
+  #filterPriceInnerDiv {
+    margin-top: 3.5rem;
+  }
+
+  #productFilterFooter { 
+    width: 50%;
   }
 }
 
@@ -1357,14 +1442,23 @@
 
   #productFilterOptionsMain {
     width: 30%;
+    padding-bottom: 5rem;
   }
 
   #filterHeaderText {
-    font-size: var(--20px);
+    font-size: var(--24px);
   }
 
   .productFilterText {
     margin-bottom: 1rem;
     font-size: var(--20px);
+  }
+
+  #filterPriceInnerDiv {
+    margin-top: 2.5rem;
+  }
+
+  #productFilterFooter { 
+    width: 30%;
   }
 }

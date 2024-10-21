@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
           <article id="storeArticle">
             <h1 id="storeHead">About Our Store</h1>
-            <p id="storeParagraph">Our values in Chani are upheld within high quality tailoring, fabric insight and innovative design alongside the desire for innovative and the natural beauty with versatility and top of mind allowing for the investment pieces.</p>
+            <p id="storeParagraph">Our values in Calor Stiches are upheld within high quality tailoring, fabric insight and innovative design alongside the desire for innovative and the natural beauty with versatility and top of mind allowing for the investment pieces.</p>
           </article>
           <Payment />
         </div>

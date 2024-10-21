@@ -40,11 +40,11 @@ const CurLangTemplate = () => {
         <p id="curLangInerText">{curDetails.preNation}</p>
         <main className="curLangMain">
           <p className="curLangText">{curDetails.preCur}</p>
-          <i className="fa-solid fa-chevron-down curLangIcon" style={{ color: "#ffffff" }}></i>
+          <i className="fa-solid fa-chevron-down curLangIcon"></i>
         </main>
         {currency &&
           <div onMouseEnter={() => setCurrency(true)} onMouseLeave={() => setCurrency(false)} onClick={ChangeCurrency} id="displayCurrency">
-            <img src={curDetails.curFlag} alt="Nigeria flag" id="curFlag" />
+            <img src={curDetails.curFlag} alt={curDetails.curName} id="curFlag" />
             <p id="curText">{curDetails.curName}</p>
           </div>
         }

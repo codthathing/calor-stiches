@@ -39,7 +39,7 @@
 .curLangMain {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
     cursor: pointer;
 }
 
@@ -95,12 +95,13 @@
 
 .sideMenuText {
     text-transform: uppercase;
+    color: var(--222222);
     font-family: var(--Yantramanav);
 }
 
 .sideMenuIcon {
     color: white;
-    background-color: black;
+    background-color: var(--222222);
     border-radius: 0.25rem;
 }
 
@@ -113,13 +114,12 @@
 
 #logoIcon.scrollDownNavbar {
     background-color: white;
-    color: black;
+    color: var(--222222);
 }
 
 #logo {
-    font-family: "Bona Nova", serif;
+    font-family: var(--Cormorant);
     font-weight: 600;
-    font-style: normal;
 }
 
 #navIcons {
@@ -127,9 +127,17 @@
     align-items: center;
 }
 
+#loginText {
+    font-family: var(--Roboto);
+}
+
 .icons {
     list-style: none;
     cursor: pointer;
+}
+
+.iconTag {
+    font-weight: 700;
 }
 
 #displayText {
@@ -387,11 +395,14 @@
     object-fit: cover;
 }
 
-#videoAside {
+#videoControllerDiv {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#videoAside {
     border: 1px solid var(--F3F2ED);
     border-radius: 50%;
     display: flex;
@@ -399,13 +410,26 @@
     align-items: center;
 }
 
-#videoPlayer {
+.videoPlayer {
     color: white;
 }
 
 #videoPlay {
     color: white;
     font-family: var(--Yantramanav);
+}
+
+.videoCursor {
+    cursor: pointer;
+}
+
+.videoWidthIcon {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 #serviceSection {
@@ -725,10 +749,6 @@
         grid-gap: 0 3.5rem;
     }
 
-    #videoPlayer {
-        font-size: 4rem;
-    }
-
     #videoPlay {
         font-size: var(--15px);
     }
@@ -877,7 +897,8 @@
     }
 
     .sideMenuIcon {
-        padding: 0.25rem;
+        padding: 0.15rem;
+        font-size: var(--12px);
     }
 
     #logoIcon {
@@ -901,7 +922,7 @@
     }
 
     .iconTag {
-        font-size: var(--20px);
+        font-size: var(--16px);
     }
 
     .paragraphStyles {
@@ -1044,24 +1065,28 @@
     }
 
     #videoDiv {
-        padding: 0 0.5rem;
+        margin: 0 0.5rem;
     }
 
     #videoMain {
-        height: 12rem;
+        height: 10rem;
     }
 
     #videoAside {
-        height: 10rem;
-        width: 10rem;
+        height: 6rem;
+        width: 6rem;
     }
 
-    #videoPlayer {
-        font-size: 3rem;
+    .videoPlayer {
+        font-size: 1rem;
     }
 
     #videoPlay {
         font-size: var(--12px);
+    }
+
+    .videoWidthIcon {
+        font-size: var(--20px);
     }
 
     #serviceSection {
@@ -1222,7 +1247,7 @@
     }
 
     .sideMenuIcon {
-        padding: 0.35rem;
+        padding: 0.25rem;
     }
 
     #logoIcon {
@@ -1362,16 +1387,24 @@
     }
 
     #videoDiv {
-        padding: 0 0.5rem;
+        margin: 0 0.5rem;
     }
 
     #videoMain {
-        height: 35rem;
+        height: 20rem;
     }
 
     #videoAside {
-        height: 19rem;
-        width: 19rem;
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .videoPlayer {
+        font-size: 1.5rem;
+    }
+
+    .videoWidthIcon {
+        font-size: var(--32px);
     }
 
     #serviceSection {
@@ -1633,16 +1666,24 @@
     }
 
     #videoDiv {
-        padding: 0 0.75rem;
+        margin: 0 0.75rem;
     }
 
     #videoMain {
-        height: 30rem;
+        height: 25rem;
     }
 
     #videoAside {
-        height: 21rem;
-        width: 21rem;
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .videoPlayer {
+        font-size: 2rem;
+    }
+
+    .videoWidthIcon {
+        font-size: var(--24px);
     }
 
     #serviceSection {

@@ -59,20 +59,20 @@ const WishListPage = () => {
                 <button className="wishlistToCartBtn">ADD TO CART</button>
               </div>
             </div>
-            <div className="productWishlistDiv">
-              <div className="productWishlistIconImageTextDiv">
-                <i className="fa-solid fa-xmark wishlistDelteIcon"></i>
-                <div className="wishlistImageNameDiv">
-                  <img src={wishlistImage} alt="" className="wishlistMainImage" />
+            <div className="wishlistCartDiv">
+              <div className="wishlistCartIconImageTextDiv">
+                <i className="fa-solid fa-xmark wishlistCartDeleteIcon"></i>
+                <div className="wishlistCartImageNameDiv">
+                  <img src={wishlistImage} alt="" className="wishlistCartMainImage" />
                   <div className="wishlistNameDateDiv">
-                    <p className="wishlistName">Apple Cinnam Pants</p>
+                    <p className="wishlistCartName">Apple Cinnam Pants</p>
                     <p className="wishlistDate">0ctober 7, 2024</p>
                   </div>
                 </div>
               </div>
-              <div className="wishlistPriceValueDiv">
-                <p className="wishlistPriceText">Price</p>
-                <p className="wishlistPriceValue">$20.00</p>
+              <div className="wishlistCartPriceValueDiv">
+                <p className="wishlistCartPriceText">Price</p>
+                <p className="wishlistCartPriceValue">$20.00</p>
               </div>
               <div className="wishlistStatusDiv">
                 <p className="wishlistStatusText">Stock Status</p>

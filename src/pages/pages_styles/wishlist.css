@@ -139,9 +139,41 @@
   display: flex;
 }
 
+.wishlistCartName {
+  color: var(--222222);
+  font-family: var(--Roboto);
+}
+
+.wishlistDate {
+  color: var(--282828);
+  font-family: var(--Roboto);
+}
+
+.wishlistCartPriceText {
+  color: var(--222222);
+  font-family: var(--Roboto);
+}
+
+.wishlistCartPriceValue {
+  color: var(--282828);
+  font-family: var(--Roboto);
+}
+
+.wishlistStatusText {
+  font-family: var(--Roboto);
+  color: var(--222222);
+}
+
+.wishlistStatus {
+  color: var(--282828);
+  font-family: var(--Roboto);
+}
+
 .wishlistToCartBtn {
   background-color: var(--222222);
   color: #FFFFFF;
+  font-family: var(--Roboto);
+  border: none;
 }
 
 #wishlistHandleShare {
@@ -151,6 +183,11 @@
 .wishlistHandleDiv {
   display: flex;
   align-items: center;
+}
+
+.wishlistHandleText {
+  color: var(--222222);
+  font-family: var(--Roboto);
 }
 
 
@@ -255,20 +292,24 @@
   }
 
   .wishlistCartMainImage {
-    height: 8rem;
-    width: 6rem;
+    height: 7rem;
+    width: 5rem;
+  }
+
+  .wishlistCartName {
+    font-size: var(--16px);
   }
 
   .wishlistDate {
-    font-size: var(--16px);
+    font-size: var(--12px);
   }
 
   .wishlistCartPriceValue {
-    font-size: var(--16px);
+    font-size: var(--12px);
   }
 
   .wishlistStatus {
-    font-size: var(--16px);
+    font-size: var(--12px);
   }
 
   .wishlistToCartBtn {
@@ -380,40 +421,40 @@
   }
 
   .wishlistCartMainImage {
-    height: 5rem;
-    width: 4rem;
+    height: 4rem;
+    width: 3rem;
   }
 
   .wishlistCartName {
-    font-size: var(--16px);
+    font-size: var(--12px);
   }
 
   .wishlistDate {
-    font-size: var(--12px);
+    font-size: var(--8px);
   }
 
   .wishlistCartPriceValueDiv {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
 
   .wishlistCartPriceText {
-    font-size: var(--16px);
+    font-size: var(--12px);
   }
 
   .wishlistCartPriceValue {
-    font-size: var(--12px);
+    font-size: var(--8px);
   }
 
   .wishlistStatusDiv {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
 
   .wishlistStatusText {
-    font-size: var(--16px);
+    font-size: var(--12px);
   }
 
   .wishlistStatus {
-    font-size: var(--12px);
+    font-size: var(--8px);
   }
 
   .wishlistToCartBtn {
@@ -480,24 +521,20 @@
     top: 0.5rem;
   }
 
-  .wishlistCartName {
-    font-size: var(--24px);
-  }
-
   .wishlistCartPriceValueDiv {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 
   .wishlistCartPriceText {
-    font-size: var(--24px);
+    font-size: var(--16px);
   }
 
   .wishlistStatusDiv {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 
   .wishlistStatusText {
-    font-size: var(--24px);
+    font-size: var(--16px);
   }
 }
 
@@ -537,10 +574,13 @@
     justify-content: space-between;
     width: 65%;
     margin-left: 10rem;
+    padding-bottom: 0.75rem;
   }
 
   .wishlistCartTopicTexts {
-    font-size: var(--20px);
+    font-size: var(--16px);
+    font-family: var(--Roboto);
+    color: var(--1B1A1A);
   }
 
   .wishlistCartDiv {
@@ -558,10 +598,6 @@
 
   .wishlistCartImageNameDiv {
     align-items: center;
-  }
-
-  .wishlistCartName {
-    font-size: var(--20px);
   }
 
   .wishlistCartPriceText {

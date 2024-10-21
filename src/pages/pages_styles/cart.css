@@ -106,18 +106,30 @@
 .cartQuantityDiv {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #cartUpdateBtn {
   background-color: var(--222222);
   color: #FFFFFF;
+  font-family: var(--Roboto);
   margin: 2rem 0;
+}
+
+#cartTotalText {
+  font-family: var(-Cormorant);
+  color: var(--1B1A1A);
 }
 
 .cartPriceValueDiv {
   display: flex;
   border-bottom: 1px solid var(--F3F2ED);
   padding: 2rem 0;
+}
+
+.cartPriceText {
+  color: var(--222222);
+  font-family: var(--Roboto);
 }
 
 #cartShippingAddressDiv {
@@ -129,6 +141,11 @@
   display: flex;
 }
 
+#cartShippingText {
+  font-family: var(--Roboto);
+  color: var(--282828);
+}
+
 #cartShippingSpan {
   font-weight: 600;
   text-transform: uppercase;
@@ -136,6 +153,8 @@
 
 #cartAddressText {
   cursor: pointer;
+  color: var(--222222);
+  font-family: var(--Roboto);
 }
 
 #cartAddressDiv {
@@ -160,6 +179,7 @@
 #cartCheckoutButton {
   background-color: var(--222222);
   color: #FFFFFF;
+  font-family: var(--Roboto);
 }
 
 
@@ -175,6 +195,20 @@
   display: flex;
 }
 
+.checkoutLoginTexts {
+  font-family: var(--Cormorant);
+  color: var(--1B1A1A);
+}
+
+.checkoutLoginTexts:nth-child(2) {
+  color: var(--222222);
+}
+
+.billOrderText {
+  font-family: var(--Cormorant);
+  color: var(--1B1A1A);
+}
+
 .billForm {
   display: flex;
   flex-direction: column;
@@ -185,9 +219,16 @@
   flex-direction: column;
 }
 
+.billLabel {
+  font-family: var(--Roboto);
+  color: var(--1B1A1A);
+}
+
 .billInput {
   padding: 1.5rem;
   border: 1px solid var(--222222);
+  color: var(--222222);
+  font-family: var(--Roboto);
 }
 
 #billOtherMain {
@@ -200,19 +241,36 @@
   accent-color: var(--222222);
 }
 
+#billOtherText {
+  font-family: var(--Cormorant);
+  color: var(--222222);
+}
+
 #billOptTextDiv {
   display: flex;
   flex-direction: column;
 }
 
+#billOptText {
+  font-family: var(--Roboto);
+  color: var(--1B1A1A);
+}
+
 #billOptTextArea {
   border: 1px solid var(--222222);
+  font-family: var(--Roboto);
+  color: var(--222222);
 }
 
 #orderOptionDiv {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--F3F2ED);
+}
+
+.orderOptionText {
+  color: var(--1B1A1A);
+  font-family: var(--Roboto);
 }
 
 #orderProductMain {
@@ -229,6 +287,13 @@
 
 .orderProductNameAmt {
   text-transform: capitalize;
+  color: var(--1B1A1A);
+  font-family: var(--Roboto);
+}
+
+.orderPriceValue {
+  font-family: var(--Roboto);
+  color: var(--282828);
 }
 
 .orderSubTotalDiv {
@@ -236,6 +301,16 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--F3F2ED);
+}
+
+.orderSubTotalText {
+  font-family: var(--Roboto);
+  color: var(--222222);
+}
+
+.orderSubTotalValue {
+  font-family: var(--Roboto);
+  color: var(--282828);
 }
 
 #orderPaymentDiv {
@@ -252,8 +327,20 @@
   accent-color: var(--222222);
 }
 
+.paymentText {
+  font-family: var(--Roboto);
+  color: var(--1B1A1A);
+}
+
 .paymentMethodDetails {
   background-color: var(--F3F2ED);
+  color: var(--282828);
+  font-family: var(--Roboto);
+}
+
+#personalInfoText {
+  color: var(--282828);
+  font-family: var(--Roboto);
 }
 
 #termsDiv {
@@ -265,9 +352,15 @@
   accent-color: var(--222222);
 }
 
+#termsText {
+  color: var(--1B1A1A);
+  font-family: var(--Roboto);
+}
+
 #placeOrderBtn {
   background-color: var(--222222);
   color: #FFFFFF;
+  font-family: var(--Roboto);
   width: 100%;
 }
 
@@ -584,7 +677,7 @@
   }
 
   .cartQuantityDiv {
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
   }
 
   #cartUpdateBtn {
@@ -913,6 +1006,7 @@
     display: flex;
     justify-content: space-between;
     margin-left: 12.5%;
+    padding-bottom: 0.75rem;
   }
 
   .cartPriceValueDiv {
