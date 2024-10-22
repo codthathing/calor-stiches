@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { ToggleRegister } from "../../contextpage";
 import ProductTemplate from "../../body/frontpage/innerpages/products_func/productTemplate";
 import { useScroll } from "../usescroll";
-import { useFocus } from "../header_pages/register_page/main_pages/usefocus";
+import { useFocus } from "./register_page/usefocus";
 
 const Search = () => {
 

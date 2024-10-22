@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ToggleRegister } from "../../../../contextpage";
-import { useFocus } from "./usefocus";
+import { useFocus } from "../usefocus";
 
 const ForgotPasswordPage = () => {
   const {setRegister, presentRegister, setPresentRegister} = useContext(ToggleRegister)
@@ -13,7 +13,7 @@ const ForgotPasswordPage = () => {
           <span className="cancelBtn" onClick={() => setRegister(false)}><i className="fa-solid fa-xmark cancelIcon"></i></span>
           <div className="registerDiv">
             <h1 className="registerHead">Forgotten Password?</h1>
-            <form id="registerForm">
+            <form className="registerForm">
               <input type="text" ref={inputFocus} className="registerInput" placeholder="Username or Email Address" required />
               <button type="submit" className="navBtn registerBtn">GET NEW PASSWORD</button>
               <p onClick={() => setPresentRegister("LOGIN")} className="registerNavText">ALREADY HAS AN ACCOUNT</p>

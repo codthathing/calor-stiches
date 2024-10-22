@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ToggleRegister } from "../../../../contextpage";
-import { useFocus } from "./usefocus";
+import { useFocus } from "../usefocus";
 
 const CreateAccountPage = () => {
   const {setRegister, presentRegister, setPresentRegister} = useContext(ToggleRegister)
@@ -13,7 +13,7 @@ const CreateAccountPage = () => {
           <span className="cancelBtn" onClick={() => setRegister(false)}><i className="fa-solid fa-xmark cancelIcon"></i></span>
           <div className="registerDiv">
             <h1 className="registerHead">Create Account</h1>
-            <form id="registerForm">
+            <form className="registerForm">
               <input type="text" ref={inputFocus} className="registerInput" placeholder="User Name" required />
               <input type="text" className="registerInput" placeholder="Email" required />
               <button type="submit" className="navBtn registerBtn">REGISTER</button>

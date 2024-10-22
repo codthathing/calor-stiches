@@ -82,6 +82,14 @@
   color: var(--222222);
 }
 
+#register-message {
+  background-color: var(--FFFF00);
+  font-family: var(--Roboto);
+  color: var(--222222);
+  text-align: center;
+}
+
+
 
 
 
@@ -130,6 +138,12 @@
   }
   
   .registerNavText {
+    font-size: var(--16px);
+  }
+
+  #register-message {
+    padding: 0.75rem 0;
+    margin-bottom: 0.75rem;
     font-size: var(--16px);
   }
 }
@@ -193,6 +207,12 @@
   }
   
   .registerNavText {
+    font-size: var(--12px);
+  }
+
+  #register-message {
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
     font-size: var(--12px);
   }
 }
