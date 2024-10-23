@@ -4,6 +4,7 @@ import RegisterLayout from "../header_pages/register_page/registerlayout";
 import Search from "../header_pages/search";
 import WishList from "../header_pages/wishlist_page/wishlist";
 import Cart from "../header_pages/cart_page/cart"
+import UserProfile from "../header_pages/user_profile/user_profile";
 
 const NavIcons = () => {
   const { register, setRegister, search, setSearch, wishList, setWishList, cart, setCart, toggleSideMenu, setToggleSideMenu } = useContext(ToggleRegister);
@@ -32,6 +33,7 @@ const NavIcons = () => {
   return (
     <ul id="navIcons">
       <li className="icons"><p onClick={() => setRegister(true)} id="loginText">LOGIN</p></li>
+      <UserProfile/>
       <LinksIcon/>
       <li className="icons">
         <i className={toggleSideMenu ? "fa-solid fa-xmark iconTag" : "fa-solid fa-bars iconTag"} onClick={() => setToggleSideMenu(!toggleSideMenu)}></i>

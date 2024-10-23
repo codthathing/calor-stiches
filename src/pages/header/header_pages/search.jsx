@@ -6,10 +6,10 @@ import { useFocus } from "./register_page/usefocus";
 
 const Search = () => {
 
-  const { setSearch, search, products } = useContext(ToggleRegister)
+  const { setSearch, products } = useContext(ToggleRegister)
   const { presentScroll: addScroll } = useScroll("auto", "hidden");
   const { presentScroll: removeScroll } = useScroll("hidden", "auto");
-  const { inputFocus } = useFocus(search);
+  const { inputFocus } = useFocus();
   const [searchItems, setSearchItems] = useState(products);
   const [searchInput, setSearchInput] = useState("");
   useEffect(() => {
