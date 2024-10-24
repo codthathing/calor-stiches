@@ -34,11 +34,7 @@ const ProductReview = () => {
 
   return (
     <div className="otherPages" id="productReview">
-      <ul className="productList">
-        {pageLinkDetails.map((details) => {
-          return <PageLinkTemplate key={details.id} {...details}></PageLinkTemplate>
-        })}
-      </ul>
+      <PageLinkTemplate pageLinks={pageLinkDetails} />
 
       <main id="productReviewMain" className="productMains">
         <picture id="productReviewImages">

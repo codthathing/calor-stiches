@@ -28,11 +28,7 @@ const ProductPage = () => {
 
   return (
     <div className="otherPages">
-      <ul className="productList">
-        {pageLinkDetails.map((details) => {
-          return <PageLinkTemplate key={details.id} {...details}></PageLinkTemplate>
-        })}
-      </ul>
+      <PageLinkTemplate pageLinks={pageLinkDetails} />
       <main id="productAllMain" className="productMains">
         <div className="productShownDiv">
           <p className="productShownText">Showing {mapProducts + 1} - {mapProducts + shownProducts} of {products.length} products</p>

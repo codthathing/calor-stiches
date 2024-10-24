@@ -23,11 +23,7 @@ const CartPage = () => {
 
   return (
     <div className="otherPages" id="productReview">
-      <ul className="productList">
-        {pageLinkDetails.map((details) => {
-          return <PageLinkTemplate key={details.id} {...details}></PageLinkTemplate>
-        })}
-      </ul>
+      <PageLinkTemplate pageLinks={pageLinkDetails} />
       <main className="productWishlistCartMain">
         <section className="productWishlistCartSection">
           <div id="productCartTopicsDiv">

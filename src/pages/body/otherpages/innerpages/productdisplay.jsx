@@ -50,11 +50,7 @@ const ProductDisplay = () => {
 
   return (
     <div className="otherPages">
-      <ul className="productList">
-        {pageLinkDetails.map((details) => {
-          return <PageLinkTemplate key={details.id} {...details}></PageLinkTemplate>
-        })}
-      </ul>
+      <PageLinkTemplate pageLinks={pageLinkDetails} />
       <main id="productAllMain" className="productMains">
         <div className="productShownDiv">
           <div id="productFilterIconTextDiv" onClick={() => setShowFilterSection(true)}>
