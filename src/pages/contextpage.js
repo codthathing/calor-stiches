@@ -9,7 +9,7 @@ const savedWishlistItems = localStorage.getItem('wishlistItems');
 const savedCartItems = localStorage.getItem('cartItems');
 
 export const OptNavProvider = ({ children }) => {
-  const [register, setRegister] = useState(false);
+  const [account, setAccount] = useState(false);
   const [search, setSearch] = useState(false);
   const [wishList, setWishList] = useState(false);
   const [wishlistItems, setWishlistItems] = useState(savedWishlistItems ? JSON.parse(savedWishlistItems) : []);
@@ -43,7 +43,7 @@ export const OptNavProvider = ({ children }) => {
   const [state, dispatch] = useReducer(changeStyles, wishlistTextStyle);
 
   return (
-    <ToggleRegister.Provider value={{ register, setRegister, presentRegister, setPresentRegister, wishList, setWishList, cart, setCart, search, setSearch, toggleSideMenu, setToggleSideMenu, navbar, setNavbar, products, setProducts, curSymbol, setCurSymbol, hotItems, setHotItems, newArrivals, setNewArrivals, onSales, setOnSales, wishlistItems, setWishlistItems, cartItems, setCartItems, state, dispatch, latestItems, setLatestItems }}>
+    <ToggleRegister.Provider value={{ account, setAccount, presentRegister, setPresentRegister, wishList, setWishList, cart, setCart, search, setSearch, toggleSideMenu, setToggleSideMenu, navbar, setNavbar, products, setProducts, curSymbol, setCurSymbol, hotItems, setHotItems, newArrivals, setNewArrivals, onSales, setOnSales, wishlistItems, setWishlistItems, cartItems, setCartItems, state, dispatch, latestItems, setLatestItems }}>
       {children}
     </ToggleRegister.Provider>
   );

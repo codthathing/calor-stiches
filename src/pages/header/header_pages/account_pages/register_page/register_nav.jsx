@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ToggleRegister } from "../../../contextpage";
+import { ToggleRegister } from "../../../../contextpage";
 
 const RegisterNav = ({nextRegister, navText}) => {
   const { setPresentRegister } = useContext(ToggleRegister);

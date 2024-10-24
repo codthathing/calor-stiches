@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useFocus } from "../usefocus";
-import { ToggleRegister } from "../../../../contextpage";
+import { ToggleRegister } from "../../../../../contextpage";
 import RegisterInput from "../register_input";
 import RegisterPassword from "../register_password";
 import RegisterButton from "../register_button";
